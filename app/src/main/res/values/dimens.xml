@@ -1,0 +1,7 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="contact_info_width_01">425dp</dimen>
+    <dimen name="contact_info_width_02">430dp</dimen>
+    <dimen name="contact_info_height_01">250dp</dimen>
+    <dimen name="contact_info_height_02">300dp</dimen>
+</resources>
