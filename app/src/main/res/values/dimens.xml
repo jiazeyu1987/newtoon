@@ -4,4 +4,10 @@
     <dimen name="contact_info_width_02">430dp</dimen>
     <dimen name="contact_info_height_01">250dp</dimen>
     <dimen name="contact_info_height_02">300dp</dimen>
+    <dimen name="contact_info_height_body">550dp</dimen>
+    <dimen name="contact_info_width_half">640dp</dimen>
+    <dimen name="contact_info_width_03">420dp</dimen>
+    <dimen name="contact_info_width_04">860dp</dimen>
+    <dimen name="table_unit_width">150dp</dimen>
+    <dimen name="table_unit_height">60dp</dimen>
 </resources>

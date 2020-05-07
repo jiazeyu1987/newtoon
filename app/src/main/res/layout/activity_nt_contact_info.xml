@@ -13,36 +13,8 @@
         android:layout_height="150dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+        <include layout="@layout/newtoon_nt_title"></include>
 
-        <com.example.administrator.new_ptns.custom_item.CustomItemA1
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:txt1 = "合同编号："
-            app:txt2 = "请填写合同编号"
-            android:layout_marginBottom="12dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"></com.example.administrator.new_ptns.custom_item.CustomItemA1>
-
-        <TextView
-            android:id="@+id/textView60"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="32dp"
-            android:text="手术合同信息"
-            android:textSize="40sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <TextView
-            android:id="@+id/textView62"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="2020年05月02日 星期三"
-            app:layout_constraintBottom_toTopOf="@+id/textView60"
-            app:layout_constraintEnd_toEndOf="@+id/textView60"
-            app:layout_constraintStart_toStartOf="@+id/textView60"
-            app:layout_constraintTop_toTopOf="parent" />
     </android.support.constraint.ConstraintLayout>
 
     <android.support.constraint.ConstraintLayout
