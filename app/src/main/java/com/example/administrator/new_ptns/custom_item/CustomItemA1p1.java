@@ -5,6 +5,7 @@ import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -16,12 +17,12 @@ import com.example.administrator.new_ptns.R;
  * Created by tianxiying on 2018/3/1.
  */
 
-public class CustomItemA1 extends LinearLayout {
+public class CustomItemA1p1 extends LinearLayout {
     private Context mContext;
     private View mView;
     private ImageView icon;
     private TextView txt;
-    private TextView txt2;
+    private EditText txt2;
     private OnClickListener onClickListener;
     private String titleText;
     private String titleText2;
@@ -36,6 +37,14 @@ public class CustomItemA1 extends LinearLayout {
         if (iconImgId != 10000) {
             this.iconImgId = iconImgId;
             icon.setImageResource(this.iconImgId);
+        }
+    }
+
+    public void setIconVisible(boolean vi){
+        if(vi){
+            icon.setVisibility(VISIBLE);
+        }else{
+            icon.setVisibility(INVISIBLE);
         }
     }
 
@@ -65,27 +74,21 @@ public class CustomItemA1 extends LinearLayout {
         }
     }
 
-    public void setTitleText3(String titleText) {
-        if (titleText != null) {
-            txt2.setText(titleText);
-        }
-    }
 
 
 
 
 
 
-
-    public CustomItemA1(Context context) {
+    public CustomItemA1p1(Context context) {
         this(context, null);
     }
 
-    public CustomItemA1(Context context, AttributeSet attrs) {
+    public CustomItemA1p1(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public CustomItemA1(Context context, AttributeSet attrs, int defStyleAttr) {
+    public CustomItemA1p1(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context, attrs);
     }
@@ -93,14 +96,15 @@ public class CustomItemA1 extends LinearLayout {
     private void init(Context context, AttributeSet attrs) {
         mContext = context;
         LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        mView = inflater.inflate(R.layout.custom_item_a1, this, true);
+        mView = inflater.inflate(R.layout.custom_item_a1p1, this, true);
         txt = (TextView) mView.findViewById(R.id.textView27);
-        txt2 = (TextView) mView.findViewById(R.id.et_1);
+        txt2 =  mView.findViewById(R.id.et_1);
+        icon = mView.findViewById(R.id.imageView36);
         TypedArray a = mContext.obtainStyledAttributes(attrs, R.styleable.CustomItem1Attr);
-        setTextMode();
         setTitleText(a.getString(R.styleable.CustomItem1Attr_txt1));
         setTitleText2(a.getString(R.styleable.CustomItem1Attr_txt2));
-        setTitleText3(a.getString(R.styleable.CustomItem1Attr_txt3));
+        setIconVisible(a.getBoolean(R.styleable.CustomItem1Attr_bool1,true));
+        setIconImgId(a.getResourceId(R.styleable.CustomItem1Attr_icon1,R.mipmap.dianliu));
     }
 
 

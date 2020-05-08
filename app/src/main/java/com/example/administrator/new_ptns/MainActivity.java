@@ -11,7 +11,7 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_nt_pulse_testing);
+        setContentView(R.layout.pager_nt_main_1);
     }
 
 //    $ git config --global user.name "jiazeyu1987"

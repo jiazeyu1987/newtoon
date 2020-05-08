@@ -30,6 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:txt1="患者信息"></com.example.administrator.new_ptns.custom_item.CustomItem6>
@@ -39,6 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/active_txt_color1"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/customItem66"
             app:layout_constraintTop_toBottomOf="@+id/customItem66">
 
@@ -409,157 +411,115 @@
     <android.support.constraint.ConstraintLayout
         android:id="@+id/aci_11"
         android:layout_width="@dimen/contact_info_width_04"
-        android:layout_height="600dp"
+        android:layout_height="700dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/aci_top">
+
+        <Button
+            android:id="@+id/button19"
+            style="@style/RoundRectButton.Active"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:text="停止刺激"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/customItemA52" />
+
+        <Button
+            android:id="@+id/button20"
+            style="@style/RoundRectButton.Active"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="保存参数"
+            app:layout_constraintEnd_toEndOf="@+id/customItemA52"
+            app:layout_constraintTop_toBottomOf="@+id/customItem6" />
+
+        <Button
+            android:id="@+id/button17"
+            style="@style/RoundRectButton.Active"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="32dp"
+            android:text="开始刺激"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/customItemA52" />
+
+        <com.example.administrator.new_ptns.custom_item.CustomItemA5
+            android:id="@+id/customItemA52"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            app:layout_constraintStart_toStartOf="@+id/customItemA5"
+            app:layout_constraintTop_toBottomOf="@+id/customItemA5"
+            app:txt1="频率"
+            app:txt2="0"
+            app:txt3="赫兹" />
+
+        <com.example.administrator.new_ptns.custom_item.CustomItemA5
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            app:layout_constraintStart_toStartOf="@+id/customItemA52"
+            app:layout_constraintTop_toBottomOf="@+id/customItemA52"
+            app:txt1="脉宽"
+            app:txt2="0"
+            app:txt3="uS" />
+
+        <com.example.administrator.new_ptns.custom_item.CustomItemA5
+            android:id="@+id/customItemA5"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:txt1="幅度"
+            app:txt2="0"
+            app:txt3="mA" />
 
         <com.example.administrator.new_ptns.custom_item.CustomItem6
             android:id="@+id/customItem6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:txt1="患者家属信息"></com.example.administrator.new_ptns.custom_item.CustomItem6>
+            app:txt1="参数">
 
-        <TableLayout
+        </com.example.administrator.new_ptns.custom_item.CustomItem6>
+
+        <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="32dp"
-            android:background="@color/active_txt_color1"
-            app:layout_constraintStart_toStartOf="@+id/customItem6"
-            app:layout_constraintTop_toBottomOf="@+id/customItem6">
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="317dp"
+            tools:layout_editor_absoluteY="212dp" >
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:layout_weight="1"
+                android:text="恒压模式"
+                tools:layout_editor_absoluteX="255dp"
+                tools:layout_editor_absoluteY="191dp" />
 
-                <TextView
-                    android:id="@+id/textView710"
-                    style="@style/GridViewText"
-                    android:layout_marginLeft="2dp"
-                    android:layout_marginBottom="2dp"
-                    android:text="恒流输出" />
-
-                <TextView
-                    android:id="@+id/textView711"
-                    style="@style/GridViewText"
-                    android:layout_marginRight="2dp"
-                    android:layout_marginBottom="2dp"
-                    android:text="0.5 mA" />
-
-                <TextView
-                    android:id="@+id/textView7111"
-                    style="@style/GridViewText"
-                    android:layout_marginRight="2dp"
-                    android:layout_marginBottom="2dp"
-                    android:text="正常" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:id="@+id/textView710"
-                    style="@style/GridViewText"
-                    android:layout_marginLeft="2dp"
-                    android:layout_marginBottom="2dp"
-                    android:text="恒压输出" />
-
-                <TextView
-                    android:id="@+id/textView711"
-                    style="@style/GridViewText"
-                    android:layout_marginRight="2dp"
-                    android:layout_marginBottom="2dp"
-                    android:text="1.0 V" />
-
-                <TextView
-                    android:id="@+id/textView7111"
-                    style="@style/GridViewText"
-                    android:layout_marginRight="2dp"
-                    android:layout_marginBottom="2dp"
-                    android:text="正常" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:id="@+id/textView710"
-                    style="@style/GridViewText"
-                    android:layout_marginLeft="2dp"
-                    android:layout_marginBottom="2dp"
-                    android:text="阻抗状态" />
-
-                <TextView
-                    android:id="@+id/textView711"
-                    style="@style/GridViewText"
-                    android:layout_marginRight="2dp"
-                    android:layout_marginBottom="2dp"
-                    android:text=">100 kΩ" />
-
-                <TextView
-                    android:id="@+id/textView7111"
-                    style="@style/GridViewText"
-                    android:layout_marginRight="2dp"
-                    android:layout_marginBottom="2dp"
-                    android:text="断路" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:id="@+id/textView59"
-                    style="@style/GridViewText"
-                    android:layout_marginTop="2dp"
-                    android:layout_marginRight="2dp"
-                    android:text="电池电压" />
-
-                <TextView
-                    android:id="@+id/textView617"
-                    style="@style/GridViewText"
-                    android:layout_marginLeft="2dp"
-                    android:layout_marginTop="2dp"
-                    android:text="4.0 V" />
-
-                <TextView
-                    android:id="@+id/textView613"
-                    style="@style/GridViewText"
-                    android:layout_marginTop="2dp"
-                    android:layout_marginRight="2dp"
-                    android:text="正常" />
-
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:id="@+id/textView618"
-                    style="@style/GridViewText"
-                    android:layout_marginLeft="2dp"
-                    android:text="电池容量" />
-
-                <TextView
-                    android:id="@+id/textView619"
-                    style="@style/GridViewText"
-                    android:layout_marginRight="2dp"
-                    android:text="95%" />
-
-                <TextView
-                    android:id="@+id/textView6191"
-                    style="@style/GridViewText"
-                    android:layout_marginRight="2dp"
-                    android:text="正常" />
-            </TableRow>
-
-        </TableLayout>
+            <RadioButton
+                android:id="@+id/radioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:text="恒流模式"
+                tools:layout_editor_absoluteX="255dp"
+                tools:layout_editor_absoluteY="191dp" />
+        </RadioGroup>
 
     </android.support.constraint.ConstraintLayout>
 
