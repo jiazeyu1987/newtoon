@@ -165,21 +165,21 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/textView710"
+                    android:id="@+id/t3extView710"
                     style="@style/GridViewText"
                     android:layout_marginLeft="2dp"
                     android:layout_marginBottom="2dp"
                     android:text="恒流输出" />
 
                 <TextView
-                    android:id="@+id/textView711"
+                    android:id="@+id/t3extView711"
                     style="@style/GridViewText"
                     android:layout_marginRight="2dp"
                     android:layout_marginBottom="2dp"
                     android:text="0.5 mA" />
 
                 <TextView
-                    android:id="@+id/textView7111"
+                    android:id="@+id/t3extView7111"
                     style="@style/GridViewText"
                     android:layout_marginRight="2dp"
                     android:layout_marginBottom="2dp"
@@ -191,21 +191,21 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/textView710"
+                    android:id="@+id/t2extView710"
                     style="@style/GridViewText"
                     android:layout_marginLeft="2dp"
                     android:layout_marginBottom="2dp"
                     android:text="恒压输出" />
 
                 <TextView
-                    android:id="@+id/textView711"
+                    android:id="@+id/t2extView711"
                     style="@style/GridViewText"
                     android:layout_marginRight="2dp"
                     android:layout_marginBottom="2dp"
                     android:text="1.0 V" />
 
                 <TextView
-                    android:id="@+id/textView7111"
+                    android:id="@+id/t2extView7111"
                     style="@style/GridViewText"
                     android:layout_marginRight="2dp"
                     android:layout_marginBottom="2dp"
@@ -217,21 +217,21 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/textView710"
+                    android:id="@+id/t1extView710"
                     style="@style/GridViewText"
                     android:layout_marginLeft="2dp"
                     android:layout_marginBottom="2dp"
                     android:text="阻抗状态" />
 
                 <TextView
-                    android:id="@+id/textView711"
+                    android:id="@+id/t1extView711"
                     style="@style/GridViewText"
                     android:layout_marginRight="2dp"
                     android:layout_marginBottom="2dp"
                     android:text=">100 kΩ" />
 
                 <TextView
-                    android:id="@+id/textView7111"
+                    android:id="@+id/t1extView7111"
                     style="@style/GridViewText"
                     android:layout_marginRight="2dp"
                     android:layout_marginBottom="2dp"

@@ -1,10 +1,13 @@
 package com.example.administrator.new_ptns.custom_item;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.res.TypedArray;
+import android.support.v7.app.AlertDialog;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -16,7 +19,7 @@ import com.example.administrator.new_ptns.R;
  * Created by tianxiying on 2018/3/1.
  */
 
-public class CustomItemA1 extends LinearLayout {
+public class CustomItemA3p1 extends LinearLayout {
     private Context mContext;
     private View mView;
     private ImageView icon;
@@ -26,8 +29,10 @@ public class CustomItemA1 extends LinearLayout {
     private String titleText;
     private String titleText2;
     private int iconImgId;
+    public String[] datalist = null;
     public static final int NO_LINE = 0;
-
+    public String title = "";
+    Button btn1;
     public int getIconImgId() {
         return iconImgId;
     }
@@ -50,14 +55,6 @@ public class CustomItemA1 extends LinearLayout {
         }
     }
 
-    public void setTextMode(){
-        txt2.setEnabled(false);
-    }
-
-    public void setEditMode(){
-        txt2.setEnabled(true);
-    }
-
     public void setTitleText2(String titleText) {
         if (titleText != null) {
             this.titleText2 = titleText;
@@ -65,47 +62,58 @@ public class CustomItemA1 extends LinearLayout {
         }
     }
 
-    public void setTitleText3(String titleText) {
-        if (titleText != null) {
-            txt2.setText(titleText);
-        }
+
+
+
+    public void setDataList(String title1,String[] d1){
+        datalist = d1;
+        title = title1;
     }
 
 
-
-
-
-
-
-    public CustomItemA1(Context context) {
+    public CustomItemA3p1(Context context) {
         this(context, null);
     }
 
-    public CustomItemA1(Context context, AttributeSet attrs) {
+    public CustomItemA3p1(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public CustomItemA1(Context context, AttributeSet attrs, int defStyleAttr) {
+    public CustomItemA3p1(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context, attrs);
     }
 
-    private void init(Context context, AttributeSet attrs) {
+    private void init(final Context context, AttributeSet attrs) {
         mContext = context;
         LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        mView = inflater.inflate(R.layout.custom_item_a1, this, true);
+        mView = inflater.inflate(R.layout.custom_item_a3p1, this, true);
         txt = (TextView) mView.findViewById(R.id.textView27);
-        txt2 = (TextView) mView.findViewById(R.id.et_1);
+        btn1 = mView.findViewById(R.id.button39);
         TypedArray a = mContext.obtainStyledAttributes(attrs, R.styleable.CustomItem1Attr);
-        setTextMode();
         setTitleText(a.getString(R.styleable.CustomItem1Attr_txt1));
-        setTitleText2(a.getString(R.styleable.CustomItem1Attr_txt2));
-        setTitleText3(a.getString(R.styleable.CustomItem1Attr_txt3));
-        if(a.getBoolean(R.styleable.CustomItem1Attr_bool1,true)){
-            setEditMode();
-        }else{
-            setTextMode();
-        }
+        btn1.setText((a.getString(R.styleable.CustomItem1Attr_btn1)));
+        this.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(title==null||datalist==null||datalist.length==0){
+                    return;
+                }
+                final Context c1 = context;
+                AlertDialog.Builder builder = new AlertDialog.Builder(c1);
+                builder.setTitle(title);
+                builder.setCancelable(true);
+                builder.setIcon(R.mipmap.ic_launcher)
+                        .setItems(datalist, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                setTitleText(datalist[which]);
+                            }
+                        }).create()
+                        .show();
+
+            }
+        });
     }
 
 

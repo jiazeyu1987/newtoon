@@ -19,6 +19,7 @@
         app:txt3="未连接" />
 
     <com.example.administrator.new_ptns.custom_item.CustomItemA1
+        android:id="@+id/customItemA111"
         android:layout_width="wrap_content"
         android:layout_height="53dp"
         android:layout_marginStart="32dp"
@@ -59,15 +60,6 @@
         app:txt1="设备连接">
 
     </com.example.administrator.new_ptns.custom_item.CustomItem6>
-
-    <Button
-        android:id="@+id/button21"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:text="请扫描获取合同信息"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <com.example.administrator.new_ptns.custom_item.CustomItem6
         android:id="@+id/customItem617"
@@ -133,5 +125,14 @@
         app:layout_constraintBottom_toBottomOf="@+id/customItemA1119"
         app:layout_constraintStart_toEndOf="@+id/customItemA1119"
         app:layout_constraintTop_toTopOf="@+id/customItemA1119" />
+
+    <Button
+        android:id="@+id/button35"
+        style="@style/RoundRectButton2"
+        android:layout_marginTop="16dp"
+        android:text="进入模块"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/customItemA111" />
 
 </android.support.constraint.ConstraintLayout>
