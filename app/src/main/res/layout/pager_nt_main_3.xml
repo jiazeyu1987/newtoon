@@ -3,16 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="@dimen/pager_content_width"
-    android:layout_height="match_parent"
+    android:layout_height="700dp"
     android:focusable="true"
-    android:focusableInTouchMode="true" >
+    android:focusableInTouchMode="true">
 
     <com.example.administrator.new_ptns.custom_item.CustomItemA1
         android:id="@+id/customItemA1119"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="@+id/customItem617"
         app:layout_constraintTop_toBottomOf="@+id/customItem67"
         app:txt1="设备连接："
@@ -42,7 +41,7 @@
         android:id="@+id/customItem627"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintStart_toStartOf="@+id/customItem67"
         app:layout_constraintTop_toBottomOf="@+id/customItemA1119"
         app:txt1="设备信息">
@@ -65,7 +64,7 @@
         android:id="@+id/customItem617"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintStart_toStartOf="@+id/customItem67"
         app:layout_constraintTop_toBottomOf="@+id/customItemA149"
         app:txt1="患者信息">
@@ -77,7 +76,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="@+id/customItem617"
         app:layout_constraintTop_toBottomOf="@+id/customItem627"
         app:txt1="刺激器序列号："
@@ -102,16 +100,16 @@
         app:layout_constraintTop_toBottomOf="@+id/customItemA139"
         app:txt1="阻抗状态："
         app:txt3="王二小" />
+
     <com.example.administrator.new_ptns.custom_item.CustomItemA1
         android:id="@+id/customItemA17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="@+id/customItem617"
         app:layout_constraintTop_toBottomOf="@+id/customItem617"
-        app:txt3="王二小"
-        app:txt1="姓名:" >
+        app:txt1="姓名:"
+        app:txt3="王二小">
 
     </com.example.administrator.new_ptns.custom_item.CustomItemA1>
 
@@ -129,7 +127,6 @@
     <Button
         android:id="@+id/button35"
         style="@style/RoundRectButton2"
-        android:layout_marginTop="16dp"
         android:text="进入模块"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

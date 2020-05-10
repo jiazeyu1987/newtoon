@@ -7,53 +7,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.support.constraint.ConstraintLayout
-        android:id="@+id/aci_top"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/textView88"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="2020年4月22日    星期三"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textView89"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="50dp"
-            android:text="注销"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textView90"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="50dp"
-            android:text="王小二"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/textView89"
-            app:layout_constraintTop_toTopOf="parent" />
-    </android.support.constraint.ConstraintLayout>
+    <include
+        android:id="@+id/include2"
+        layout="@layout/newtoon_nt_title3"></include>
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/aci_00"
         android:layout_width="260dp"
-        android:layout_height="770dp"
+        android:layout_height="700dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/aci_top">
+        app:layout_constraintTop_toBottomOf="@+id/include2">
 
         <Button
             android:id="@+id/button29"
@@ -95,9 +58,16 @@
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/aci_12"
-        android:layout_width="1100dp"
-        android:layout_height="770dp"
+        android:layout_width="1020dp"
+        android:layout_height="700dp"
         app:layout_constraintStart_toEndOf="@+id/aci_00"
-        app:layout_constraintTop_toBottomOf="@+id/aci_top" />
+        app:layout_constraintTop_toBottomOf="@+id/include2" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+
+    </android.support.constraint.ConstraintLayout>
 
 </android.support.constraint.ConstraintLayout>

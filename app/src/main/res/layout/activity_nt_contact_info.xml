@@ -31,31 +31,33 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"></com.example.administrator.new_ptns.custom_item.CustomItem6>
+
         <com.example.administrator.new_ptns.custom_item.CustomItemA1
+            android:id="@+id/ani_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@+id/customItemA14"
+            app:layout_constraintBottom_toTopOf="@+id/ani_phone_number"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:txt1="姓名："
             app:txt2="请输入姓名" />
 
         <com.example.administrator.new_ptns.custom_item.CustomItemA1
-            android:id="@+id/customItemA13"
+            android:id="@+id/ani_idcard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@+id/customItemA12"
+            app:layout_constraintBottom_toTopOf="@+id/ani_address"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:txt1="身份证号："
             app:txt2="请输入身份证号" />
 
         <com.example.administrator.new_ptns.custom_item.CustomItemA1
-            android:id="@+id/customItemA14"
+            android:id="@+id/ani_phone_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="48dp"
-            app:layout_constraintBottom_toTopOf="@+id/customItemA12"
+            app:layout_constraintBottom_toTopOf="@+id/ani_address"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
@@ -63,17 +65,17 @@
             app:txt2="请输入手机号码" />
 
         <com.example.administrator.new_ptns.custom_item.CustomItemA1
-            android:id="@+id/customItemA12"
+            android:id="@+id/ani_address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@+id/customItemA1"
+            app:layout_constraintBottom_toTopOf="@+id/ani_detailaddress"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:txt1="家庭住址："
             app:txt2="请选择城市" />
 
         <com.example.administrator.new_ptns.custom_item.CustomItemA1
-            android:id="@+id/customItemA1"
+            android:id="@+id/ani_detailaddress"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -94,12 +96,12 @@
         app:layout_constraintTop_toTopOf="@+id/aci_00" >
 
         <com.example.administrator.new_ptns.custom_item.CustomItemA2
-            android:id="@+id/customItemA27"
+            android:id="@+id/ani_control_software"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="@+id/customItem62"
             app:layout_constraintStart_toStartOf="@+id/customItem62"
-            app:layout_constraintTop_toBottomOf="@+id/customItemA25"
+            app:layout_constraintTop_toBottomOf="@+id/ani_electrode2"
             app:txt1="患者程控软件：" />
 
         <com.example.administrator.new_ptns.custom_item.CustomItem6
@@ -112,7 +114,7 @@
             app:txt1="产品信息"></com.example.administrator.new_ptns.custom_item.CustomItem6>
 
         <com.example.administrator.new_ptns.custom_item.CustomItemA2
-            android:id="@+id/customItemA2"
+            android:id="@+id/ani_electrode1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="@+id/customItem62"
@@ -121,20 +123,21 @@
             app:txt1="电极一：" />
 
         <com.example.administrator.new_ptns.custom_item.CustomItemA2
+            android:id="@+id/ani_charging_coil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="@+id/customItem62"
             app:layout_constraintStart_toStartOf="@+id/customItem62"
-            app:layout_constraintTop_toBottomOf="@+id/customItemA27"
+            app:layout_constraintTop_toBottomOf="@+id/ani_control_software"
             app:txt1="充电线圈：" />
 
         <com.example.administrator.new_ptns.custom_item.CustomItemA2
-            android:id="@+id/customItemA25"
+            android:id="@+id/ani_electrode2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="@+id/customItem62"
             app:layout_constraintStart_toStartOf="@+id/customItem62"
-            app:layout_constraintTop_toBottomOf="@+id/customItemA2"
+            app:layout_constraintTop_toBottomOf="@+id/ani_electrode1"
             app:txt1="电极二：" />
 
     </android.support.constraint.ConstraintLayout>
@@ -147,13 +150,14 @@
         app:layout_constraintTop_toTopOf="@+id/aci_01" >
 
         <com.example.administrator.new_ptns.custom_item.CustomItemA1
+            android:id="@+id/ani_extra_info"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:txt1 = "备注"
-            app:txt2 = "限40字以内"
             app:layout_constraintEnd_toEndOf="@+id/customItem65"
             app:layout_constraintStart_toStartOf="@+id/customItem65"
-            app:layout_constraintTop_toBottomOf="@+id/customItem65"></com.example.administrator.new_ptns.custom_item.CustomItemA1>
+            app:layout_constraintTop_toBottomOf="@+id/customItem65"
+            app:txt1="备注"
+            app:txt2="限40字以内"></com.example.administrator.new_ptns.custom_item.CustomItemA1>
 
         <com.example.administrator.new_ptns.custom_item.CustomItem6
             android:id="@+id/customItem65"
@@ -174,26 +178,26 @@
         app:layout_constraintTop_toBottomOf="@+id/aci_00" >
 
         <com.example.administrator.new_ptns.custom_item.CustomItemA2
-            android:id="@+id/customItemA31"
+            android:id="@+id/ani_operation_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="@+id/customItem63"
             app:layout_constraintStart_toStartOf="@+id/customItem63"
-            app:layout_constraintTop_toBottomOf="@+id/customItemA29"
+            app:layout_constraintTop_toBottomOf="@+id/ani_operation_doctor"
             app:txt1="计划手术日期："></com.example.administrator.new_ptns.custom_item.CustomItemA2>
 
         <com.example.administrator.new_ptns.custom_item.CustomItemA2
-            android:id="@+id/customItemA29"
+            android:id="@+id/ani_operation_doctor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="@+id/customItem63"
             app:layout_constraintStart_toStartOf="@+id/customItem63"
-            app:layout_constraintTop_toBottomOf="@+id/customItemA210"
+            app:layout_constraintTop_toBottomOf="@+id/ani_department"
             app:txt1="手术医生："></com.example.administrator.new_ptns.custom_item.CustomItemA2>
 
 
         <com.example.administrator.new_ptns.custom_item.CustomItemA2
-            android:id="@+id/customItemA28"
+            android:id="@+id/ani_operation_machanism"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:txt1="手术机构："
@@ -202,12 +206,12 @@
             app:layout_constraintTop_toBottomOf="@+id/customItem63"></com.example.administrator.new_ptns.custom_item.CustomItemA2>
 
         <com.example.administrator.new_ptns.custom_item.CustomItemA2
-            android:id="@+id/customItemA210"
+            android:id="@+id/ani_department"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="@+id/customItem63"
             app:layout_constraintStart_toStartOf="@+id/customItem63"
-            app:layout_constraintTop_toBottomOf="@+id/customItemA28"
+            app:layout_constraintTop_toBottomOf="@+id/ani_operation_machanism"
             app:txt1="科室："></com.example.administrator.new_ptns.custom_item.CustomItemA2>
 
         <com.example.administrator.new_ptns.custom_item.CustomItem6
@@ -228,17 +232,17 @@
         app:layout_constraintTop_toBottomOf="@+id/aci_01" >
 
         <com.example.administrator.new_ptns.custom_item.CustomItemA1
-            android:id="@+id/customItemA16"
+            android:id="@+id/ani_relative"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/customItemA15"
+            app:layout_constraintTop_toBottomOf="@+id/ani_relative_name"
             app:txt1="关系："
             app:txt2="请输入亲属关系" />
 
         <com.example.administrator.new_ptns.custom_item.CustomItemA1
-            android:id="@+id/customItemA15"
+            android:id="@+id/ani_relative_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
@@ -248,11 +252,12 @@
             app:txt2="请输入姓名" />
 
         <com.example.administrator.new_ptns.custom_item.CustomItemA1
+            android:id="@+id/ani_contact_phone_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/customItemA16"
+            app:layout_constraintTop_toBottomOf="@+id/ani_relative"
             app:txt1="联系方式："
             app:txt2="请输入手机号码" />
 
@@ -274,12 +279,13 @@
         app:layout_constraintTop_toBottomOf="@+id/aci_02" >
 
         <com.example.administrator.new_ptns.custom_item.CustomItemA1
+            android:id="@+id/ani_adviser_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:txt1="姓名："
             app:layout_constraintEnd_toEndOf="@+id/customItem64"
             app:layout_constraintStart_toStartOf="@+id/customItem64"
-            app:layout_constraintTop_toBottomOf="@+id/customItem64"></com.example.administrator.new_ptns.custom_item.CustomItemA1>
+            app:layout_constraintTop_toBottomOf="@+id/customItem64"
+            app:txt1="姓名："></com.example.administrator.new_ptns.custom_item.CustomItemA1>
 
         <com.example.administrator.new_ptns.custom_item.CustomItem6
             android:id="@+id/customItem64"
@@ -299,7 +305,7 @@
         app:layout_constraintStart_toStartOf="parent" >
 
         <Button
-            android:id="@+id/button9"
+            android:id="@+id/ani_btn_shutdown"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:background="@drawable/rect_blue"

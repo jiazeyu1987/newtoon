@@ -345,7 +345,7 @@
                             android:text="幅度" />
 
                         <TextView
-                            android:id="@+id/t3extView711"
+                            android:id="@+id/apt_current_value"
                             style="@style/GridViewText3"
                             android:layout_width="200dp"
                             android:layout_marginRight="2dp"
@@ -353,7 +353,7 @@
                             android:text="0.5 mA" />
 
                         <TextView
-                            android:id="@+id/t3extView7111"
+                            android:id="@+id/apt_current_state"
                             style="@style/GridViewText3"
                             android:layout_marginRight="2dp"
                             android:layout_marginBottom="2dp"
@@ -372,14 +372,14 @@
                             android:text="频率" />
 
                         <TextView
-                            android:id="@+id/t2extView711"
+                            android:id="@+id/apt_voltage_value"
                             style="@style/GridViewText3"
                             android:layout_marginRight="2dp"
                             android:layout_marginBottom="2dp"
                             android:text="1.0 V" />
 
                         <TextView
-                            android:id="@+id/t2extView7111"
+                            android:id="@+id/apt_voltage_state"
                             style="@style/GridViewText3"
                             android:layout_marginRight="2dp"
                             android:layout_marginBottom="2dp"
@@ -398,14 +398,14 @@
                             android:text="脉宽" />
 
                         <TextView
-                            android:id="@+id/t1extView711"
+                            android:id="@+id/apt_impedance_value"
                             style="@style/GridViewText3"
                             android:layout_marginRight="2dp"
                             android:layout_marginBottom="2dp"
                             android:text=">100 kΩ" />
 
                         <TextView
-                            android:id="@+id/t1extView7111"
+                            android:id="@+id/apt_impedance_state"
                             style="@style/GridViewText3"
                             android:layout_marginRight="2dp"
                             android:layout_marginBottom="2dp"

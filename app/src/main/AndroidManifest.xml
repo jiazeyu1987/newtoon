@@ -29,19 +29,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity
-            android:name=".pager.user.DataExportActivity"
-            android:label="@string/title_activity_data_export"
-            android:theme="@style/AppTheme.NoActionBar.NoActionBar"></activity>
+        <activity android:name=".pager.shuqian.NewContactActivity"></activity>
         <activity android:name=".CameraActivity" />
         <activity android:name=".chart.ChartManagerActivity" />
-        <activity
-            android:name=".pager.timing.NewTimingActivity"
-            android:label="@string/title_activity_add_timing"
-            android:theme="@style/AppTheme.NoActionBar.NoActionBar" />
-        <activity
-            android:name=".pager.template.NewTemplateActivity"
-            android:theme="@style/AppTheme.NoActionBar.NoActionBar" />
+        <activity android:name=".pager.shuqian.PulseTestingActivity"></activity>
+
         <activity
             android:name=".chart.chart_item.unit.LineChartActivity1"
             android:theme="@style/AppTheme.NoActionBar.NoActionBar" />

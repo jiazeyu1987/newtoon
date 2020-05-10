@@ -107,14 +107,14 @@
                             android:text="通道配置" />
 
                         <TextView
-                            android:id="@+id/t3extView711"
+                            android:id="@+id/apt_current_value"
                             style="@style/GridViewText"
                             android:layout_marginRight="2dp"
                             android:layout_marginBottom="2dp"
                             android:text="阻抗" />
 
                         <TextView
-                            android:id="@+id/t3extView7111"
+                            android:id="@+id/apt_current_state"
                             style="@style/GridViewText"
                             android:layout_marginRight="2dp"
                             android:layout_marginBottom="2dp"
@@ -147,14 +147,14 @@
                             android:text="恒压输出" />
 
                         <TextView
-                            android:id="@+id/t2extView711"
+                            android:id="@+id/apt_voltage_value"
                             style="@style/GridViewText"
                             android:layout_marginRight="2dp"
                             android:layout_marginBottom="2dp"
                             android:text="1.0 V" />
 
                         <TextView
-                            android:id="@+id/t2extView7111"
+                            android:id="@+id/apt_voltage_state"
                             style="@style/GridViewText"
                             android:layout_marginRight="2dp"
                             android:layout_marginBottom="2dp"
@@ -187,14 +187,14 @@
                             android:text="电池电压" />
 
                         <TextView
-                            android:id="@+id/textView617"
+                            android:id="@+id/apt_battery_voltage_value"
                             style="@style/GridViewText"
                             android:layout_marginLeft="2dp"
                             android:layout_marginTop="2dp"
                             android:text="4.0 V" />
 
                         <TextView
-                            android:id="@+id/textView613"
+                            android:id="@+id/apt_battery_voltage_state"
                             style="@style/GridViewText"
                             android:layout_marginTop="2dp"
                             android:layout_marginRight="2dp"

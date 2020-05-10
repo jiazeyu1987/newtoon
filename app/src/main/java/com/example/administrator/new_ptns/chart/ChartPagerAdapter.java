@@ -9,10 +9,6 @@ import android.view.ViewGroup;
 import com.example.administrator.new_ptns.MainActivity;
 import com.example.administrator.new_ptns.chart.pager.PagerLong;
 import com.example.administrator.new_ptns.chart.pager.PagerNumber;
-import com.example.administrator.new_ptns.pager.template.PagerTemplate;
-import com.example.administrator.new_ptns.pager.timing.PagerTiming;
-import com.example.administrator.new_ptns.pager.treatment.PagerTreatment;
-import com.example.administrator.new_ptns.pager.user.PagerUser;
 
 import java.util.List;
 

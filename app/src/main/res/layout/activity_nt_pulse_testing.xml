@@ -13,7 +13,7 @@
         android:layout_height="150dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-        <include layout="@layout/newtoon_nt_title"></include>
+        <include layout="@layout/newtoon_nt_title3"></include>
 
     </android.support.constraint.ConstraintLayout>
 
@@ -54,7 +54,7 @@
                     android:text="电极一" />
 
                 <TextView
-                    android:id="@+id/textView63"
+                    android:id="@+id/apt_electrode1_value"
                     android:layout_marginTop="2dp"
                     android:layout_marginRight="2dp"
                     style="@style/GridViewText"
@@ -74,7 +74,7 @@
                     android:text="电极二" />
 
                 <TextView
-                    android:id="@+id/textView69"
+                    android:id="@+id/apt_electrode2_value"
                     style="@style/GridViewText"
                     android:layout_marginRight="2dp"
                     android:text="/" />
@@ -92,7 +92,7 @@
                     android:text="合同号" />
 
                 <TextView
-                    android:id="@+id/textView71"
+                    android:id="@+id/apt_contact_number_value"
                     android:layout_marginBottom="2dp"
                     android:layout_marginRight="2dp"
                     style="@style/GridViewText"
@@ -124,7 +124,7 @@
             app:txt1="手术信息"></com.example.administrator.new_ptns.custom_item.CustomItem6>
 
         <TextView
-            android:id="@+id/textView56"
+            android:id="@+id/apt_operation_info"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
@@ -172,14 +172,14 @@
                     android:text="恒流输出" />
 
                 <TextView
-                    android:id="@+id/t3extView711"
+                    android:id="@+id/apt_current_value"
                     style="@style/GridViewText"
                     android:layout_marginRight="2dp"
                     android:layout_marginBottom="2dp"
                     android:text="0.5 mA" />
 
                 <TextView
-                    android:id="@+id/t3extView7111"
+                    android:id="@+id/apt_current_state"
                     style="@style/GridViewText"
                     android:layout_marginRight="2dp"
                     android:layout_marginBottom="2dp"
@@ -198,14 +198,14 @@
                     android:text="恒压输出" />
 
                 <TextView
-                    android:id="@+id/t2extView711"
+                    android:id="@+id/apt_voltage_value"
                     style="@style/GridViewText"
                     android:layout_marginRight="2dp"
                     android:layout_marginBottom="2dp"
                     android:text="1.0 V" />
 
                 <TextView
-                    android:id="@+id/t2extView7111"
+                    android:id="@+id/apt_voltage_state"
                     style="@style/GridViewText"
                     android:layout_marginRight="2dp"
                     android:layout_marginBottom="2dp"
@@ -224,14 +224,14 @@
                     android:text="阻抗状态" />
 
                 <TextView
-                    android:id="@+id/t1extView711"
+                    android:id="@+id/apt_impedance_value"
                     style="@style/GridViewText"
                     android:layout_marginRight="2dp"
                     android:layout_marginBottom="2dp"
                     android:text=">100 kΩ" />
 
                 <TextView
-                    android:id="@+id/t1extView7111"
+                    android:id="@+id/apt_impedance_state"
                     style="@style/GridViewText"
                     android:layout_marginRight="2dp"
                     android:layout_marginBottom="2dp"
@@ -245,19 +245,19 @@
                 <TextView
                     android:id="@+id/textView59"
                     style="@style/GridViewText"
-                    android:layout_marginTop="2dp"
-                    android:layout_marginRight="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="2dp"
                     android:text="电池电压" />
 
                 <TextView
-                    android:id="@+id/textView617"
+                    android:id="@+id/apt_battery_voltage_value"
                     style="@style/GridViewText"
                     android:layout_marginLeft="2dp"
                     android:layout_marginTop="2dp"
                     android:text="4.0 V" />
 
                 <TextView
-                    android:id="@+id/textView613"
+                    android:id="@+id/apt_battery_voltage_state"
                     style="@style/GridViewText"
                     android:layout_marginTop="2dp"
                     android:layout_marginRight="2dp"
@@ -276,13 +276,13 @@
                     android:text="电池容量" />
 
                 <TextView
-                    android:id="@+id/textView619"
+                    android:id="@+id/apt_battery_number_value"
                     style="@style/GridViewText"
                     android:layout_marginRight="2dp"
                     android:text="95%" />
 
                 <TextView
-                    android:id="@+id/textView6191"
+                    android:id="@+id/apt_battery_number_state"
                     style="@style/GridViewText"
                     android:layout_marginRight="2dp"
                     android:text="正常" />
@@ -300,7 +300,7 @@
         app:layout_constraintStart_toStartOf="parent" >
 
         <Button
-            android:id="@+id/button10"
+            android:id="@+id/apt_btn_testing"
             style="@style/RoundRectButton.Active"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
@@ -312,7 +312,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/button9"
+            android:id="@+id/ani_btn_shutdown"
             style="@style/RoundRectButton.Active"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
