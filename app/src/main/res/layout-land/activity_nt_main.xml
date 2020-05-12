@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/include2"
+        layout="@layout/newtoon_nt_title3"></include>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/aci_00"
+        android:layout_width="260dp"
+        android:layout_height="700dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include2">
+
+        <Button
+            android:id="@+id/button29"
+            style="@style/MainFieldButton"
+            android:layout_marginTop="30dp"
+            android:text="术中监测"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button28" />
+
+        <Button
+            android:id="@+id/button28"
+            style="@style/MainFieldButton"
+            android:layout_marginTop="100dp"
+            android:text="术前准备"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button27"
+            style="@style/MainFieldButton"
+            android:layout_marginTop="30dp"
+            android:text="患者信息"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button26" />
+
+        <Button
+            android:id="@+id/button26"
+            style="@style/MainFieldButton"
+            android:layout_marginTop="30dp"
+            android:text="日常调试"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button29" />
+    </android.support.constraint.ConstraintLayout>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/aci_12"
+        android:layout_width="1020dp"
+        android:layout_height="700dp"
+        app:layout_constraintStart_toEndOf="@+id/aci_00"
+        app:layout_constraintTop_toBottomOf="@+id/include2" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

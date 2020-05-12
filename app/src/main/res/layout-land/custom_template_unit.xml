@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dp">
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#F0F0F0"
+        android:orientation="horizontal"></LinearLayout>
+
+    <ImageView
+        android:id="@+id/saa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="331dp"
+        android:layout_marginBottom="53dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        app:srcCompat="@mipmap/fa" />
+
+    <ImageView
+        android:id="@+id/saa2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="198dp"
+        android:layout_marginEnd="105dp"
+        android:layout_marginBottom="53dp"
+        app:layout_constraintBottom_toBottomOf="@+id/saa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/saa"
+        app:layout_constraintTop_toTopOf="@+id/saa"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@mipmap/minus" />
+
+    <ImageView
+        android:id="@+id/saa3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="283dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="53dp"
+        app:layout_constraintBottom_toBottomOf="@+id/saa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/saa"
+        app:layout_constraintTop_toTopOf="@+id/saa"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@mipmap/plus" />
+
+    <TextView
+        android:id="@+id/ti_tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/ping"
+        android:text="治疗时间"
+        android:textColor="#333333"
+        app:layout_constraintBottom_toBottomOf="@+id/saa"
+        app:layout_constraintStart_toEndOf="@+id/saa"
+        app:layout_constraintTop_toTopOf="@+id/saa" />
+
+    <TextView
+        android:id="@+id/ti_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:fontFamily="@font/ping"
+        android:text="(分钟)"
+        android:textColor="#999999"
+        app:layout_constraintBottom_toBottomOf="@+id/saa"
+        app:layout_constraintStart_toEndOf="@+id/ti_tv1"
+        app:layout_constraintTop_toTopOf="@+id/saa"
+        app:layout_constraintVertical_bias="0.555" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ping"
+        android:gravity="center"
+        android:text="5"
+        android:textColor="#333333"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/saa2"
+        app:layout_constraintEnd_toStartOf="@+id/saa3"
+        app:layout_constraintStart_toEndOf="@+id/saa2"
+        app:layout_constraintTop_toTopOf="@+id/saa2" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/saa3"
+        app:layout_constraintStart_toStartOf="@+id/saa" />
+</android.support.constraint.ConstraintLayout>

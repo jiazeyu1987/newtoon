@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pager.timing.NewTimingActivity">
+
+    <Button
+        android:id="@+id/button15"
+        style="@style/RoundRectButton.Active"
+        android:layout_width="143dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:text="保存"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.meetsl.scardview.SCardView
+        android:id="@+id/SCardView3"
+        android:layout_width="match_parent"
+        android:layout_height="122dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.kyleduo.switchbutton.SwitchButton
+                android:id="@+id/switch1"
+                android:layout_width="51dp"
+                android:layout_height="31dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                app:kswAnimationDuration="300"
+                app:kswBackDrawable="@drawable/ios_back_drawable"
+                app:kswThumbColor="#ffffff"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView27"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/date2" />
+
+            <TextView
+                android:id="@+id/textView42"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/ping"
+                android:text="重复"
+                android:textColor="#333333"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView27"
+                app:layout_constraintStart_toEndOf="@+id/imageView27"
+                app:layout_constraintTop_toTopOf="@+id/imageView27" />
+
+            <Button
+                android:id="@+id/button_day1"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/round1"
+                android:text="一"
+                android:textColor="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/imageView27" />
+
+            <Button
+                android:id="@+id/button_day2"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/round1"
+                android:text="二"
+                android:textColor="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/button_day1" />
+
+            <Button
+                android:id="@+id/button_day3"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/round1"
+                android:text="三"
+                android:textColor="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/button_day2" />
+
+            <Button
+                android:id="@+id/button_day4"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/round1"
+                android:text="四"
+                android:textColor="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/button_day3" />
+
+            <Button
+                android:id="@+id/button_day5"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/round1"
+                android:text="五"
+                android:textColor="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/button_day4" />
+
+            <Button
+                android:id="@+id/button_day6"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/round1"
+                android:text="六"
+                android:textColor="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/button_day5" />
+
+            <Button
+                android:id="@+id/button_day7"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/round1"
+                android:text="日"
+                android:textColor="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/button_day6" />
+
+        </android.support.constraint.ConstraintLayout>
+    </com.meetsl.scardview.SCardView>
+
+    <com.meetsl.scardview.SCardView
+        android:id="@+id/dsfsdf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SCardView3">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TimePicker
+                android:id="@+id/timePicker4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:timePickerMode="spinner"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></TimePicker>
+
+            <TextView
+                android:id="@+id/textView43"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/ping"
+                android:text="选择时间"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/timePicker4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView46"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/ping"
+                android:text="5:00 PM"
+                android:textColor="#333333"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/timePicker4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+    </com.meetsl.scardview.SCardView>
+
+    <Button
+        android:id="@+id/button15111"
+        style="@style/RoundRectButton.Active"
+        android:layout_width="143dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:text="确认修改"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/button16"
+        style="@style/RoundRectButton.DisActive"
+        android:layout_width="143dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="20dp"
+        android:text="删除闹钟"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView45"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/ping"
+        android:text="设定时间"
+        android:textColor="#333333"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/SCardView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>
