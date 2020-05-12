@@ -32,6 +32,7 @@ public class CustomItemA2 extends LinearLayout {
     public String[] datalist = null;
     public static final int NO_LINE = 0;
     public String title = "";
+    private boolean clickable = true;
     public int getIconImgId() {
         return iconImgId;
     }
@@ -47,6 +48,7 @@ public class CustomItemA2 extends LinearLayout {
         return titleText;
     }
 
+
     public void setTitleText(String titleText) {
         if (titleText != null) {
             this.titleText = titleText;
@@ -59,6 +61,15 @@ public class CustomItemA2 extends LinearLayout {
             this.titleText2 = titleText;
             txt2.setHint(titleText);
         }
+    }
+
+    public String getTitleText3() {
+        return titleText2;
+    }
+
+    public void setTitleText3(String titleText) {
+        txt.setText(titleText);
+        clickable  = false;
     }
 
 
@@ -94,6 +105,9 @@ public class CustomItemA2 extends LinearLayout {
             @Override
             public void onClick(View view) {
                 if(title==null||datalist==null||datalist.length==0){
+                    return;
+                }
+                if(!clickable){
                     return;
                 }
                 final Context c1 = context;

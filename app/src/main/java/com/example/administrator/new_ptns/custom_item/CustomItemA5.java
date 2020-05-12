@@ -7,11 +7,14 @@ import android.support.v7.app.AlertDialog;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.administrator.new_ptns.R;
+
+import java.text.NumberFormat;
 
 
 /**
@@ -33,6 +36,12 @@ public class CustomItemA5 extends LinearLayout {
     public String[] datalist = null;
     public static final int NO_LINE = 0;
     public String title = "";
+    Button btn1,btn2,btn3,btn4;
+    public float value = 0;
+    public float min_value = 0;
+    public float max_value = 0;
+    public float step_value_min = 0;
+    public float step_value_max = 0;
     public int getIconImgId() {
         return iconImgId;
     }
@@ -91,6 +100,14 @@ public class CustomItemA5 extends LinearLayout {
         init(context, attrs);
     }
 
+    public void set_value(float d1){
+        value = d1;
+
+
+        value = Math.round((d1*100))/100f;
+        txt2.setText(value+"");
+    }
+
     private void init(final Context context, AttributeSet attrs) {
         mContext = context;
         LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -102,8 +119,70 @@ public class CustomItemA5 extends LinearLayout {
         setTitleText(a.getString(R.styleable.CustomItem1Attr_txt1));
         setTitleText2(a.getString(R.styleable.CustomItem1Attr_txt2));
         setTitleText3(a.getString(R.styleable.CustomItem1Attr_txt3));
+        value = a.getFloat(R.styleable.CustomItem1Attr_float0,0);
+        min_value = a.getFloat(R.styleable.CustomItem1Attr_float1,-1);
+        max_value = a.getFloat(R.styleable.CustomItem1Attr_float2,-1);
+        step_value_min = a.getFloat(R.styleable.CustomItem1Attr_float3,0);
+        step_value_max = a.getFloat(R.styleable.CustomItem1Attr_float4,0);
+        btn1 = mView.findViewById(R.id.button12);
+        btn2 = mView.findViewById(R.id.button13);
+        btn3 = mView.findViewById(R.id.button14);
+        btn4 = mView.findViewById(R.id.button18);
+        btn1.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(value-step_value_max<min_value){
+                    return;
+                }
+                else{
+                    set_value(value-step_value_max);
+                }
+            }
+        });
+        btn2.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(value-step_value_min<min_value){
+                    return;
+                }
+                else{
+                    set_value(value-step_value_min);
+                }
+            }
+        });
+        btn3.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(value+step_value_min>max_value){
+                    return;
+                }
+                else{
+                    set_value(value+step_value_min);
+                }
+            }
+        });
+        btn4.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(value+step_value_max>max_value){
+                    return;
+                }
+                else{
+                    set_value(value+step_value_max);
+                }
+            }
+        });
     }
 
+
+    public void setPara(float default_value,float min_step,float max_step,float min_value1,float max_value1,String danwei){
+        step_value_min = min_step;
+        step_value_max = max_step;
+        set_value(default_value);
+        min_value = min_value1;
+        max_value = max_value1;
+        txt3.setText(danwei);
+    }
 
     public void setViewOnlickListener(OnClickListener onlickListener) {
         this.onClickListener = onlickListener;

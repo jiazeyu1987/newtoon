@@ -11,6 +11,10 @@ import android.widget.TextView;
 
 import com.example.administrator.new_ptns.R;
 
+import java.util.ArrayList;
+
+import butterknife.internal.ListenerClass;
+
 
 /**
  * Created by tianxiying on 2018/3/1.
@@ -31,6 +35,10 @@ public class CustomItemA6 extends LinearLayout {
     public String[] datalist = null;
     public static final int NO_LINE = 0;
     public String title = "";
+    TextView tv_00,tv_01,tv_02,tv_03,tv_04;
+    TextView tv_10,tv_11,tv_12,tv_13,tv_14;
+    TextView tv_20,tv_21,tv_22,tv_23,tv_24;
+    TextView tv_30,tv_31,tv_32,tv_33,tv_34;
     public int getIconImgId() {
         return iconImgId;
     }
@@ -50,6 +58,8 @@ public class CustomItemA6 extends LinearLayout {
         if (titleText != null) {
             this.titleText = titleText;
             txt.setText(titleText);
+        }else{
+            txt.setVisibility(GONE);
         }
     }
 
@@ -57,6 +67,8 @@ public class CustomItemA6 extends LinearLayout {
         if (titleText != null) {
             this.titleText2 = titleText;
             txt2.setText(titleText);
+        }else{
+            txt2.setVisibility(GONE);
         }
     }
 
@@ -92,12 +104,61 @@ public class CustomItemA6 extends LinearLayout {
         TypedArray a = mContext.obtainStyledAttributes(attrs, R.styleable.CustomItem1Attr);
         setTitleText(a.getString(R.styleable.CustomItem1Attr_txt1));
         setTitleText2(a.getString(R.styleable.CustomItem1Attr_txt2));
+        tv_00 = mView.findViewById(R.id.t1extView163);
+        tv_01 = mView.findViewById(R.id.t1extView263);
+        tv_02 = mView.findViewById(R.id.t1extView363);
+        tv_03 = mView.findViewById(R.id.t1extView463);
+        tv_04 = mView.findViewById(R.id.t1extView);
+
+        tv_10 = mView.findViewById(R.id.t2extView163);
+        tv_11 = mView.findViewById(R.id.t2extView263);
+        tv_12 = mView.findViewById(R.id.t2extView363);
+        tv_13 = mView.findViewById(R.id.t2extView463);
+        tv_14 = mView.findViewById(R.id.t2extView);
+
+        tv_20 = mView.findViewById(R.id.t3extView163);
+        tv_21 = mView.findViewById(R.id.t3extView263);
+        tv_22 = mView.findViewById(R.id.t3extView363);
+        tv_23 = mView.findViewById(R.id.t3extView463);
+        tv_24 = mView.findViewById(R.id.t3extView);
+
+        tv_30 = mView.findViewById(R.id.t4extView163);
+        tv_31 = mView.findViewById(R.id.t4extView263);
+        tv_32 = mView.findViewById(R.id.t4extView363);
+        tv_33 = mView.findViewById(R.id.t4extView463);
+        tv_34 = mView.findViewById(R.id.t4extView);
     }
 
 
     public void setViewOnlickListener(OnClickListener onlickListener) {
         this.onClickListener = onlickListener;
         mView.setOnClickListener(onlickListener);
+    }
+
+    public void setValue(ArrayList<String> list1){
+        tv_00.setText(list1.get(0));
+        tv_01.setText(list1.get(1));
+        tv_02.setText(list1.get(2));
+        tv_03.setText(list1.get(3));
+        tv_04.setText(list1.get(4));
+
+        tv_10.setText(list1.get(5));
+        tv_11.setText(list1.get(6));
+        tv_12.setText(list1.get(7));
+        tv_13.setText(list1.get(8));
+        tv_14.setText(list1.get(9));
+
+        tv_20.setText(list1.get(10));
+        tv_21.setText(list1.get(11));
+        tv_22.setText(list1.get(12));
+        tv_23.setText(list1.get(13));
+        tv_24.setText(list1.get(14));
+
+        tv_30.setText(list1.get(15));
+        tv_31.setText(list1.get(16));
+        tv_32.setText(list1.get(17));
+        tv_33.setText(list1.get(18));
+        tv_34.setText(list1.get(19));
     }
 
 }

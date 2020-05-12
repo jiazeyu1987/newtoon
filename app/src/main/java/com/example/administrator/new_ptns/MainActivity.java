@@ -6,14 +6,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 
+import com.blankj.utilcode.util.ToastUtils;
 import com.example.administrator.new_ptns.custom_item.CustomItemA1;
 import com.example.administrator.new_ptns.pager.MyPagerAdapter;
+import com.example.administrator.new_ptns.pager.shuqian.AddressPickTask;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import cn.addapp.pickers.entity.City;
+import cn.addapp.pickers.entity.County;
+import cn.addapp.pickers.entity.Province;
 
 
 public class MainActivity extends BaseActivity {
@@ -99,6 +104,9 @@ public class MainActivity extends BaseActivity {
     private void do_click_debug(){
         set_choosen(debug);
         viewPager.setCurrentItem(2, false);
+
+
+
     }
 
     private void do_click_patient_info(){

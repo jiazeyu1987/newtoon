@@ -79,7 +79,7 @@ public class ChartManagerActivity extends AppCompatActivity {
                 fresh_bottom();
                 tv_number.setTextColor(getResources().getColor(R.color.green1));
                 b_number.setBackgroundColor(getResources().getColor(R.color.green1));
-                myPagerAdapter.pagerNumber.set_mode("number");
+                //myPagerAdapter.pagerNumber.set_mode("number");
             }
         });
 
@@ -89,7 +89,7 @@ public class ChartManagerActivity extends AppCompatActivity {
                 fresh_bottom();
                 tv_long.setTextColor(getResources().getColor(R.color.green1));
                 b_long.setBackgroundColor(getResources().getColor(R.color.green1));
-                myPagerAdapter.pagerNumber.set_mode("long");
+                //myPagerAdapter.pagerNumber.set_mode("long");
             }
         });
 

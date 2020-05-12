@@ -7,8 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.administrator.new_ptns.MainActivity;
-import com.example.administrator.new_ptns.chart.pager.PagerLong;
-import com.example.administrator.new_ptns.chart.pager.PagerNumber;
 
 import java.util.List;
 
@@ -17,8 +15,8 @@ public class ChartPagerAdapter extends PagerAdapter {
     private List<View> viewList;
     private List<Integer> drawableList;
     private Context context;
-    public PagerNumber pagerNumber;
-    public PagerLong pagerLong;
+    //public PagerNumber pagerNumber;
+    //public PagerLong pagerLong;
     public ChartPagerAdapter() {
 
     }
@@ -26,8 +24,8 @@ public class ChartPagerAdapter extends PagerAdapter {
         this.viewList = viewList;
         this.drawableList = drawableList;
         context = ct;
-        pagerNumber = new PagerNumber(ct);
-        pagerLong = new PagerLong(ct);
+        //pagerNumber = new PagerNumber(ct);
+        //pagerLong = new PagerLong(ct);
     }
 
     @Override
@@ -44,12 +42,12 @@ public class ChartPagerAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
         View view = viewList.get(position);
-        if(position==1){
-            pagerLong.init_view(view,"pagerLong");
-        }
-        if(position==0){
-            pagerNumber.init_view(view,"pagerNumber");
-        }
+//        if(position==1){
+//            pagerLong.init_view(view,"pagerLong");
+//        }
+//        if(position==0){
+//            pagerNumber.init_view(view,"pagerNumber");
+//        }
         container.addView(view);
         return view;
     }

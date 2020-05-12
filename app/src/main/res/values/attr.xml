@@ -12,5 +12,16 @@
         <attr name="icon1" format="reference" />
         <attr name="bool1" format="boolean" />
         <attr name="int1" format="integer" />
+        <attr name="int2" format="integer" />
+        <attr name="int3" format="integer" />
+        <attr name="int4" format="integer" />
+        <attr name="int0" format="integer" />
+        <attr name="int10" format="integer" />
+        <attr name="float1" format="float" />
+        <attr name="float2" format="float" />
+        <attr name="float3" format="float" />
+        <attr name="float4" format="float" />
+        <attr name="float0" format="float" />
+        <attr name="float10" format="float" />
     </declare-styleable>
 </resources>

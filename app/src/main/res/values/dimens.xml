@@ -13,4 +13,5 @@
     <dimen name="table_unit_height">60dp</dimen>
     <dimen name="image_width1">40dp</dimen>
     <dimen name="image_height1">40dp</dimen>
+    <dimen name="channel_width">90dp</dimen>
 </resources>
