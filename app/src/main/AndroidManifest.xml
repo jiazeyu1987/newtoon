@@ -30,11 +30,14 @@
         android:screenOrientation="landscape"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".pager.shuzhong.OperationActivity"></activity>
+        <activity android:name=".pager.patient_info.DetailPatientInfoActivity"></activity>
+        <activity android:name=".pager.shuzhong.OperationTestingActivity" />
+        <activity android:name=".pager.shuzhong.OperationActivity" />
         <activity android:name=".pager.shuqian.NewContactActivity" />
         <activity android:name=".CameraActivity" />
         <activity android:name=".chart.ChartManagerActivity" />
         <activity android:name=".pager.shuqian.PulseTestingActivity" />
+        <activity android:name=".pager.debug.DailyDebugActivity" />
         <activity
             android:name=".chart.chart_item.unit.LineChartActivity1"
             android:theme="@style/AppTheme.NoActionBar.NoActionBar" />

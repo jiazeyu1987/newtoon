@@ -35,7 +35,7 @@ public class MainActivity extends BaseActivity {
     @BindView(R.id.vp1)
     public ViewPager viewPager;
 
-    MyPagerAdapter myPagerAdapter;
+    public MyPagerAdapter myPagerAdapter;
     private List<View> viewList = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {

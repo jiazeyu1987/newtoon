@@ -12,6 +12,7 @@ import com.example.administrator.new_ptns.pager.PagerBase;
 public class PagerShuzhong extends PagerBase {
 
     TextView enter1,enter2;
+    TextView tv_testing;
     public PagerShuzhong(MainActivity context){
         super(context);
     }
@@ -21,6 +22,7 @@ public class PagerShuzhong extends PagerBase {
         super.init_view(view,type);
         enter1 = mView.findViewById(R.id.textView84);
         enter2 = mView.findViewById(R.id.textView85);
+        tv_testing = mView.findViewById(R.id.pm1_testing);
         enter1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -34,6 +36,12 @@ public class PagerShuzhong extends PagerBase {
                 do_enter2();
             }
         });
+        tv_testing.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                do_enter_testing();
+            }
+        });
     }
 
     private void do_enter1(){
@@ -42,6 +50,11 @@ public class PagerShuzhong extends PagerBase {
     }
     private void do_enter2(){
         Intent intent = new Intent(mContext,OperationActivity.class);
+        mContext.startActivity(intent);
+    }
+
+    private void do_enter_testing(){
+        Intent intent = new Intent(mContext,OperationTestingActivity.class);
         mContext.startActivity(intent);
     }
 

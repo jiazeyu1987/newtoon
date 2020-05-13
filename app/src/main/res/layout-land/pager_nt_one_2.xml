@@ -166,9 +166,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="16dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView42" />
+                    app:layout_constraintTop_toBottomOf="@+id/imageView42"
+                    app:txt1="电极一"
+                    app:txt2="LSTN" />
 
                 <com.example.administrator.new_ptns.custom_item.CustomItem5
                     android:id="@+id/customItem56"

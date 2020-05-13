@@ -262,21 +262,24 @@
         android:id="@+id/textView103"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="150dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="32dp"
         android:text="电极一"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/tableLayout3"
+        app:layout_constraintEnd_toEndOf="@+id/tableLayout3"
         app:layout_constraintStart_toStartOf="@+id/tableLayout3" />
 
     <TextView
         android:id="@+id/textView104"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="150dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
         android:text="LSTN"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/tableLayout3"
-        app:layout_constraintEnd_toEndOf="@+id/tableLayout3" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView103" />
 </android.support.constraint.ConstraintLayout>

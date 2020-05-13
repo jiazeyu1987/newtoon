@@ -82,6 +82,13 @@
         <item name="android:textColor">@color/active_txt_color1</item>
     </style>
 
+    <style name="RoundRectButton3">
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/ping</item>
+        <item name="android:background">@drawable/rect1</item>
+        <item name="android:textColor">@color/active_txt_color1</item>
+    </style>
+
     <style name="SmallText1">
         <item name="android:textSize">15sp</item>
         <item name="android:fontFamily">@font/ping</item>

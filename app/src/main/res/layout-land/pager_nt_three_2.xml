@@ -10,31 +10,9 @@
     <android.support.constraint.ConstraintLayout
         android:id="@+id/cons1traintLayout11"
         android:layout_width="700dp"
-        android:layout_height="300dp"
+        android:layout_height="700dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/textView129"
-            style="@style/SmallText1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_weight="1"
-            android:text="XXXXXXXXXXXXXXXX\nXXXXXXXXXXXXXXXX\nXXXXXXXXXXXXXXXXXXX"
-            app:layout_constraintStart_toStartOf="@+id/customI1t1em511"
-            app:layout_constraintTop_toBottomOf="@+id/textView131" />
-
-        <TextView
-            android:id="@+id/textView131"
-            style="@style/SmallText1"
-            android:layout_width="wrap_content"
-            android:layout_height="21dp"
-            android:layout_marginTop="16dp"
-            android:layout_weight="1"
-            android:text="2020-02-02"
-            app:layout_constraintStart_toStartOf="@+id/customI1t1em511"
-            app:layout_constraintTop_toBottomOf="@+id/customI1t1em511" />
 
         <com.example.administrator.new_ptns.custom_item.CustomItem5
             android:id="@+id/customI1t1em511"
@@ -48,6 +26,11 @@
 
         </com.example.administrator.new_ptns.custom_item.CustomItem5>
 
+        <ListView
+            android:id="@+id/listview3"
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            app:layout_constraintBottom_toBottomOf="parent"></ListView>
     </android.support.constraint.ConstraintLayout>
 
     <android.support.constraint.ConstraintLayout
@@ -58,7 +41,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textView120"
+            android:id="@+id/pnt2_txt1"
             style="@style/SmallText1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -69,7 +52,7 @@
             app:layout_constraintTop_toBottomOf="@+id/customItem511" />
 
         <TextView
-            android:id="@+id/textView121"
+            android:id="@+id/pnt2_txt2"
             style="@style/SmallText1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -77,10 +60,10 @@
             android:layout_weight="1"
             android:text="手机号码：18232492819"
             app:layout_constraintStart_toStartOf="@+id/customItem511"
-            app:layout_constraintTop_toBottomOf="@+id/textView120" />
+            app:layout_constraintTop_toBottomOf="@+id/pnt2_txt1" />
 
         <TextView
-            android:id="@+id/textView122"
+            android:id="@+id/pnt2_txt3"
             style="@style/SmallText1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -88,7 +71,7 @@
             android:layout_weight="1"
             android:text="家庭住址：XXXXXXXXXXXXXX"
             app:layout_constraintStart_toStartOf="@+id/customItem511"
-            app:layout_constraintTop_toBottomOf="@+id/textView121" />
+            app:layout_constraintTop_toBottomOf="@+id/pnt2_txt2" />
 
         <com.example.administrator.new_ptns.custom_item.CustomItem5
             android:id="@+id/customItem511"
@@ -128,7 +111,7 @@
             android:layout_weight="1"
             android:text="电极一："
             app:layout_constraintStart_toStartOf="@+id/customI1tem511"
-            app:layout_constraintTop_toBottomOf="@+id/textView124" />
+            app:layout_constraintTop_toBottomOf="@+id/pnt2_txt4" />
 
         <TextView
             android:id="@+id/textView127"
@@ -139,10 +122,10 @@
             android:layout_weight="1"
             android:text="电极一："
             app:layout_constraintStart_toStartOf="@+id/customI1tem511"
-            app:layout_constraintTop_toBottomOf="@+id/textView126" />
+            app:layout_constraintTop_toBottomOf="@+id/pnt2_txt5" />
 
         <TextView
-            android:id="@+id/textView124"
+            android:id="@+id/pnt2_txt4"
             style="@style/SmallText1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -154,7 +137,7 @@
             app:layout_constraintTop_toBottomOf="@+id/customI1tem511" />
 
         <TextView
-            android:id="@+id/textView126"
+            android:id="@+id/pnt2_txt5"
             style="@style/SmallText1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -163,10 +146,10 @@
             android:layout_weight="1"
             android:text="序列号：XXXXXXXXXXX\n植入日期：2020年02月02日\n电池容量：90%"
             app:layout_constraintStart_toEndOf="@+id/textView123"
-            app:layout_constraintTop_toBottomOf="@+id/textView124" />
+            app:layout_constraintTop_toBottomOf="@+id/pnt2_txt4" />
 
         <TextView
-            android:id="@+id/textView128"
+            android:id="@+id/pnt2_txt6"
             style="@style/SmallText1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -175,7 +158,7 @@
             android:layout_weight="1"
             android:text="序列号：XXXXXXXXXXX\n植入日期：2020年02月02日\n电池容量：90%"
             app:layout_constraintStart_toEndOf="@+id/textView123"
-            app:layout_constraintTop_toBottomOf="@+id/textView126" />
+            app:layout_constraintTop_toBottomOf="@+id/pnt2_txt5" />
 
         <com.example.administrator.new_ptns.custom_item.CustomItem5
             android:id="@+id/customI1tem511"
