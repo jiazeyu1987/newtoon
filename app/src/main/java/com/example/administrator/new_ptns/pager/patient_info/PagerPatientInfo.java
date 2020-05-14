@@ -34,7 +34,6 @@ public class PagerPatientInfo extends PagerBase {
         list1 = getDoubleArrayList(list0);
         listView = mView.findViewById(R.id.listview2);
         adapter = new PatientInfoAdapter(mContext,list1);
-        ToastUtils.showShort(list1.size()+" number "+list0.size());
         listView.setAdapter(adapter);
 
     }

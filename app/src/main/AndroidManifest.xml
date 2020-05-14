@@ -31,6 +31,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
         <activity android:name=".pager.patient_info.DetailPatientInfoActivity"></activity>
+        <activity android:name=".pager.patient_info.ImpedanceHistoryActivity"></activity>
         <activity android:name=".pager.shuzhong.OperationTestingActivity" />
         <activity android:name=".pager.shuzhong.OperationActivity" />
         <activity android:name=".pager.shuqian.NewContactActivity" />

@@ -136,6 +136,9 @@ public class CustomItemA6 extends LinearLayout {
     }
 
     public void setValue(ArrayList<String> list1){
+        if(list1==null){
+            return;
+        }
         tv_00.setText(list1.get(0));
         tv_01.setText(list1.get(1));
         tv_02.setText(list1.get(2));

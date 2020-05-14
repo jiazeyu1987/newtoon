@@ -3,6 +3,7 @@ package com.example.administrator.new_ptns.pager.patient_info;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -45,6 +46,12 @@ public class DetailPatientInfoActivity extends AppCompatActivity {
         pnt2Txt4.setText("序列号："+mPatientData.stim_number+"\n植入日期："+mPatientData.stim_embedded_date+"\n电池容量："+mPatientData.charging_percent+"%");
         pnt2Txt5.setText("序列号："+mPatientData.electrode1_number+"\n植入日期："+mPatientData.electrode1_date+"\n植入位置："+mPatientData.electorde1_position);
         pnt2Txt6.setText("序列号："+mPatientData.electrode2_number+"\n植入日期："+mPatientData.electrode2_date+"\n植入位置："+mPatientData.electorde2_position);
-
+        pnt2Txt1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent1 = new Intent(DetailPatientInfoActivity.this,ImpedanceHistoryActivity.class);
+                startActivity(intent1);
+            }
+        });
     }
 }
