@@ -2,7 +2,7 @@ package com.example.administrator.new_ptns.data_handler;
 
 import java.util.ArrayList;
 
-public class ImpedanceData {
+public class ImpedanceData extends AABaseData{
     public int id;
     public String date;
     public ArrayList<String> leftImpedanceList = null;

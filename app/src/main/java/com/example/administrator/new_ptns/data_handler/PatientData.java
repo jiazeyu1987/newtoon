@@ -2,8 +2,12 @@ package com.example.administrator.new_ptns.data_handler;
 
 import java.util.ArrayList;
 
-public class PatientData {
+public class PatientData extends AABaseData {
     public int id;
+
+    public int doctor_id;
+    public String doctor_name;
+
     public String name;
     public String sex;
     public int age;

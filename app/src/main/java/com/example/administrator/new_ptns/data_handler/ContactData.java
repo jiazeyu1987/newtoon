@@ -4,7 +4,7 @@ import android.content.Context;
 
 import com.blankj.utilcode.util.ToastUtils;
 
-public class ContactData {
+public class ContactData  extends AABaseData{
 
     public int id = -1;
 
@@ -68,5 +68,4 @@ public class ContactData {
         return true;
     }
 
-    public void cal(){}
 }
