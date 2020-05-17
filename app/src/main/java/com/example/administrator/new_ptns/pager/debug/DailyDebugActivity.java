@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.administrator.new_ptns.R;
 
@@ -27,6 +28,8 @@ public class DailyDebugActivity extends AppCompatActivity {
     Button btnDebug;
     @BindView(R.id.viewPager1)
     ViewPager viewPager1;
+    @BindView(R.id.btn_return)
+    TextView btnReturn;
     private List<View> viewList = new ArrayList<>();
     DailyDebugAdapter myPagerAdapter;
 
@@ -50,7 +53,6 @@ public class DailyDebugActivity extends AppCompatActivity {
     }
 
 
-
     @OnClick({R.id.btn_impedance, R.id.btn_paras, R.id.btn_debug})
     public void onClick(View view) {
         btnParas.setBackground(getResources().getDrawable(R.drawable.rect1));
@@ -70,5 +72,10 @@ public class DailyDebugActivity extends AppCompatActivity {
                 viewPager1.setCurrentItem(2);
                 break;
         }
+    }
+
+    @OnClick(R.id.btn_return)
+    public void onClick() {
+        finish();
     }
 }

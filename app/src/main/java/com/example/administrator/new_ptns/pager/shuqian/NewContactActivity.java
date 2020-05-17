@@ -77,6 +77,7 @@ public class NewContactActivity extends BaseActivity {
     public int state = VIEW;
 
     public ContactData mContact = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -84,14 +85,14 @@ public class NewContactActivity extends BaseActivity {
         ButterKnife.bind(this);
         Utils.init(this);
         Intent intent = getIntent();
-        state = intent.getIntExtra(INTENT_CONTACT_STATE,NEW);
+        state = intent.getIntExtra(INTENT_CONTACT_STATE, NEW);
         fresh_state();
     }
 
-    private void fresh_state(){
-        if(state==NEW) {
+    private void fresh_state() {
+        if (state == NEW) {
             mContact = new ContactData();
-        }else{
+        } else {
             Intent intent = getIntent();
             mContact = new Gson().fromJson(intent.getStringExtra(INTENT_CONTACT_JSON), ContactData.class);
 
@@ -133,7 +134,7 @@ public class NewContactActivity extends BaseActivity {
         mContact.id_card = aniIdcard.getTitleText3();
         mContact.sex = "男";
         mContact.phone_number = aniPhoneNumber.getTitleText3();
-        mContact.address  = aniAddress.getTitleText3();
+        mContact.address = aniAddress.getTitleText3();
         mContact.detail_address = aniAddress.getTitleText3();
 
         mContact.operation_machanism = aniOperationMachanism.getTitleText3();
@@ -156,14 +157,14 @@ public class NewContactActivity extends BaseActivity {
         mContact.adviser_info = aniAdviserName.getTitleText3();
 
         boolean result = mContact.CheckDataLegality();
-        if(!result){
+        if (!result) {
             return;
         }
 
         ContactDao dao = new ContactDao(this);
-        if(state==NEW){
+        if (state == NEW) {
             dao.insert(mContact);
-        }else if(state==MODIFY){
+        } else if (state == MODIFY) {
             dao.modify(mContact);
         }
         finish();
@@ -171,7 +172,7 @@ public class NewContactActivity extends BaseActivity {
 
     @OnClick(R.id.ani_address)
     public void onAddressPicker(View view) {
-        if(state==VIEW){
+        if (state == VIEW) {
             return;
         }
         AddressPickTask task = new AddressPickTask(this);
@@ -188,10 +189,15 @@ public class NewContactActivity extends BaseActivity {
                 if (county == null) {
                     ToastUtils.showShort(province.getAreaName() + city.getAreaName());
                 } else {
-                    ToastUtils.showShort(province.getAreaName() +"-" +city.getAreaName() +"-"+ county.getAreaName());
+                    ToastUtils.showShort(province.getAreaName() + "-" + city.getAreaName() + "-" + county.getAreaName());
                 }
             }
         });
         task.execute("安徽", "安庆", "潜山");
+    }
+
+    @OnClick(R.id.btn_return)
+    public void onClickReturn() {
+        finish();
     }
 }

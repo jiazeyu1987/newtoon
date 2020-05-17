@@ -1,17 +1,27 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
-    <dimen name="contact_info_width_01">425dp</dimen>
-    <dimen name="contact_info_width_02">430dp</dimen>
-    <dimen name="contact_info_height_01">250dp</dimen>
-    <dimen name="contact_info_height_02">300dp</dimen>
+    <dimen name="contact_info_width_01">340dp</dimen>
+    <dimen name="contact_info_width_02">350dp</dimen>
+    <dimen name="contact_info_height_01">240dp</dimen>
+    <dimen name="contact_info_height_02">250dp</dimen>
     <dimen name="contact_info_height_body">550dp</dimen>
     <dimen name="contact_info_width_half">640dp</dimen>
     <dimen name="contact_info_width_03">420dp</dimen>
     <dimen name="contact_info_width_04">860dp</dimen>
-    <dimen name="pager_content_width">850dp</dimen>
-    <dimen name="table_unit_width">150dp</dimen>
+
+    <dimen name="activity_content_width">1030dp</dimen>
+    <dimen name="activity_content_height">640dp</dimen>
+    <dimen name="half_activity_content_width">515dp</dimen>
+
+    <dimen name="pager_content_width">770dp</dimen>
+    <dimen name="pager_content_height">540dp</dimen>
+    <dimen name="table_unit_width">100dp</dimen>
     <dimen name="table_unit_height">60dp</dimen>
     <dimen name="image_width1">40dp</dimen>
     <dimen name="image_height1">40dp</dimen>
     <dimen name="channel_width">90dp</dimen>
+    <dimen name="small_title_height">35dp</dimen>
+    <dimen name="small_title_width">200dp</dimen>
+    <dimen name="small_txt_height1">35dp</dimen>
+    <dimen name="small_txy_width1">300dp</dimen>
 </resources>

@@ -3,6 +3,7 @@ package com.example.administrator.new_ptns.pager.shuqian;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.administrator.new_ptns.BaseActivity;
@@ -45,6 +46,8 @@ public class PulseTestingActivity extends BaseActivity {
     Button aptBtnTesting;
     @BindView(R.id.ani_btn_shutdown)
     Button aniBtnShutdown;
+    @BindView(R.id.btn_return)
+    ImageView btnReturn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,32 +60,32 @@ public class PulseTestingActivity extends BaseActivity {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.apt_btn_testing:
-                SetProductInfo("123","456","789");
+                SetProductInfo("123", "456", "789");
                 SetChargingTestingInfo("`````````````````````````````");
-                SetSystemTestingInfo("01","11","02","12","03","13","04","14","05","15");
+                SetSystemTestingInfo("01", "11", "02", "12", "03", "13", "04", "14", "05", "15");
                 break;
             case R.id.ani_btn_shutdown:
                 break;
         }
     }
 
-    private void SetProductInfo(String aptElectrode1Value1,String aptElectrode1Value2,String aptContactNumberValue1){
+    private void SetProductInfo(String aptElectrode1Value1, String aptElectrode1Value2, String aptContactNumberValue1) {
         aptElectrode1Value.setText(aptElectrode1Value1);
         aptElectrode2Value.setText(aptElectrode1Value2);
         aptContactNumberValue.setText(aptContactNumberValue1);
     }
 
-    private void SetChargingTestingInfo(String info){
+    private void SetChargingTestingInfo(String info) {
         aptOperationInfo.setText(info);
     }
 
     private void SetSystemTestingInfo(
-            String aptCurrentValue1,String aptCurrentState1,
-            String aptVoltageValue1,String aptVoltageState1,
-            String aptImpedanceValue1,String aptImpedanceState1,
-            String aptBatteryVoltageValue1,String aptBatteryVoltageState1,
-            String aptBatteryNumberValue1,String aptBatteryNumberState1
-    ){
+            String aptCurrentValue1, String aptCurrentState1,
+            String aptVoltageValue1, String aptVoltageState1,
+            String aptImpedanceValue1, String aptImpedanceState1,
+            String aptBatteryVoltageValue1, String aptBatteryVoltageState1,
+            String aptBatteryNumberValue1, String aptBatteryNumberState1
+    ) {
         aptCurrentValue.setText(aptCurrentValue1);
         aptCurrentState.setText(aptCurrentState1);
         aptVoltageValue.setText(aptVoltageValue1);
@@ -93,5 +96,10 @@ public class PulseTestingActivity extends BaseActivity {
         aptBatteryVoltageState.setText(aptBatteryVoltageState1);
         aptBatteryNumberValue.setText(aptBatteryNumberValue1);
         aptBatteryNumberState.setText(aptBatteryNumberState1);
+    }
+
+    @OnClick(R.id.btn_return)
+    public void onClick() {
+        finish();
     }
 }
