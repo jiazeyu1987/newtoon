@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/pager_content_width"
+    android:layout_height="700dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="@dimen/pager_content_width"
+        android:layout_height="@dimen/pager_content_height"
+        android:background="#EFEFEF"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></android.support.constraint.ConstraintLayout>
+
+    <com.example.administrator.new_ptns.custom_item.CustomItemA1
+        android:id="@+id/customItemA1119"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        app:layout_constraintStart_toStartOf="@+id/customItem617"
+        app:layout_constraintTop_toBottomOf="@+id/customItem67"
+        app:txt1="设备连接："
+        app:txt3="未连接" />
+
+    <com.example.administrator.new_ptns.custom_item.CustomItemA1
+        android:id="@+id/customItemA111"
+        android:layout_width="wrap_content"
+        android:layout_height="53dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintStart_toStartOf="@+id/customItem617"
+        app:layout_constraintTop_toBottomOf="@+id/customItemA18"
+        app:txt1="性别"
+        app:txt3="男" />
+
+    <com.example.administrator.new_ptns.custom_item.CustomItemA1
+        android:id="@+id/customItemA18"
+        android:layout_width="wrap_content"
+        android:layout_height="53dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintStart_toStartOf="@+id/customItem617"
+        app:layout_constraintTop_toBottomOf="@+id/customItemA17"
+        app:txt1="年龄："
+        app:txt3="18" />
+
+    <com.example.administrator.new_ptns.custom_item.CustomItem6
+        android:id="@+id/customItem627"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/customItem67"
+        app:layout_constraintTop_toBottomOf="@+id/customItemA1119"
+        app:txt1="设备信息">
+
+    </com.example.administrator.new_ptns.custom_item.CustomItem6>
+
+    <com.example.administrator.new_ptns.custom_item.CustomItem6
+        android:id="@+id/customItem67"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button21"
+        app:txt1="设备连接">
+
+    </com.example.administrator.new_ptns.custom_item.CustomItem6>
+
+    <com.example.administrator.new_ptns.custom_item.CustomItem6
+        android:id="@+id/customItem617"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/customItem67"
+        app:layout_constraintTop_toBottomOf="@+id/customItemA149"
+        app:txt1="患者信息">
+
+    </com.example.administrator.new_ptns.custom_item.CustomItem6>
+
+    <com.example.administrator.new_ptns.custom_item.CustomItemA1
+        android:id="@+id/customItemA119"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        app:layout_constraintStart_toStartOf="@+id/customItem617"
+        app:layout_constraintTop_toBottomOf="@+id/customItem627"
+        app:txt1="刺激器序列号："
+        app:txt3="王二小" />
+
+    <com.example.administrator.new_ptns.custom_item.CustomItemA1
+        android:id="@+id/customItemA139"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        app:layout_constraintStart_toStartOf="@+id/customItem617"
+        app:layout_constraintTop_toBottomOf="@+id/customItemA119"
+        app:txt1="刺激器电量："
+        app:txt3="王二小" />
+
+    <com.example.administrator.new_ptns.custom_item.CustomItemA1
+        android:id="@+id/customItemA149"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        app:layout_constraintStart_toStartOf="@+id/customItem617"
+        app:layout_constraintTop_toBottomOf="@+id/customItemA139"
+        app:txt1="阻抗状态："
+        app:txt3="王二小" />
+
+    <com.example.administrator.new_ptns.custom_item.CustomItemA1
+        android:id="@+id/customItemA17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        app:layout_constraintStart_toStartOf="@+id/customItem617"
+        app:layout_constraintTop_toBottomOf="@+id/customItem617"
+        app:txt1="姓名:"
+        app:txt3="王二小">
+
+    </com.example.administrator.new_ptns.custom_item.CustomItemA1>
+
+    <Button
+        android:id="@+id/button24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rect1"
+        android:text="连接"
+        app:layout_constraintBottom_toBottomOf="@+id/customItemA1119"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/customItemA1119" />
+
+    <Button
+        android:id="@+id/button35"
+        style="@style/RoundRectButton2"
+        android:text="进入模块"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/customItemA111" />
+
+</android.support.constraint.ConstraintLayout>
