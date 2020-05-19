@@ -35,7 +35,7 @@ public class CustomItemA8 extends LinearLayout {
     public static final int NO_LINE = 0;
     public String title = "";
     Button btn1;
-    int state = 1;
+    public int state = 1;
     public int getIconImgId() {
         return iconImgId;
     }

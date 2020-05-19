@@ -8,14 +8,14 @@ import android.widget.TextView;
 
 import com.example.administrator.new_ptns.MainActivity;
 import com.example.administrator.new_ptns.R;
-import com.example.administrator.new_ptns.custom_item.CustomItem5;
 import com.example.administrator.new_ptns.custom_item.CustomItemA1p1;
-import com.example.administrator.new_ptns.custom_item.InfoDialog;
+import com.example.administrator.new_ptns.data_handler.ContactDao;
+import com.example.administrator.new_ptns.data_handler.ContactData;
+import com.example.administrator.new_ptns.data_handler.ContactDataList;
 import com.example.administrator.new_ptns.pager.PagerBase;
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
-
-import butterknife.BindView;
 
 
 public class PagerShuqian extends PagerBase {
@@ -30,8 +30,8 @@ public class PagerShuqian extends PagerBase {
     @Override
     public void init_view(View view,String type){
         super.init_view(view,type);
-        query_contact = mView.findViewById(R.id.customItemA1p1);
-        new_contact = mView.findViewById(R.id.customItemA1p12);
+        query_contact = mView.findViewById(R.id.ci_contact_number);
+        new_contact = mView.findViewById(R.id.ci_id_card);
         et_id_number = query_contact.findViewById(R.id.et_1);
         et_name = new_contact.findViewById(R.id.et_1);
         iv_find = query_contact.findViewById(R.id.imageView36);
@@ -55,6 +55,8 @@ public class PagerShuqian extends PagerBase {
                 do_new();
             }
         });
+
+
     }
 
     public void onResume(){
@@ -63,6 +65,17 @@ public class PagerShuqian extends PagerBase {
 
     private void do_find(){
 
+        ContactDao dao = new ContactDao(mContext);
+        ArrayList<ContactData> list1 = dao.get_contact_by_idcard(query_contact.getTitleText3());
+        if(list1.size()==0){
+            return;
+        }
+        ContactDataList contactDataList = new ContactDataList();
+        contactDataList.list1 = list1;
+        Intent intent = new Intent(mContext,NewContactActivity.class);
+        intent.putExtra(NewContactActivity.INTENT_CONTACT_STATE,NewContactActivity.VIEW);
+        intent.putExtra(NewContactActivity.INTENT_CONTACT_JSON,new Gson().toJson(contactDataList));
+        mContext.startActivity(intent);
     }
 
     private void do_new(){

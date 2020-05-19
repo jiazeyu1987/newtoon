@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.example.administrator.new_ptns.BaseActivity;
 import com.example.administrator.new_ptns.R;
+import com.example.administrator.new_ptns.custom_item.CustomItemA1;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -48,12 +49,15 @@ public class PulseTestingActivity extends BaseActivity {
     Button aniBtnShutdown;
     @BindView(R.id.btn_return)
     ImageView btnReturn;
+    @BindView(R.id.contact_number)
+    CustomItemA1 contactNumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nt_pulse_testing);
         ButterKnife.bind(this);
+        contactNumber.setVisibility(View.INVISIBLE);
     }
 
     @OnClick({R.id.apt_btn_testing, R.id.ani_btn_shutdown})

@@ -1,7 +1,9 @@
 package com.example.administrator.new_ptns.custom_item;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.res.TypedArray;
+import android.support.v7.app.AlertDialog;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -123,6 +125,25 @@ public class CustomItemA1p3 extends LinearLayout {
         setTitleText3(a.getString(R.styleable.CustomItem1Attr_txt3));
         setTitleText4(a.getString(R.styleable.CustomItem1Attr_txt4));
         setBtn1(a.getString(R.styleable.CustomItem1Attr_btn1));
+
+        btn1.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final Context c1 = mContext;
+                final String[] datalist = new String[]{"LSTN","RSTN","/"};
+                AlertDialog.Builder builder = new AlertDialog.Builder(c1);
+                builder.setTitle("请选择规格");
+                builder.setCancelable(true);
+                builder.setIcon(R.mipmap.ic_launcher)
+                        .setItems(datalist, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                btn1.setText(datalist[which]);
+                            }
+                        }).create()
+                        .show();
+            }
+        });
     }
 
 

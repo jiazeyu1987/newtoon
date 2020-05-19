@@ -67,6 +67,11 @@ public class CustomItemA1 extends LinearLayout {
 
     public void setTitleText3(String titleText) {
         txt2.setText(titleText);
+
+    }
+
+    public void setUnModifyValue(String titleText) {
+        txt2.setText(titleText);
         setTextMode();
     }
 

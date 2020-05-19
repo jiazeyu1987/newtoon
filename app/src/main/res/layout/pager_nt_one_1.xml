@@ -14,7 +14,7 @@
         android:layout_marginTop="8dp"
         app:btn1="LSTN"
         app:layout_constraintStart_toStartOf="@+id/customItem55"
-        app:layout_constraintTop_toBottomOf="@+id/afasdfas1"
+        app:layout_constraintTop_toBottomOf="@+id/sdfafa1"
         app:txt1="电极一"
         app:txt3="iSBS210A"
         app:txt4="ISBSxxxxxxxxx" />
@@ -30,18 +30,6 @@
         app:txt1="电极二"
         app:txt3="iSBS210A"
         app:txt4="ISBSxxxxxxxxx" />
-
-    <com.example.administrator.new_ptns.custom_item.CustomItemA1p3
-        android:id="@+id/afasdfas1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@+id/customItem55"
-        app:layout_constraintTop_toBottomOf="@+id/sdfafa1"
-        app:txt1="电量："
-        app:txt2="XXX"
-        app:txt3="最大容量"
-        app:txt4="XXXXXX" />
 
     <com.example.administrator.new_ptns.custom_item.CustomItem5
         android:id="@+id/customItem55"

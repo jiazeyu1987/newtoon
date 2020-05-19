@@ -33,6 +33,7 @@
             android:background="@drawable/rect1"
             android:hint="请填写电极序列号"
             android:paddingLeft="10dp"
+            android:text="ISBSXXXXXXXX"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/button23"

@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class ContactHelper extends SQLiteOpenHelper {
     public static final String CREATE_STUDENT = "create table t_contact (" +
-            "id integer primary key, date_1 varchar(50))";
+            "id integer primary key,id_card varchar(50), date_1 text)";
 
     public ContactHelper(Context context, String name, SQLiteDatabase.CursorFactory factory,
                          int version) {

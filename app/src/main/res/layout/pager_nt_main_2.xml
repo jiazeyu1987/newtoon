@@ -3,25 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="@dimen/pager_content_width"
-    android:layout_height="match_parent"
+    android:layout_height="@dimen/pager_content_height"
     android:focusable="true"
     android:focusableInTouchMode="true">
 
-    <android.support.constraint.ConstraintLayout
-        android:layout_width="@dimen/pager_content_width"
-        android:layout_height="@dimen/pager_content_height"
-        android:background="#EFEFEF"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></android.support.constraint.ConstraintLayout>
-
     <com.example.administrator.new_ptns.custom_item.CustomItemA1p2
-        android:id="@+id/customItemA1p22"
+        android:id="@+id/ci_electrode2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@+id/customItemA1p12"
-        app:layout_constraintTop_toBottomOf="@+id/customItemA1p2"
+        app:layout_constraintStart_toStartOf="@+id/ci_id_card"
+        app:layout_constraintTop_toBottomOf="@+id/ci_electrode1"
         app:txt1="电极二" />
 
     <com.example.administrator.new_ptns.custom_item.CustomItem6
@@ -30,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="@+id/customItem67"
-        app:layout_constraintTop_toBottomOf="@+id/customItemA1p12"
+        app:layout_constraintTop_toBottomOf="@+id/ci_id_card"
         app:txt1="术中刺激">
 
     </com.example.administrator.new_ptns.custom_item.CustomItem6>
@@ -55,17 +47,18 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.example.administrator.new_ptns.custom_item.CustomItemA1p1
-        android:id="@+id/customItemA1p12"
+        android:id="@+id/ci_id_card"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:bool1="false"
-        app:layout_constraintStart_toStartOf="@+id/customItemA1p1"
-        app:layout_constraintTop_toBottomOf="@+id/customItemA1p1"
+        app:layout_constraintStart_toStartOf="@+id/ci_contact_number"
+        app:layout_constraintTop_toBottomOf="@+id/ci_contact_number"
         app:txt1="患者信息："
+        app:txt3="3408211999010184033"
         app:txt2="请填写患者信息" />
 
     <com.example.administrator.new_ptns.custom_item.CustomItemA1p1
-        android:id="@+id/customItemA1p1"
+        android:id="@+id/ci_contact_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -73,6 +66,7 @@
         app:layout_constraintStart_toStartOf="@+id/customItem67"
         app:layout_constraintTop_toBottomOf="@+id/customItem67"
         app:txt1="合同编号："
+        app:txt3="NO.000001"
         app:txt2="请填写合同编号" />
 
     <com.example.administrator.new_ptns.custom_item.CustomItem6
@@ -81,7 +75,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="@+id/customItem67"
-        app:layout_constraintTop_toBottomOf="@+id/customItemA1p22"
+        app:layout_constraintTop_toBottomOf="@+id/ci_electrode2"
         app:txt1="系统测试">
 
     </com.example.administrator.new_ptns.custom_item.CustomItem6>
@@ -116,7 +110,7 @@
         android:text="连接"
         android:textColor="#333333"
         app:layout_constraintBottom_toBottomOf="@+id/textView77"
-        app:layout_constraintEnd_toEndOf="@+id/customItemA1p12"
+        app:layout_constraintEnd_toEndOf="@+id/ci_id_card"
         app:layout_constraintTop_toTopOf="@+id/textView77" />
 
     <TextView
@@ -126,7 +120,7 @@
         android:layout_marginEnd="8dp"
         android:text="测试"
         android:textColor="#333333"
-        app:layout_constraintEnd_toEndOf="@+id/customItemA1p12"
+        app:layout_constraintEnd_toEndOf="@+id/ci_id_card"
         app:layout_constraintTop_toTopOf="@+id/textView79" />
 
     <TextView
@@ -145,9 +139,9 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginEnd="32dp"
-        app:layout_constraintBottom_toBottomOf="@+id/customItemA1p1"
+        app:layout_constraintBottom_toBottomOf="@+id/ci_contact_number"
         app:layout_constraintEnd_toStartOf="@+id/textView82"
-        app:layout_constraintTop_toTopOf="@+id/customItemA1p1"
+        app:layout_constraintTop_toTopOf="@+id/ci_contact_number"
         app:srcCompat="@mipmap/dianliu" />
 
     <ImageView
@@ -155,9 +149,9 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginEnd="32dp"
-        app:layout_constraintBottom_toBottomOf="@+id/customItemA1p22"
+        app:layout_constraintBottom_toBottomOf="@+id/ci_electrode2"
         app:layout_constraintEnd_toStartOf="@+id/textView82"
-        app:layout_constraintTop_toTopOf="@+id/customItemA1p22"
+        app:layout_constraintTop_toTopOf="@+id/ci_electrode2"
         app:srcCompat="@mipmap/dianliu" />
 
     <ImageView
@@ -165,9 +159,9 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginEnd="32dp"
-        app:layout_constraintBottom_toBottomOf="@+id/customItemA1p2"
+        app:layout_constraintBottom_toBottomOf="@+id/ci_electrode1"
         app:layout_constraintEnd_toStartOf="@+id/textView82"
-        app:layout_constraintTop_toTopOf="@+id/customItemA1p2"
+        app:layout_constraintTop_toTopOf="@+id/ci_electrode1"
         app:srcCompat="@mipmap/dianliu" />
 
     <TextView
@@ -178,9 +172,9 @@
         android:text="确定"
         android:textColor="#333333"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/customItemA1p1"
+        app:layout_constraintBottom_toBottomOf="@+id/ci_contact_number"
         app:layout_constraintEnd_toStartOf="@+id/textView83"
-        app:layout_constraintTop_toTopOf="@+id/customItemA1p1" />
+        app:layout_constraintTop_toTopOf="@+id/ci_contact_number" />
 
     <TextView
         android:id="@+id/textView84"
@@ -213,9 +207,9 @@
         android:text="清除"
         android:textColor="#333333"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/customItemA1p1"
+        app:layout_constraintBottom_toBottomOf="@+id/ci_contact_number"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/customItemA1p1" />
+        app:layout_constraintTop_toTopOf="@+id/ci_contact_number" />
 
     <TextView
         android:id="@+id/textView86"
@@ -242,11 +236,11 @@
         app:layout_constraintTop_toTopOf="@+id/textView85" />
 
     <com.example.administrator.new_ptns.custom_item.CustomItemA1p2
-        android:id="@+id/customItemA1p2"
+        android:id="@+id/ci_electrode1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@+id/customItemA1p12"
+        app:layout_constraintStart_toStartOf="@+id/ci_id_card"
         app:layout_constraintTop_toBottomOf="@+id/customItem627" />
 
 </android.support.constraint.ConstraintLayout>

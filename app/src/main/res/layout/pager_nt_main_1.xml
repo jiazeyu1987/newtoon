@@ -36,23 +36,24 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.example.administrator.new_ptns.custom_item.CustomItemA1p1
-        android:id="@+id/customItemA1p12"
+        android:id="@+id/ci_id_card"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="@+id/customItemA1p1"
-        app:layout_constraintTop_toBottomOf="@+id/customItemA1p1"
+        app:layout_constraintStart_toStartOf="@+id/ci_contact_number"
+        app:layout_constraintTop_toBottomOf="@+id/ci_contact_number"
         app:txt1="新建合同："
         app:txt2="请填写患者姓名" />
 
     <com.example.administrator.new_ptns.custom_item.CustomItemA1p1
-        android:id="@+id/customItemA1p1"
+        android:id="@+id/ci_contact_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
         app:txt1="合同查询："
         app:txt2="请输入患者身份证号"
+        app:txt3="3408211999010184033"
         app:layout_constraintStart_toStartOf="@+id/customItem67"
         app:layout_constraintTop_toBottomOf="@+id/customItem67" />
 
@@ -62,7 +63,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
         app:layout_constraintStart_toStartOf="@+id/customItem67"
-        app:layout_constraintTop_toBottomOf="@+id/customItemA1p12"
+        app:layout_constraintTop_toBottomOf="@+id/ci_id_card"
         app:txt1="脉冲发生器测试">
 
     </com.example.administrator.new_ptns.custom_item.CustomItem6>
@@ -97,7 +98,7 @@
         android:text="连接"
         android:textColor="#333333"
         app:layout_constraintBottom_toBottomOf="@+id/textView77"
-        app:layout_constraintEnd_toEndOf="@+id/customItemA1p12"
+        app:layout_constraintEnd_toEndOf="@+id/ci_id_card"
         app:layout_constraintTop_toTopOf="@+id/textView77" />
 
     <TextView
@@ -107,7 +108,7 @@
         android:layout_marginEnd="8dp"
         android:text="测试"
         android:textColor="#333333"
-        app:layout_constraintEnd_toEndOf="@+id/customItemA1p12"
+        app:layout_constraintEnd_toEndOf="@+id/ci_id_card"
         app:layout_constraintTop_toTopOf="@+id/textView79" />
 
     <TextView

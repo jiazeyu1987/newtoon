@@ -4,12 +4,12 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-public class ImpedanceHelper extends SQLiteOpenHelper {
-    public static final String CREATE_STUDENT = "create table t_impedance (" +
+public class OperationTempDataHelper extends SQLiteOpenHelper {
+    public static final String CREATE_STUDENT = "create table t_operation_temp_data (" +
             "id integer primary key, date_1 text)";
 
-    public ImpedanceHelper(Context context, String name, SQLiteDatabase.CursorFactory factory,
-                           int version) {
+    public OperationTempDataHelper(Context context, String name, SQLiteDatabase.CursorFactory factory,
+                                   int version) {
         super(context, name, factory, version);
     }
 

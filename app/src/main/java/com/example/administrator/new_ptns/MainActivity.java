@@ -8,6 +8,7 @@ import android.widget.Button;
 
 import com.blankj.utilcode.util.ToastUtils;
 import com.example.administrator.new_ptns.custom_item.CustomItemA1;
+import com.example.administrator.new_ptns.data_handler.ContactDao;
 import com.example.administrator.new_ptns.pager.MyPagerAdapter;
 import com.example.administrator.new_ptns.pager.shuqian.AddressPickTask;
 
@@ -44,6 +45,9 @@ public class MainActivity extends BaseActivity {
 
         ButterKnife.bind(this);
         init_view();
+
+        ContactDao dao = new ContactDao(this);
+        dao.delete_all();
     }
 
 

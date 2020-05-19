@@ -108,6 +108,10 @@ public class CustomItemA5 extends LinearLayout {
         txt2.setText(value+"");
     }
 
+    public String getTitleText2(){
+        return txt2.getText().toString();
+    }
+
     private void init(final Context context, AttributeSet attrs) {
         mContext = context;
         LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);

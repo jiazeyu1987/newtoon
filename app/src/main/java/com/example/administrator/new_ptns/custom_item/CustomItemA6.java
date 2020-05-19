@@ -164,4 +164,34 @@ public class CustomItemA6 extends LinearLayout {
         tv_34.setText(list1.get(19));
     }
 
+
+    public void setSmallValue(ArrayList<String> list1){
+        if(list1==null){
+            return;
+        }
+        tv_00.setText(list1.get(0));
+        tv_01.setText(list1.get(1));
+        tv_02.setText(list1.get(2));
+        tv_03.setText(list1.get(3));
+        tv_04.setVisibility(INVISIBLE);
+
+        tv_10.setText(list1.get(4));
+        tv_11.setText(list1.get(5));
+        tv_12.setText(list1.get(6));
+        tv_13.setText(list1.get(7));
+        tv_14.setVisibility(INVISIBLE);
+
+        tv_20.setText(list1.get(8));
+        tv_21.setText(list1.get(9));
+        tv_22.setText(list1.get(10));
+        tv_23.setText(list1.get(11));
+        tv_24.setVisibility(INVISIBLE);
+
+        tv_30.setText(list1.get(12));
+        tv_31.setText(list1.get(13));
+        tv_32.setText(list1.get(14));
+        tv_33.setText(list1.get(15));
+        tv_34.setVisibility(INVISIBLE);
+    }
+
 }

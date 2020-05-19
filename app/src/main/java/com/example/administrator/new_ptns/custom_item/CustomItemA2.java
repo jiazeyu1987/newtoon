@@ -1,18 +1,23 @@
 package com.example.administrator.new_ptns.custom_item;
 
+import android.app.DatePickerDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.res.TypedArray;
 import android.support.v7.app.AlertDialog;
 import android.util.AttributeSet;
+import android.util.TimeUtils;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.administrator.new_ptns.R;
+
+import java.util.Calendar;
 
 
 /**
@@ -63,12 +68,18 @@ public class CustomItemA2 extends LinearLayout {
         }
     }
 
-    public String getTitleText3() {
-        return titleText2;
+    public void setValue3(String titleText) {
+        if (titleText != null) {
+            txt2.setText(titleText);
+        }
     }
 
-    public void setTitleText3(String titleText) {
-        txt.setText(titleText);
+    public String getTitleText3() {
+        return txt2.getText().toString();
+    }
+
+    public void setUnClickableValue(String titleText) {
+        txt2.setText(titleText);
         clickable  = false;
     }
 
@@ -78,8 +89,55 @@ public class CustomItemA2 extends LinearLayout {
     public void setDataList(String title1,String[] d1){
         datalist = d1;
         title = title1;
+        mView.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(title==null||datalist==null||datalist.length==0){
+                    return;
+                }
+                if(!clickable){
+                    return;
+                }
+                final Context c1 = mContext;
+                AlertDialog.Builder builder = new AlertDialog.Builder(c1);
+                builder.setTitle(title);
+                builder.setCancelable(true);
+                builder.setIcon(R.mipmap.ic_launcher)
+                        .setItems(datalist, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                txt2.setText(datalist[which]);
+                            }
+                        }).create()
+                        .show();
+
+            }
+        });
     }
 
+
+    public void setDatePicker(){
+        mView.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Calendar c = Calendar.getInstance();//可以对每个时间域单独修改
+                final int mYear = c.get(Calendar.YEAR);
+                final int mMonth = c.get(Calendar.MONTH)+1;
+                final int mDay = c.get(Calendar.DATE);
+                DatePickerDialog datePickerDialog = new DatePickerDialog(mContext, DatePickerDialog.THEME_HOLO_DARK,
+                        new DatePickerDialog.OnDateSetListener() {
+                            @Override
+                            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                                String s2 = year+"-"+month+"-"+dayOfMonth;
+                                txt2.setText(s2);
+                            }
+                        },
+                        mYear, mMonth-1, mDay);
+                datePickerDialog.show();
+            }
+        });
+
+    }
 
     public CustomItemA2(Context context) {
         this(context, null);
@@ -99,32 +157,10 @@ public class CustomItemA2 extends LinearLayout {
         LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         mView = inflater.inflate(R.layout.custom_item_a3, this, true);
         txt = (TextView) mView.findViewById(R.id.textView27);
+        txt2 = mView.findViewById(R.id.textView89);
         TypedArray a = mContext.obtainStyledAttributes(attrs, R.styleable.CustomItem1Attr);
         setTitleText(a.getString(R.styleable.CustomItem1Attr_txt1));
-        this.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(title==null||datalist==null||datalist.length==0){
-                    return;
-                }
-                if(!clickable){
-                    return;
-                }
-                final Context c1 = context;
-                AlertDialog.Builder builder = new AlertDialog.Builder(c1);
-                builder.setTitle(title);
-                builder.setCancelable(true);
-                builder.setIcon(R.mipmap.ic_launcher)
-                        .setItems(datalist, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                setTitleText(datalist[which]);
-                            }
-                        }).create()
-                        .show();
 
-            }
-        });
     }
 
 

@@ -1,10 +1,13 @@
 package com.example.administrator.new_ptns.custom_item;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.res.TypedArray;
+import android.support.v7.app.AlertDialog;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -28,7 +31,7 @@ public class CustomItemA1p2 extends LinearLayout {
     private String titleText2;
     private int iconImgId;
     public static final int NO_LINE = 0;
-
+    public Button btn1,btn2;
     public int getIconImgId() {
         return iconImgId;
     }
@@ -51,7 +54,9 @@ public class CustomItemA1p2 extends LinearLayout {
     public String getTitleText() {
         return titleText;
     }
-
+    public String getTitleText2() {
+        return txt2.getText().toString();
+    }
     public void setTitleText(String titleText) {
         if (titleText != null) {
             this.titleText = titleText;
@@ -97,9 +102,51 @@ public class CustomItemA1p2 extends LinearLayout {
         mContext = context;
         LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         mView = inflater.inflate(R.layout.custom_item_a1p2, this, true);
+        btn1 = mView.findViewById(R.id.button22);
+        btn2 = mView.findViewById(R.id.button23);
         txt = (TextView) mView.findViewById(R.id.textView27);
+        txt2 = mView.findViewById(R.id.et_1);
         TypedArray a = mContext.obtainStyledAttributes(attrs, R.styleable.CustomItem1Attr);
         setTitleText(a.getString(R.styleable.CustomItem1Attr_txt1));
+
+        btn1.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final Context c1 = mContext;
+                final String[] datalist = new String[]{"L","R","/"};
+                AlertDialog.Builder builder = new AlertDialog.Builder(c1);
+                builder.setTitle("请选择电极位置");
+                builder.setCancelable(true);
+                builder.setIcon(R.mipmap.ic_launcher)
+                        .setItems(datalist, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                btn1.setText(datalist[which]);
+                            }
+                        }).create()
+                        .show();
+            }
+        });
+
+
+        btn2.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final Context c1 = mContext;
+                final String[] datalist = new String[]{"规格1","规格2","无"};
+                AlertDialog.Builder builder = new AlertDialog.Builder(c1);
+                builder.setTitle("请选择规格");
+                builder.setCancelable(true);
+                builder.setIcon(R.mipmap.ic_launcher)
+                        .setItems(datalist, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                btn2.setText(datalist[which]);
+                            }
+                        }).create()
+                        .show();
+            }
+        });
     }
 
 

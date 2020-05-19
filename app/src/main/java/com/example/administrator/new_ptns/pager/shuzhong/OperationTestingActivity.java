@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.administrator.new_ptns.R;
+import com.example.administrator.new_ptns.data_handler.ContactData;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,6 +31,10 @@ public class OperationTestingActivity extends AppCompatActivity {
     @BindView(R.id.btn_return)
     TextView btnReturn;
 
+    public String new_stim_name = "";
+    public ContactData contactData = null;
+    public String new_electrode1 = "";
+    public String new_electrode2 = "";
     private List<View> viewList = new ArrayList<>();
     OperationPagerAdapter myPagerAdapter;
 

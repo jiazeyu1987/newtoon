@@ -74,6 +74,17 @@ public class CustomItemA1p1 extends LinearLayout {
         }
     }
 
+    public void setTitleText3(String titleText) {
+        if (titleText != null) {
+            this.titleText2 = titleText;
+            txt2.setText(titleText);
+        }
+    }
+
+
+    public String getTitleText3(){
+        return txt2.getText().toString();
+    }
 
 
 
@@ -103,6 +114,7 @@ public class CustomItemA1p1 extends LinearLayout {
         TypedArray a = mContext.obtainStyledAttributes(attrs, R.styleable.CustomItem1Attr);
         setTitleText(a.getString(R.styleable.CustomItem1Attr_txt1));
         setTitleText2(a.getString(R.styleable.CustomItem1Attr_txt2));
+        setTitleText3(a.getString(R.styleable.CustomItem1Attr_txt3));
         setIconVisible(a.getBoolean(R.styleable.CustomItem1Attr_bool1,true));
         setIconImgId(a.getResourceId(R.styleable.CustomItem1Attr_icon1,R.mipmap.dianliu));
     }

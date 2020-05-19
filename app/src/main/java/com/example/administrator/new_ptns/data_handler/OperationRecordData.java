@@ -7,5 +7,5 @@ public class OperationRecordData extends AABaseData {
 
     public int patient_id;
 
-    
+
 }
