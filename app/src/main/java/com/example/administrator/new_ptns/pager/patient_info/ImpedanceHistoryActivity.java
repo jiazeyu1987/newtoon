@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 
+import com.example.administrator.new_ptns.BaseActivity;
 import com.example.administrator.new_ptns.R;
 import com.example.administrator.new_ptns.data_handler.DoublePatientData;
 import com.example.administrator.new_ptns.data_handler.ImpedanceData;
@@ -13,7 +14,7 @@ import java.util.ArrayList;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class ImpedanceHistoryActivity extends AppCompatActivity {
+public class ImpedanceHistoryActivity extends BaseActivity {
 
 
     @BindView(R.id.listview4)

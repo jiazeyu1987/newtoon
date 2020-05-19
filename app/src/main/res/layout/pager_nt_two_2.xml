@@ -9,12 +9,9 @@
 
     <ScrollView
         android:layout_width="@dimen/pager_content_width"
-        android:layout_height="@dimen/pager_content_height"
-        android:layout_marginBottom="60dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="450dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -27,7 +24,7 @@
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/adfad1f1asdf"
-                    android:layout_width="470dp"
+                    android:layout_width="300dp"
                     android:layout_height="300dp"
                     android:layout_marginTop="8dp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -79,7 +76,7 @@
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/adfad11fasdf"
-                    android:layout_width="600dp"
+                    android:layout_width="450dp"
                     android:layout_height="wrap_content"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/constraintLayout10">
@@ -94,12 +91,14 @@
                     <com.example.administrator.new_ptns.custom_item.CustomItemA7
                         android:id="@+id/customItemA7"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
+                        android:layout_height="match_parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
                 </android.support.constraint.ConstraintLayout>
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/adfad1fasdf"
-                    android:layout_width="470dp"
+                    android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent">
@@ -158,6 +157,8 @@
                     android:id="@+id/adfadfasdf"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="333dp"
+                    app:layout_constraintBottom_toTopOf="@+id/constraintLayout10"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
@@ -185,7 +186,7 @@
                         android:id="@+id/switch2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="300dp"
+                        android:layout_marginStart="32dp"
                         android:scaleX="1.5"
                         android:scaleY="1.5"
                         android:textOff="恒流 mA"
@@ -207,7 +208,7 @@
                     <Button
                         android:id="@+id/button41"
                         style="@style/RoundRectButton2"
-                        android:layout_width="500dp"
+                        android:layout_width="320dp"
                         android:layout_marginStart="32dp"
                         android:layout_marginTop="16dp"
                         android:text="LSTN"
@@ -238,7 +239,7 @@
                     <Button
                         android:id="@+id/button40"
                         style="@style/RoundRectButton2"
-                        android:layout_width="500dp"
+                        android:layout_width="320dp"
                         android:layout_marginStart="16dp"
                         android:layout_marginTop="16dp"
                         android:text="RSTN"
@@ -271,6 +272,7 @@
     </ScrollView>
 
     <LinearLayout
+        android:id="@+id/linearLayout9"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:orientation="horizontal"

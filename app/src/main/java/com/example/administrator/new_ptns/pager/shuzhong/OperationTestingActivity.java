@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.administrator.new_ptns.BaseActivity;
 import com.example.administrator.new_ptns.R;
 import com.example.administrator.new_ptns.data_handler.ContactData;
 
@@ -18,7 +19,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class OperationTestingActivity extends AppCompatActivity {
+public class OperationTestingActivity extends BaseActivity {
 
     @BindView(R.id.btn_patient)
     Button btnPatient;

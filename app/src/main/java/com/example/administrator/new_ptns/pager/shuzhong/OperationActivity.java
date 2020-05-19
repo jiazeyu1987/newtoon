@@ -10,6 +10,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import com.example.administrator.new_ptns.BaseActivity;
 import com.example.administrator.new_ptns.R;
 import com.example.administrator.new_ptns.custom_item.CustomItemA4;
 import com.example.administrator.new_ptns.custom_item.CustomItemA5;
@@ -25,7 +26,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class OperationActivity extends AppCompatActivity {
+public class OperationActivity extends BaseActivity {
 
     @BindView(R.id.btn_return)
     ImageView btnReturn;

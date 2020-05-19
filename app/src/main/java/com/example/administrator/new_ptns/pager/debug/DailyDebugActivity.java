@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.administrator.new_ptns.BaseActivity;
 import com.example.administrator.new_ptns.R;
 
 import java.util.ArrayList;
@@ -17,7 +18,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class DailyDebugActivity extends AppCompatActivity {
+public class DailyDebugActivity extends BaseActivity {
 
 
     @BindView(R.id.btn_impedance)

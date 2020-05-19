@@ -2,10 +2,10 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/activity_content_width"
+    android:layout_height="@dimen/activity_content_height"
     android:focusable="true"
-    android:focusableInTouchMode="true"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:focusableInTouchMode="true">
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/aci_top"
@@ -22,6 +22,7 @@
         android:id="@+id/aci_00"
         android:layout_width="520dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/aci_top">
 
@@ -40,7 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="32dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/customItem66"></com.example.administrator.new_ptns.custom_item.CustomItemA6>
 
@@ -63,6 +64,7 @@
         android:id="@+id/aci_10"
         android:layout_width="@dimen/contact_info_width_03"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/aci_00">
 
@@ -83,7 +85,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="24dp"
             android:background="@color/active_txt_color1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/customItem63">
@@ -175,7 +177,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="24dp"
             app:layout_constraintStart_toEndOf="@+id/textView74"
             app:layout_constraintTop_toTopOf="parent"
             app:txt1="STN" />
@@ -185,7 +187,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="24dp"
             android:text="植入位置"
             android:textSize="25sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -204,7 +206,7 @@
             style="@style/RoundRectButton.Active"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="8dp"
             android:text="停止刺激"
             app:layout_constraintEnd_toEndOf="@+id/bundle_freq"
             app:layout_constraintTop_toBottomOf="@+id/bundle_pulse" />
@@ -225,7 +227,7 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="8dp"
             android:text="开始刺激"
             app:layout_constraintStart_toStartOf="@+id/bundle_freq"
             app:layout_constraintTop_toBottomOf="@+id/bundle_pulse" />
@@ -234,28 +236,28 @@
             android:id="@+id/bundle_freq"
             android:layout_width="wrap_content"
             android:layout_height="44dp"
+            app:float0="0"
+            app:float1="0"
+            app:float2="5"
+            app:float3="0.1"
+            app:float4="0.5"
             app:layout_constraintStart_toStartOf="@+id/bundle_range"
             app:layout_constraintTop_toBottomOf="@+id/bundle_range"
-            app:float0 = "0"
-            app:float1 = "0"
-            app:float2 = "5"
-            app:float3 = "0.1"
-            app:float4 = "0.5"
             app:txt1="频率"
             app:txt2="0"
-            app:txt3="赫兹" />
+            app:txt3="Hz" />
 
         <com.example.administrator.new_ptns.custom_item.CustomItemA5
             android:id="@+id/bundle_pulse"
             android:layout_width="wrap_content"
             android:layout_height="44dp"
+            app:float0="0"
+            app:float1="0"
+            app:float2="50"
+            app:float3="1"
+            app:float4="10"
             app:layout_constraintStart_toStartOf="@+id/bundle_freq"
             app:layout_constraintTop_toBottomOf="@+id/bundle_freq"
-            app:float0 = "0"
-            app:float1 = "0"
-            app:float2 = "50"
-            app:float3 = "1"
-            app:float4 = "10"
             app:txt1="脉宽"
             app:txt2="0"
             app:txt3="uS" />
@@ -265,18 +267,16 @@
             android:layout_width="wrap_content"
             android:layout_height="44dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="273dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:float0="0"
+            app:float1="0"
+            app:float2="50"
+            app:float3="10"
+            app:float4="20"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:float0 = "0"
-            app:float1 = "0"
-            app:float2 = "50"
-            app:float3 = "10"
-            app:float4 = "20"
             app:txt1="幅度"
             app:txt2="0"
             app:txt3="mA" />
@@ -286,6 +286,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
             android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -298,7 +299,7 @@
             android:id="@+id/radioGroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="32dp"
+            android:layout_marginBottom="24dp"
             android:orientation="horizontal"
             app:layout_constraintBottom_toTopOf="@+id/bundle_range"
             app:layout_constraintEnd_toEndOf="@+id/bundle_freq"

@@ -2,15 +2,15 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="@dimen/activity_content_width"
+    android:layout_height="@dimen/activity_content_height"
     android:focusable="true"
     android:focusableInTouchMode="true">
 
     <android.support.constraint.ConstraintLayout
-        android:id="@+id/cons1traintLayout11"
-        android:layout_width="700dp"
-        android:layout_height="700dp"
+        android:id="@+id/cons1traintLayout111"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -29,14 +29,65 @@
         <ListView
             android:id="@+id/listview3"
             android:layout_width="match_parent"
-            android:layout_height="600dp"
-            app:layout_constraintBottom_toBottomOf="parent"></ListView>
+            android:layout_height="250dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/customI1t1em511"></ListView>
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cons1traintLayout11"
+        android:layout_width="500dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cons1traintLayout111">
+
+        <Button
+            android:id="@+id/btn_stim_report"
+            style="@style/RoundRectButton2"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:text="刺激日志"
+            app:layout_constraintStart_toEndOf="@+id/btn_operation_report"
+            app:layout_constraintTop_toBottomOf="@+id/customI1t1em512" />
+
+        <Button
+            android:id="@+id/btn_impedance_report"
+            style="@style/RoundRectButton2"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:text="阻抗日志"
+            app:layout_constraintStart_toEndOf="@+id/btn_stim_report"
+            app:layout_constraintTop_toBottomOf="@+id/customI1t1em512" />
+
+        <Button
+            android:id="@+id/btn_operation_report"
+            style="@style/RoundRectButton2"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:text="手术报告"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/customI1t1em512" />
+
+        <com.example.administrator.new_ptns.custom_item.CustomItem5
+            android:id="@+id/customI1t1em512"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:txt1="其他信息">
+
+        </com.example.administrator.new_ptns.custom_item.CustomItem5>
     </android.support.constraint.ConstraintLayout>
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/constraintLayout11"
-        android:layout_width="570dp"
+        android:layout_width="500dp"
         android:layout_height="300dp"
+        android:layout_marginStart="32dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -86,8 +137,9 @@
     </android.support.constraint.ConstraintLayout>
 
     <android.support.constraint.ConstraintLayout
-        android:layout_width="570dp"
-        android:layout_height="400dp"
+        android:layout_width="500dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="32dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout11">
 

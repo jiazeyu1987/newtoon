@@ -25,11 +25,10 @@
                 <Button
                     android:id="@+id/button38"
                     style="@style/RoundRectButton2"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginBottom="8dp"
+                    android:layout_marginStart="32dp"
                     android:text="查看"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/customItemA113"
+                    app:layout_constraintBottom_toBottomOf="@+id/custom111Item58"
+                    app:layout_constraintStart_toEndOf="@+id/custom111Item58"
                     app:layout_constraintTop_toTopOf="@+id/custom111Item58" />
 
                 <com.example.administrator.new_ptns.custom_item.CustomItem5
@@ -38,6 +37,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
+                    android:layout_marginBottom="333dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/asda1sdasd"
                     app:txt1="历史数据" />
@@ -45,11 +46,12 @@
                 <Button
                     android:id="@+id/button37"
                     style="@style/RoundRectButton2"
-                    android:layout_marginStart="8dp"
                     android:layout_marginBottom="8dp"
                     android:text="同步"
                     app:layout_constraintBottom_toBottomOf="@+id/asda1sdasd"
+                    app:layout_constraintEnd_toEndOf="@+id/button38"
                     app:layout_constraintStart_toEndOf="@+id/customItemA113"
+                    app:layout_constraintStart_toStartOf="@+id/button38"
                     app:layout_constraintTop_toTopOf="@+id/asda1sdasd" />
 
                 <Button
@@ -57,10 +59,13 @@
                     style="@style/RoundRectButton2"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
                     android:layout_marginBottom="8dp"
                     android:text="详情"
                     app:layout_constraintBottom_toTopOf="@+id/asdasdasd"
+                    app:layout_constraintEnd_toEndOf="@+id/button37"
                     app:layout_constraintStart_toEndOf="@+id/customItemA113"
+                    app:layout_constraintStart_toStartOf="@+id/button37"
                     app:layout_constraintTop_toTopOf="@+id/customItemA113" />
 
                 <com.example.administrator.new_ptns.custom_item.CustomItemA1
@@ -258,14 +263,11 @@
 
                 <ImageView
                     android:id="@+id/imageView46"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginEnd="8dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:layout_marginBottom="8dp"
                     app:layout_constraintBottom_toBottomOf="@+id/tableLayout5"
-                    app:layout_constraintEnd_toStartOf="@+id/tableLayout4"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/imageView45"
                     app:layout_constraintTop_toTopOf="@+id/tableLayout5"
                     app:srcCompat="@mipmap/dianliu" />
 
@@ -420,10 +422,9 @@
                     android:id="@+id/tableLayout5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
                     android:layout_marginTop="16dp"
                     android:background="@color/active_txt_color1"
-                    app:layout_constraintStart_toEndOf="@+id/customItem58"
+                    app:layout_constraintStart_toStartOf="@+id/tableLayout4"
                     app:layout_constraintTop_toBottomOf="@+id/tableLayout4">
 
                     <TableRow

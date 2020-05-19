@@ -9,7 +9,7 @@
 
     <TextView
         android:id="@+id/textView27"
-        android:layout_width="70dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:gravity="center_vertical"
@@ -22,7 +22,7 @@
 
     <Button
         android:id="@+id/button12"
-        android:layout_width="wrap_content"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:text="--"
@@ -32,7 +32,7 @@
 
     <Button
         android:id="@+id/button13"
-        android:layout_width="wrap_content"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:text="-"
@@ -42,7 +42,7 @@
 
     <TextView
         android:id="@+id/textView75"
-        android:layout_width="50dp"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -66,7 +66,7 @@
 
     <Button
         android:id="@+id/button14"
-        android:layout_width="wrap_content"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:text="+"
@@ -76,7 +76,7 @@
 
     <Button
         android:id="@+id/button18"
-        android:layout_width="wrap_content"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:text="++"
