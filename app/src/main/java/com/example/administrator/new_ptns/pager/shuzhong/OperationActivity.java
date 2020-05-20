@@ -15,9 +15,11 @@ import com.example.administrator.new_ptns.custom_item.CustomItemA4;
 import com.example.administrator.new_ptns.custom_item.CustomItemA5;
 import com.example.administrator.new_ptns.custom_item.CustomItemA6;
 import com.example.administrator.new_ptns.custom_item.CustomItemA8;
+import com.example.administrator.new_ptns.data_handler.ElectrodeBundle;
 import com.example.administrator.new_ptns.data_handler.OperationTempData;
 import com.example.administrator.new_ptns.data_handler.OperationTempDataDao;
 import com.example.administrator.new_ptns.my_utils.TimeUtils;
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 
@@ -67,9 +69,7 @@ public class OperationActivity extends AppCompatActivity {
     @BindView(R.id.tv_electrode_show)
     TextView tvElectrodeShow;
     private int current_mode = 1;
-    public String g_side;
-    public String g_guige;
-    public String g_xuliehao;
+    public ElectrodeBundle electrodeBundle;
     public ArrayList<String> impedance_list;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,11 +91,10 @@ public class OperationActivity extends AppCompatActivity {
             }
         });
 
+        btnEmbeddedPosition.setDataList("请选择位置：",new String[]{"位置1","位置2","位置3","位置4","位置5",});
         Intent intent = getIntent();
-        g_side = intent.getStringExtra("para1");
-        g_guige = intent.getStringExtra("para2");
-        g_xuliehao = intent.getStringExtra("para3");
-        tvElectrodeShow.setText(g_side+":"+g_guige);
+        electrodeBundle = new Gson().fromJson(intent.getStringExtra("extra"),ElectrodeBundle.class);
+        tvElectrodeShow.setText(electrodeBundle.type+":"+electrodeBundle.guige);
         init_false_data();
 
     }
@@ -129,15 +128,13 @@ public class OperationActivity extends AppCompatActivity {
         bundleImpedance.setValue(impedance_list);
     }
 
-    @OnClick({R.id.btn_return, R.id.btn_testing, R.id.btn_embedded_position, R.id.btn_stop_stim, R.id.btn_save_para, R.id.btn_start_time})
+    @OnClick({R.id.btn_return, R.id.btn_testing, R.id.btn_stop_stim, R.id.btn_save_para, R.id.btn_start_time})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_return:
                 finish();
                 break;
             case R.id.btn_testing:
-                break;
-            case R.id.btn_embedded_position:
                 break;
             case R.id.btn_stop_stim:
                 break;

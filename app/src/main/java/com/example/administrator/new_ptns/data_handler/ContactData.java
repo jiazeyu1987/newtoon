@@ -8,6 +8,8 @@ public class ContactData  extends AABaseData{
 
     public int id = -1;
 
+
+
     public String contact_number;
 
 
@@ -58,6 +60,12 @@ public class ContactData  extends AABaseData{
 
 
     public String adviser_info;
+
+
+    public String getAge(){
+        return "18";
+    }
+
 
     public boolean CheckDataLegality(){
         if(patient_name==null){

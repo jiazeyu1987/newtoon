@@ -2,14 +2,14 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="@dimen/pager_content_width"
-    android:layout_height="@dimen/pager_content_height"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:focusable="true"
     android:focusableInTouchMode="true">
 
     <ScrollView
-        android:layout_width="@dimen/pager_content_width"
-        android:layout_height="@dimen/pager_content_height"
+        android:layout_width="1200dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="60dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -85,6 +85,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/constraintLayout10">
 
                     <com.example.administrator.new_ptns.custom_item.CustomItemA7
+                        android:id="@+id/asdgafdgad"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginTop="16dp"
@@ -156,20 +157,19 @@
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/adfadfasdf"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="599dp"
+                    android:layout_height="104dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
                     <com.example.administrator.new_ptns.custom_item.CustomItemA3p1
+                        android:id="@+id/adfasdfsfd"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="200dp"
                         app:btn1="关闭"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/customItemA3p1"
-                        app:txt1="软停止" />
+                        app:txt1="软停止"
+                        tools:layout_editor_absoluteX="266dp"
+                        tools:layout_editor_absoluteY="58dp" />
 
                     <com.example.administrator.new_ptns.custom_item.CustomItemA3p1
                         android:id="@+id/customItemA3p1"

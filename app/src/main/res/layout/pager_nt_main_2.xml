@@ -33,18 +33,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button21"
-        app:txt1="合同录入">
+        app:txt1="合同录入"
+        tools:layout_editor_absoluteY="50dp">
 
     </com.example.administrator.new_ptns.custom_item.CustomItem6>
-
-    <Button
-        android:id="@+id/button21"
-        android:layout_width="@dimen/pager_content_width"
-        android:layout_height="50dp"
-        android:text="请扫描获取合同信息"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <com.example.administrator.new_ptns.custom_item.CustomItemA1p1
         android:id="@+id/ci_id_card"
@@ -53,9 +45,9 @@
         app:bool1="false"
         app:layout_constraintStart_toStartOf="@+id/ci_contact_number"
         app:layout_constraintTop_toBottomOf="@+id/ci_contact_number"
-        app:txt1="患者信息："
+        app:txt1="身份证号："
         app:txt3="3408211999010184033"
-        app:txt2="请填写患者信息" />
+        app:txt2="请填写身份证信息" />
 
     <com.example.administrator.new_ptns.custom_item.CustomItemA1p1
         android:id="@+id/ci_contact_number"

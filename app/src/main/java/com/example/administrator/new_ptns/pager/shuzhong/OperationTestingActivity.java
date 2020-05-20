@@ -1,5 +1,6 @@
 package com.example.administrator.new_ptns.pager.shuzhong;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +11,8 @@ import android.widget.TextView;
 
 import com.example.administrator.new_ptns.R;
 import com.example.administrator.new_ptns.data_handler.ContactData;
+import com.example.administrator.new_ptns.data_handler.ElectrodeBundle;
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,10 +36,10 @@ public class OperationTestingActivity extends AppCompatActivity {
 
     public String new_stim_name = "";
     public ContactData contactData = null;
-    public String new_electrode1 = "";
-    public String new_electrode2 = "";
+    public ElectrodeBundle new_electrode1 = null;
+    public ElectrodeBundle new_electrode2 = null;
     private List<View> viewList = new ArrayList<>();
-    OperationPagerAdapter myPagerAdapter;
+    public OperationPagerAdapter myPagerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +47,8 @@ public class OperationTestingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_operation_testing);
         ButterKnife.bind(this);
 
+        Intent intent = getIntent();
+        contactData = new Gson().fromJson(intent.getStringExtra("para1"),ContactData.class);
 
         LayoutInflater inflater = LayoutInflater.from(this);
         View view = inflater.inflate(R.layout.pager_nt_one_1, null);

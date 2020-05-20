@@ -46,8 +46,8 @@ public class MainActivity extends BaseActivity {
         ButterKnife.bind(this);
         init_view();
 
-        ContactDao dao = new ContactDao(this);
-        dao.delete_all();
+        //ContactDao dao = new ContactDao(this);
+        ////dao.delete_all();
     }
 
 

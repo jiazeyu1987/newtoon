@@ -32,7 +32,8 @@ public class CustomItemA1p3 extends LinearLayout {
     private String titleText;
     private String titleText2;
     private int iconImgId;
-    private Button btn1;
+    public Button btn1;
+    public EditText edt1;
     public static final int NO_LINE = 0;
 
     public int getIconImgId() {
@@ -65,18 +66,32 @@ public class CustomItemA1p3 extends LinearLayout {
         }
     }
 
-    public void setTextMode(){
-        txt2.setEnabled(false);
-    }
 
     public void setEditMode(){
-        txt2.setEnabled(true);
+        edt1.setVisibility(VISIBLE);
+        txt2.setVisibility(INVISIBLE);
+        btn1.setVisibility(INVISIBLE);
+    }
+
+    public void setTextMode(){
+        this.txt2.setVisibility(VISIBLE);
+        this.btn1.setVisibility(INVISIBLE);
+        edt1.setVisibility(INVISIBLE);
+    }
+
+    public void setBtnMode(){
+        btn1.setVisibility(VISIBLE);
+        txt2.setVisibility(INVISIBLE);
+        edt1.setVisibility(INVISIBLE);
     }
 
     public void setTitleText2(String titleText) {
-        this.txt2.setVisibility(VISIBLE);
-        this.btn1.setVisibility(INVISIBLE);
+        setTextMode();
         txt2.setText(titleText);
+    }
+
+    public String  getTitleText2() {
+        return txt2.getText().toString();
     }
 
     public void setTitleText3(String titleText) {
@@ -88,10 +103,33 @@ public class CustomItemA1p3 extends LinearLayout {
     }
 
     public void setBtn1(String s1){
-        btn1.setVisibility(VISIBLE);
-        txt2.setVisibility(INVISIBLE);
+        setBtnMode();
         btn1.setText(s1);
+        btn1.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final Context c1 = mContext;
+                final String[] datalist = new String[]{"LSTN","RSTN","/"};
+                AlertDialog.Builder builder = new AlertDialog.Builder(c1);
+                builder.setTitle("请选择规格");
+                builder.setCancelable(true);
+                builder.setIcon(R.mipmap.ic_launcher)
+                        .setItems(datalist, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                btn1.setText(datalist[which]);
+                            }
+                        }).create()
+                        .show();
+            }
+        });
     }
+
+    public void setedt1(boolean b){
+        if(b){
+        setEditMode();}
+    }
+
 
 
 
@@ -119,31 +157,15 @@ public class CustomItemA1p3 extends LinearLayout {
         txt2 =  mView.findViewById(R.id.et_3);
         txt3  =  mView.findViewById(R.id.et_1);
         txt4  =  mView.findViewById(R.id.et_2);
+        edt1 = mView.findViewById(R.id.eddads);
         TypedArray a = mContext.obtainStyledAttributes(attrs, R.styleable.CustomItem1Attr);
         setTitleText(a.getString(R.styleable.CustomItem1Attr_txt1));
         setTitleText2(a.getString(R.styleable.CustomItem1Attr_txt2));
         setTitleText3(a.getString(R.styleable.CustomItem1Attr_txt3));
         setTitleText4(a.getString(R.styleable.CustomItem1Attr_txt4));
         setBtn1(a.getString(R.styleable.CustomItem1Attr_btn1));
+        setedt1(a.getBoolean(R.styleable.CustomItem1Attr_bool1,false));
 
-        btn1.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                final Context c1 = mContext;
-                final String[] datalist = new String[]{"LSTN","RSTN","/"};
-                AlertDialog.Builder builder = new AlertDialog.Builder(c1);
-                builder.setTitle("请选择规格");
-                builder.setCancelable(true);
-                builder.setIcon(R.mipmap.ic_launcher)
-                        .setItems(datalist, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                btn1.setText(datalist[which]);
-                            }
-                        }).create()
-                        .show();
-            }
-        });
     }
 
 

@@ -80,8 +80,15 @@ public class CustomItemA1p2 extends LinearLayout {
     }
 
 
-
-
+    public String getBtn1Text(){
+        return btn1.getText().toString();
+    }
+    public String getBtn2Text(){
+        return btn2.getText().toString();
+    }
+    public String getEditText(){
+        return txt2.getText().toString();
+    }
 
 
 
