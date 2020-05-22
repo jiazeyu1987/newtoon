@@ -70,7 +70,9 @@ public class PagerShuzhong extends PagerBase {
                 intent.putExtra(NewContactActivity.INTENT_CONTACT_JSON,new Gson().toJson(contactDataList));
                 G.init(contactDataList.list1.get(0), TimeUtils.getCurrentTimeYMDHMS());
                 g_contactData = list1.get(0);
-                mContext.startActivity(intent);
+                if(G.TEST==false) {
+                    mContext.startActivity(intent);
+                }
             }
         });
         enter1.setOnClickListener(new View.OnClickListener() {
@@ -92,6 +94,9 @@ public class PagerShuzhong extends PagerBase {
                 do_enter_testing();
             }
         });
+        if(G.TEST){
+            contact_confirm.performClick();
+        }
     }
 
     private void do_enter1(){

@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.administrator.new_ptns.G;
 import com.example.administrator.new_ptns.R;
 import com.example.administrator.new_ptns.data_handler.ContactData;
 import com.example.administrator.new_ptns.data_handler.ElectrodeBundle;
@@ -60,6 +61,9 @@ public class OperationTestingActivity extends AppCompatActivity {
 
         myPagerAdapter = new OperationPagerAdapter(OperationTestingActivity.this, viewList, null);
         viewPager1.setAdapter(myPagerAdapter);
+        if(G.TEST){
+            //btnPreview.performClick();
+        }
     }
 
     @OnClick({R.id.btn_patient, R.id.btn_detection, R.id.btn_preview})

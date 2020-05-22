@@ -59,4 +59,5 @@ dependencies {
     configurations {
         all*.exclude group: 'com.google.code.gson'
     }
+    implementation 'com.github.huangyanbin:SmartTable:2.2.0'
 }

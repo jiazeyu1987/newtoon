@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.administrator.new_ptns.G;
 import com.example.administrator.new_ptns.R;
 
 import java.util.ArrayList;
@@ -50,6 +51,9 @@ public class DailyDebugActivity extends AppCompatActivity {
 
         myPagerAdapter = new DailyDebugAdapter(DailyDebugActivity.this, viewList, null);
         viewPager1.setAdapter(myPagerAdapter);
+        if(G.TEST){
+            btnDebug.performClick();
+        }
     }
 
 

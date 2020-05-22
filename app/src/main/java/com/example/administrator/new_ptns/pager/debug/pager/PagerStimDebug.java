@@ -4,14 +4,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
-import android.widget.Switch;
 
 import com.example.administrator.new_ptns.R;
 import com.example.administrator.new_ptns.custom_item.CustomItemA3p1;
 import com.example.administrator.new_ptns.custom_item.CustomItemA7;
 import com.example.administrator.new_ptns.custom_item.CustomItemA8;
 import com.example.administrator.new_ptns.pager.debug.DailyDebugActivity;
-import com.example.administrator.new_ptns.pager.shuzhong.OperationTestingActivity;
+import com.kyleduo.switchbutton.SwitchButton;
 
 
 public class PagerStimDebug {
@@ -20,7 +19,7 @@ public class PagerStimDebug {
     public View mView;
 
 
-    public Switch vc_switch;
+    public SwitchButton vc_switch;
     public CustomItemA3p1 soft_boot,soft_stop;
     public Button btn_LSTN,btn_RSTN,btn_syn_to_side;
     public CheckBox stim_real_time,complex_solution;
@@ -40,8 +39,8 @@ public class PagerStimDebug {
     public void init_view(View view){
         mView = view;
         vc_switch = mView.findViewById(R.id.switch2);
-        soft_boot = mView.findViewById(R.id.customItemA3p1);
-        soft_stop = mView.findViewById(R.id.adfasdfsfd);
+        soft_boot = mView.findViewById(R.id.soft_boot);
+        soft_stop = mView.findViewById(R.id.soft_stop);
         btn_LSTN = mView.findViewById(R.id.button41);
         btn_RSTN = mView.findViewById(R.id.button40);
         //btn_syn_to_side = mView.findViewById(R.id.switch2);
@@ -121,6 +120,12 @@ public class PagerStimDebug {
                 do_choose_vc(b);
             }
         });
+        do_choose_side("left");
+        range_auth.setDataList("请选择幅度范围",new String[]{"禁止","加减0.2","加减0.4","加减0.6","加减0.8","加减1.0","加减1.5","加减2.0","其他"});
+        freq_auth.setDataList("请选择频率范围",new String[]{"禁止","加减10","加减20","加减30","加减40","加减50","其他"});
+        pulse_auth.setDataList("请选择脉宽范围",new String[]{"禁止","加减10","加减20","加减30","加减40","加减50","加减60","加减70","加减80","加减90","加减100","其他"});
+        soft_boot.setDataList("请选择软启动时间",new String[]{"关闭","1s","2s","3s","4s","5s","6s","7s","8s","9s","10s"});
+        soft_stop.setDataList("请选择软停止时间",new String[]{"关闭","1s","2s","3s","4s","5s","6s","7s","8s","9s","10s"});
     }
 
     public void onResume(){
@@ -144,7 +149,17 @@ public class PagerStimDebug {
 
     private void do_choose_side(String side){
         current_side = side;
-        //TODO
+        btn_LSTN.setTextColor(mContext.getResources().getColor(R.color.green2));
+        btn_RSTN.setTextColor(mContext.getResources().getColor(R.color.green2));
+        btn_LSTN.setBackgroundColor(mContext.getResources().getColor(R.color.white));
+        btn_RSTN.setBackgroundColor(mContext.getResources().getColor(R.color.white));
+        if(current_side=="left"){
+            btn_LSTN.setTextColor(mContext.getResources().getColor(R.color.white));
+            btn_LSTN.setBackgroundColor(mContext.getResources().getColor(R.color.green2));
+        }else{
+            btn_RSTN.setTextColor(mContext.getResources().getColor(R.color.white));
+            btn_RSTN.setBackgroundColor(mContext.getResources().getColor(R.color.green2));
+        }
     }
 
     private void do_choose_vc(boolean b){

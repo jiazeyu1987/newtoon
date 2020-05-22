@@ -1,22 +1,29 @@
 package com.example.administrator.new_ptns.pager.shuzhong.pager;
 
+import android.graphics.Color;
+import android.support.constraint.ConstraintLayout;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.CheckBox;
+import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TableLayout;
 import android.widget.TextView;
 
-import com.example.administrator.new_ptns.MainActivity;
+import com.bin.david.form.core.SmartTable;
+import com.bin.david.form.data.style.FontStyle;
 import com.example.administrator.new_ptns.R;
+import com.example.administrator.new_ptns.custom_item.CustomItem5;
 import com.example.administrator.new_ptns.custom_item.CustomItemA1;
-import com.example.administrator.new_ptns.custom_item.CustomItemA1p1;
 import com.example.administrator.new_ptns.custom_item.CustomItemA1p3;
 import com.example.administrator.new_ptns.data_handler.ContactData;
 import com.example.administrator.new_ptns.data_handler.OperationTempData;
 import com.example.administrator.new_ptns.data_handler.OperationTempDataDao;
-import com.example.administrator.new_ptns.pager.PagerBase;
+import com.example.administrator.new_ptns.data_handler.OperationTableColumnInfo;
 import com.example.administrator.new_ptns.pager.shuzhong.OperationTestingActivity;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class PagerReportPreview {
@@ -30,8 +37,10 @@ public class PagerReportPreview {
     public CustomItemA1 hospital,operation_doctor,operation_date,contact_number;
     public ArrayList<OperationTempData> list1;
     public ContactData contactData = null;
-
+    public ScrollView scrollview;
     public TableLayout table1;
+    public ConstraintLayout lt1;
+    CustomItem5 tag1;
     public PagerReportPreview(OperationTestingActivity context){
         mContext = context;
     }
@@ -57,13 +66,66 @@ public class PagerReportPreview {
         operation_doctor = mView.findViewById(R.id.customItemA110);
         operation_date = mView.findViewById(R.id.custom1ItemA19);
         contact_number = mView.findViewById(R.id.custom12ItemA19);
-
+        scrollview = mView.findViewById(R.id.scrollview1);
+        lt1 = mView.findViewById(R.id.lt1);
+        tag1 = mView.findViewById(R.id.other_record);
         contactData = mContext.contactData;
         OperationTempDataDao dao = new OperationTempDataDao(mContext);
         list1 = dao.getAllOperationTempDatas();
-
+        list1.add(new OperationTempData(1,"2020-2-2","LSTN","3+ 2-","200","xxxxx"));
+        list1.add(new OperationTempData(1,"2020-2-2","LSTN","3+ 2-","200","xxxxx"));
+        list1.add(new OperationTempData(1,"2020-2-2","LSTN","3+ 2-","200","xxxxx"));
+        list1.add(new OperationTempData(1,"2020-2-2","LSTN","3+ 2-","200","xxxxx"));
+        list1.add(new OperationTempData(1,"2020-2-2","LSTN","3+ 2-","200","xxxxx"));
+        list1.add(new OperationTempData(1,"2020-2-2","LSTN","3+ 2-","200","xxxxx"));
+        list1.add(new OperationTempData(1,"2020-2-2","LSTN","3+ 2-","200","xxxxx"));
+        list1.add(new OperationTempData(1,"2020-2-2","LSTN","3+ 2-","200","xxxxx"));
+        list1.add(new OperationTempData(1,"2020-2-2","LSTN","3+ 2-","200","xxxxx"));
+        list1.add(new OperationTempData(1,"2020-2-2","LSTN","3+ 2-","200","xxxxx"));
+        list1.add(new OperationTempData(1,"2020-2-2","LSTN","3+ 2-","200","xxxxx"));
+        list1.add(new OperationTempData(1,"2020-2-2","LSTN","3+ 2-","200","xxxxx"));
+        list1.add(new OperationTempData(1,"2020-2-2","LSTN","3+ 2-","200","xxxxx"));
+        list1.add(new OperationTempData(1,"2020-2-2","LSTN","3+ 2-","200","xxxxx"));
+        list1.add(new OperationTempData(1,"2020-2-2","LSTN","3+ 2-","200","xxxxx"));
+        list1.add(new OperationTempData(1,"2020-2-2","LSTN","3+ 2-","200","xxxxx"));
+        list1.add(new OperationTempData(1,"2020-2-2","LSTN","3+ 2-","200","xxxxx"));
+        list1.add(new OperationTempData(1,"2020-2-2","LSTN","3+ 2-","200","xxxxx"));
+        list1.add(new OperationTempData(1,"2020-2-2","LSTN","3+ 2-","200","xxxxx"));
+        list1.add(new OperationTempData(1,"2020-2-2","LSTN","3+ 2-","200","xxxxx"));
+        list1.add(new OperationTempData(1,"2020-2-2","LSTN","3+ 2-","200","xxxxx"));
+        list1.add(new OperationTempData(1,"2020-2-2","LSTN","3+ 2-","200","xxxxx"));
+        list1.add(new OperationTempData(1,"2020-2-2","LSTN","3+ 2-","200","xxxxx"));
+        list1.add(new OperationTempData(1,"2020-2-2","LSTN","3+ 2-","200","xxxxx"));
+        list1.add(new OperationTempData(1,"2020-2-2","LSTN","3+ 2-","200","xxxxx"));
+        list1.add(new OperationTempData(1,"2020-2-2","LSTN","3+ 2-","200","xxxxx"));
+        list1.add(new OperationTempData(1,"2020-2-2","LSTN","3+ 2-","200","xxxxx"));
+        list1.add(new OperationTempData(1,"2020-2-2","LSTN","3+ 2-","200","xxxxx"));
+        list1.add(new OperationTempData(1,"2020-2-2","LSTN","3+ 2-","200","xxxxx"));
+        list1.add(new OperationTempData(1,"2020-2-2","LSTN","3+ 2-","200","xxxxx"));
+        list1.add(new OperationTempData(1,"2020-2-2","LSTN","3+ 2-","200","xxxxx"));
+        list1.add(new OperationTempData(1,"2020-2-2","LSTN","3+ 2-","200","xxxxx"));
+        list1.add(new OperationTempData(1,"2020-2-2","LSTN","3+ 2-","200","xxxxx"));
+        list1.add(new OperationTempData(1,"2020-2-2","LSTN","3+ 2-","200","xxxxx"));
+        list1.add(new OperationTempData(1,"2020-2-2","LSTN","3+ 2-","200","xxxxx"));
         table1 = mView.findViewById(R.id.tableLayout);
         set_data();
+        set_table_data();
+    }
+
+    private void set_table_data(){
+        List<OperationTableColumnInfo> list = new ArrayList<>();
+        SmartTable table = mView.findViewById(R.id.table1);
+        for(int i = 0 ; i < list1.size();i++){
+            OperationTempData data = list1.get(i);
+            list.add(new OperationTableColumnInfo(data.long_date,data.electrode_position,data.electrode_data,data.impedance,data.stim_para));
+        }
+        table.setData(list);
+        table.getConfig().setContentStyle(new FontStyle(18, Color.BLUE));
+        //lt1.getLayoutParams().height = list1.size()*20+lt1.getLayoutParams().height;
+
+        ConstraintLayout.LayoutParams lp = (ConstraintLayout.LayoutParams) tag1.getLayoutParams();
+        lp.topMargin = list1.size()*60;
+        tag1.setLayoutParams(lp);
     }
 
     private void set_data(){

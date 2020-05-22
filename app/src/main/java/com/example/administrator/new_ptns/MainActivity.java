@@ -93,6 +93,10 @@ public class MainActivity extends BaseActivity {
 
         myPagerAdapter = new MyPagerAdapter(MainActivity.this, viewList, null);
         viewPager.setAdapter(myPagerAdapter);
+
+        if(G.TEST){
+            debug.performClick();
+        }
     }
 
     private void do_click_shuqian(){
