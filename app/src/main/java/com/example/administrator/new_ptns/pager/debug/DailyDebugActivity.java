@@ -51,6 +51,9 @@ public class DailyDebugActivity extends BaseActivity {
 
         myPagerAdapter = new DailyDebugAdapter(DailyDebugActivity.this, viewList, null);
         viewPager1.setAdapter(myPagerAdapter);
+        if(G.TEST){
+            btnDebug.performClick();
+        }
     }
 
 

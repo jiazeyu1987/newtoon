@@ -106,7 +106,7 @@
         app:layout_constraintStart_toStartOf="@+id/customItem55"
         app:layout_constraintTop_toBottomOf="@+id/customItem55"
         app:txt1="刺激器"
-        app:txt2="DBS"
+        app:bool1="true"
         app:txt3="iSBS210A"
         app:txt4="ISBSxxxxxxxxx" />
 </android.support.constraint.ConstraintLayout>

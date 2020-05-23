@@ -46,8 +46,8 @@ public class MainActivity extends BaseActivity {
         ButterKnife.bind(this);
         init_view();
 
-        ContactDao dao = new ContactDao(this);
-        dao.delete_all();
+        //ContactDao dao = new ContactDao(this);
+        ////dao.delete_all();
     }
 
 
@@ -93,6 +93,10 @@ public class MainActivity extends BaseActivity {
 
         myPagerAdapter = new MyPagerAdapter(MainActivity.this, viewList, null);
         viewPager.setAdapter(myPagerAdapter);
+
+        if(G.TEST){
+            debug.performClick();
+        }
     }
 
     private void do_click_shuqian(){

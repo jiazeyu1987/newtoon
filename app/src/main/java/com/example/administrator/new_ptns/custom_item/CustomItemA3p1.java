@@ -62,6 +62,13 @@ public class CustomItemA3p1 extends LinearLayout {
         }
     }
 
+    public void setTitleText3(String titleText) {
+        if (titleText != null) {
+            this.titleText2 = titleText;
+            btn1.setText(titleText);
+        }
+    }
+
 
 
 
@@ -93,29 +100,39 @@ public class CustomItemA3p1 extends LinearLayout {
         TypedArray a = mContext.obtainStyledAttributes(attrs, R.styleable.CustomItem1Attr);
         setTitleText(a.getString(R.styleable.CustomItem1Attr_txt1));
         btn1.setText((a.getString(R.styleable.CustomItem1Attr_btn1)));
-        this.setOnClickListener(new OnClickListener() {
+        LinearLayout as = mView.findViewById(R.id.as);
+        as.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(title==null||datalist==null||datalist.length==0){
-                    return;
-                }
-                final Context c1 = context;
-                AlertDialog.Builder builder = new AlertDialog.Builder(c1);
-                builder.setTitle(title);
-                builder.setCancelable(true);
-                builder.setIcon(R.mipmap.ic_launcher)
-                        .setItems(datalist, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                setTitleText(datalist[which]);
-                            }
-                        }).create()
-                        .show();
+                onclick1();
 
+            }
+        });
+        btn1.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onclick1();
             }
         });
     }
 
+    private void onclick1(){
+        if(title==null||datalist==null||datalist.length==0){
+            return;
+        }
+        final Context c1 = mContext;
+        AlertDialog.Builder builder = new AlertDialog.Builder(c1);
+        builder.setTitle(title);
+        builder.setCancelable(true);
+        builder.setIcon(R.mipmap.ic_launcher)
+                .setItems(datalist, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        setTitleText3(datalist[which]);
+                    }
+                }).create()
+                .show();
+    }
 
     public void setViewOnlickListener(OnClickListener onlickListener) {
         this.onClickListener = onlickListener;

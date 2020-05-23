@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.administrator.new_ptns.G;
 import com.example.administrator.new_ptns.MainActivity;
 import com.example.administrator.new_ptns.R;
 import com.example.administrator.new_ptns.pager.PagerBase;
@@ -26,6 +27,9 @@ public class PagerDebug extends PagerBase {
                 do_enter();
             }
         });
+        if(G.TEST){
+            enter.performClick();
+        }
     }
 
     private void do_enter(){
