@@ -209,7 +209,7 @@
             android:layout_marginTop="8dp"
             android:text="停止刺激"
             app:layout_constraintEnd_toEndOf="@+id/bundle_freq"
-            app:layout_constraintTop_toBottomOf="@+id/bundle_pulse" />
+            app:layout_constraintTop_toBottomOf="@+id/adfadf" />
 
         <Button
             android:id="@+id/btn_save_para"
@@ -230,34 +230,36 @@
             android:layout_marginTop="8dp"
             android:text="开始刺激"
             app:layout_constraintStart_toStartOf="@+id/bundle_freq"
-            app:layout_constraintTop_toBottomOf="@+id/bundle_pulse" />
+            app:layout_constraintTop_toBottomOf="@+id/adfadf" />
 
         <com.example.administrator.new_ptns.custom_item.CustomItemA5
             android:id="@+id/bundle_freq"
             android:layout_width="wrap_content"
             android:layout_height="44dp"
+
+            app:layout_constraintStart_toStartOf="@+id/bundle_range"
+            app:layout_constraintTop_toBottomOf="@+id/bundle_range"
             app:float0="0"
             app:float1="0"
             app:float2="5"
             app:float3="0.1"
             app:float4="0.5"
-            app:layout_constraintStart_toStartOf="@+id/bundle_range"
-            app:layout_constraintTop_toBottomOf="@+id/bundle_range"
             app:txt1="频率"
             app:txt2="0"
             app:txt3="Hz" />
 
         <com.example.administrator.new_ptns.custom_item.CustomItemA5
-            android:id="@+id/bundle_pulse"
+            android:id="@+id/adfadf"
             android:layout_width="wrap_content"
             android:layout_height="44dp"
+
+            app:layout_constraintStart_toStartOf="@+id/bundle_freq"
+            app:layout_constraintTop_toBottomOf="@+id/bundle_freq"
             app:float0="0"
             app:float1="0"
             app:float2="50"
             app:float3="1"
             app:float4="10"
-            app:layout_constraintStart_toStartOf="@+id/bundle_freq"
-            app:layout_constraintTop_toBottomOf="@+id/bundle_freq"
             app:txt1="脉宽"
             app:txt2="0"
             app:txt3="uS" />
@@ -269,14 +271,15 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="273dp"
             android:layout_marginEnd="8dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:float0="0"
             app:float1="0"
             app:float2="50"
             app:float3="10"
             app:float4="20"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             app:txt1="幅度"
             app:txt2="0"
             app:txt3="mA" />

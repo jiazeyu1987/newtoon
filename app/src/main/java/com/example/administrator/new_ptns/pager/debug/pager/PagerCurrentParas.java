@@ -84,7 +84,8 @@ public class PagerCurrentParas {
         run_state = mView.findViewById(R.id.customItemA113);
         battery = mView.findViewById(R.id.asdasdasd);
         inner_clock = mView.findViewById(R.id.asda1sdasd);
-        bundle = DailyStimBundle.getNormalTestData();
+        //bundle = DailyStimBundle.getNormalTestData();
+        bundle = DailyStimBundle.getComplexTestData();
         init_with_data();
     }
 

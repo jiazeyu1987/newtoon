@@ -34,7 +34,7 @@ public class CustomItemA8 extends LinearLayout {
     public String[] datalist = null;
     public static final int NO_LINE = 0;
     public String title = "";
-    Button btn1;
+    public Button btn1;
     public int state = 1;
     public int getIconImgId() {
         return iconImgId;
@@ -65,7 +65,13 @@ public class CustomItemA8 extends LinearLayout {
         }
     }
 
+    public String getBtnText(){
+        return btn1.getText().toString();
+    }
 
+    public void setBtnText(String s1){
+        btn1.setText(s1);
+    }
 
 
 

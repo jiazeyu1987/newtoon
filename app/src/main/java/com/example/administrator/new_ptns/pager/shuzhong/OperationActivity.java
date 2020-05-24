@@ -2,7 +2,6 @@ package com.example.administrator.new_ptns.pager.shuzhong;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -54,7 +53,7 @@ public class OperationActivity extends BaseActivity {
     Button btnStartTime;
     @BindView(R.id.bundle_freq)
     CustomItemA5 bundleFreq;
-    @BindView(R.id.bundle_pulse)
+    @BindView(R.id.adfadf)
     CustomItemA5 bundlePulse;
     @BindView(R.id.bundle_range)
     CustomItemA5 bundleRange;

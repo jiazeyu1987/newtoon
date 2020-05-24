@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.blankj.utilcode.util.ToastUtils;
 import com.example.administrator.new_ptns.R;
 
 import java.text.NumberFormat;
@@ -42,6 +43,7 @@ public class CustomItemA5 extends LinearLayout {
     public float max_value = 0;
     public float step_value_min = 0;
     public float step_value_max = 0;
+    public String vc_mode = "current";
     public int getIconImgId() {
         return iconImgId;
     }
@@ -79,7 +81,29 @@ public class CustomItemA5 extends LinearLayout {
     }
 
 
+    public void update_vcmode(String vc){
 
+
+        if(vc==vc_mode){
+            return;
+        }
+        vc_mode = vc;
+        if(vc=="current"){
+            value = 0;
+            min_value = 0;
+            max_value = 50;
+            step_value_min = 10;
+            step_value_max = 20;
+            setTitleText3("mA");
+        }else{
+            value = 0;
+            min_value = 0;
+            max_value = 70;
+            step_value_min = 5;
+            step_value_max = 10;
+            setTitleText3("mV");
+        }
+    }
 
     public void setDataList(String title1,String[] d1){
         datalist = d1;
