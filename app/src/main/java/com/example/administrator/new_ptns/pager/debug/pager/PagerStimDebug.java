@@ -1,5 +1,6 @@
 package com.example.administrator.new_ptns.pager.debug.pager;
 
+import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -15,6 +16,7 @@ import com.example.administrator.new_ptns.data_handler.SolutionData;
 import com.example.administrator.new_ptns.data_handler.StimDebugDao;
 import com.example.administrator.new_ptns.data_handler.StimDebugData;
 import com.example.administrator.new_ptns.pager.debug.DailyDebugActivity;
+import com.example.administrator.new_ptns.pager.debug.ReportActivity;
 import com.kyleduo.switchbutton.SwitchButton;
 
 
@@ -198,7 +200,10 @@ public class PagerStimDebug {
 
     }
 
-    private void do_start_stim(){}
+    private void do_start_stim(){
+        Intent intent = new Intent(mContext, ReportActivity.class);
+        mContext.startActivity(intent);
+    }
 
 
     private void do_save_report(){

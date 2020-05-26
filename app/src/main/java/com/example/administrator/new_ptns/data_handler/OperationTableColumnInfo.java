@@ -3,7 +3,7 @@ package com.example.administrator.new_ptns.data_handler;
 import com.bin.david.form.annotation.SmartColumn;
 import com.bin.david.form.annotation.SmartTable;
 
-@SmartTable(name = "销售计划表")
+@SmartTable(name = "图标1")
 public class OperationTableColumnInfo {
     public OperationTableColumnInfo(String save_time1, String electrode_position1, String channel_position1, String impedance1, String para1) {
         this.save_time = save_time1;
