@@ -89,7 +89,7 @@ public class CustomItemA7 extends LinearLayout {
                 bundle_range.getTitleText2(),
                 bundle_freq.getTitleText2(),
                 bundle_pulse.getTitleText2(),
-                test_time.btn1.getText().toString(),bundle_range.vc_mode);
+                test_time.btn1.getText().toString());
     }
 
     public void setSolutionData(SolutionData solutionData){

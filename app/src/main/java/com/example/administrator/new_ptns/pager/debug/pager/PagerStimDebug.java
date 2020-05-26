@@ -12,6 +12,7 @@ import com.example.administrator.new_ptns.custom_item.CustomItemA7;
 import com.example.administrator.new_ptns.custom_item.CustomItemA8;
 import com.example.administrator.new_ptns.data_handler.SolutionBigData;
 import com.example.administrator.new_ptns.data_handler.SolutionData;
+import com.example.administrator.new_ptns.data_handler.StimDebugDao;
 import com.example.administrator.new_ptns.data_handler.StimDebugData;
 import com.example.administrator.new_ptns.pager.debug.DailyDebugActivity;
 import com.kyleduo.switchbutton.SwitchButton;
@@ -29,14 +30,15 @@ public class PagerStimDebug {
     public CheckBox cb_stim_real_time,cb_complex_solution;
     public CustomItemA3p1 range_auth,freq_auth,pulse_auth,lasttime_auth;
 
-    public Button start_stim,save_report,shut_down_stim;
+    public Button start_stim,shut_down_stim;
     CustomItemA8 btn_channel1,btn_channel2,btn_channel3,btn_channel4,btn_channel5;
     public String current_side = "left";
     public String vc_mode = "current";
     CustomItemA7 ci_solution1,ci_solution2;
     public SolutionBigData left_data = new SolutionBigData();
     public SolutionBigData right_data = new SolutionBigData();
-    public StimDebugData data = null;
+    public StimDebugData stimDebugData = null;
+    public Button btn_save_report;
     public PagerStimDebug(DailyDebugActivity context){
         mContext = context;
     }
@@ -65,8 +67,8 @@ public class PagerStimDebug {
         pulse_auth = mView.findViewById(R.id.customItemA3p14);
         lasttime_auth = mView.findViewById(R.id.dfgsdfgsdg);
         start_stim = mView.findViewById(R.id.button422);
-        save_report = mView.findViewById(R.id.button412);
         shut_down_stim = mView.findViewById(R.id.button42);
+        btn_save_report = mView.findViewById(R.id.button412);
         start_stim.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -74,7 +76,7 @@ public class PagerStimDebug {
             }
         });
 
-        save_report.setOnClickListener(new View.OnClickListener() {
+        btn_save_report.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 do_save_report();
@@ -149,9 +151,8 @@ public class PagerStimDebug {
         }
         target_data.solutionData1 = ci_solution1.getSolutionData();
         target_data.solutionData2 = ci_solution2.getSolutionData();
-        ToastUtils.showShort(target_data.solutionData1.get_vcmode());
-        ci_solution1.update_vcmode(target_data.solutionData1.get_vcmode());
-        ci_solution2.update_vcmode(target_data.solutionData2.get_vcmode());
+        ci_solution1.update_vcmode(vc_mode);
+        ci_solution2.update_vcmode(vc_mode);
         target_data.realtime = cb_stim_real_time.isChecked();
         target_data.complex = cb_complex_solution.isChecked();
         target_data.channel1 = btn_channel1.getBtnText();
@@ -198,7 +199,26 @@ public class PagerStimDebug {
     }
 
     private void do_start_stim(){}
-    private void do_save_report(){}
+
+
+    private void do_save_report(){
+        update_solutionBigData();
+        stimDebugData = new StimDebugData();
+        stimDebugData.left_data = left_data;
+        stimDebugData.right_data = right_data;
+        stimDebugData.vc_mode = vc_mode;
+        stimDebugData.soft_boot = soft_boot.getValueText();
+        stimDebugData.soft_stop = soft_stop.getValueText();
+        stimDebugData.range_freq = freq_auth.getValueText();
+        stimDebugData.range_lasttime = lasttime_auth.getValueText();
+        stimDebugData.range_pulse = pulse_auth.getValueText();
+        stimDebugData.range_range = range_auth.getValueText();
+        StimDebugDao dao = new StimDebugDao(mContext);
+        dao.insert(stimDebugData);
+        mContext.finish();
+    }
+
+
     private void do_shut_down_stim(){}
     private void change_to_solution(boolean b1){
         if(b1){
@@ -241,8 +261,6 @@ public class PagerStimDebug {
         }else{
             vc_mode = "voltage";
         }
-        left_data.set_vcmode(vc_mode);
-        right_data.set_vcmode(vc_mode);
         update_solutionBigData();
     }
 }

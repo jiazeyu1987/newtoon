@@ -7,25 +7,16 @@ public class SolutionData {
     public String freq="0";
     public String pulse="0";
     public String test_time="5s";
-    private String vc_mode = "current";
 
-    public SolutionData(String start_time1,String end_time1,String range1,String freq1,String pulse1,String test_time1,String vc1){
+    public SolutionData(String start_time1,String end_time1,String range1,String freq1,String pulse1,String test_time1){
         start_time = start_time1;
         end_time = end_time1;
         range = range1;
         freq = freq1;
         pulse = pulse1;
         test_time = test_time1;
-        vc_mode = vc1;
     }
 
-    public void set_vcmode(String vc){
-        vc_mode = vc;
-    }
-
-    public String get_vcmode(){
-        return vc_mode;
-    }
 
     public SolutionData(SolutionData data){
         start_time = data.start_time;

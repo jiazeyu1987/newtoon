@@ -70,6 +70,9 @@ public class CustomItemA3p1 extends LinearLayout {
     }
 
 
+    public String getValueText(){
+        return btn1.getText().toString();
+    }
 
 
     public void setDataList(String title1,String[] d1){

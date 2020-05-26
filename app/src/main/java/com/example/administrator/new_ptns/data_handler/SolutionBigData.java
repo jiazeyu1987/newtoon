@@ -12,17 +12,11 @@ public class SolutionBigData {
     public String channel3 = "OFF";
     public String channel4 = "OFF";
     public String channel5 = "OFF";
-    public String vc_mode = "current";
     public SolutionBigData(){
-        solutionData1 = new SolutionData("08:00","12:00","0","0","0","5s",vc_mode);
-        solutionData2 = new SolutionData("08:00","12:00","0","0","0","5s",vc_mode);
+        solutionData1 = new SolutionData("08:00","12:00","0","0","0","5s");
+        solutionData2 = new SolutionData("08:00","12:00","0","0","0","5s");
     }
 
-    public void set_vcmode(String vc){
-        vc_mode = vc;
-        solutionData1.set_vcmode(vc);
-        solutionData2.set_vcmode(vc);
-    }
 
     public SolutionBigData(SolutionBigData solutionBigData){
         solutionData1 = new SolutionData(solutionBigData.solutionData1);
@@ -34,7 +28,6 @@ public class SolutionBigData {
         channel3 = solutionBigData.channel3;
         channel4 = solutionBigData.channel4;
         channel5 = solutionBigData.channel5;
-        vc_mode = solutionBigData.vc_mode;
     }
 
 }
