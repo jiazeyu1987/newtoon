@@ -14,6 +14,8 @@ import com.example.administrator.new_ptns.data_handler.ContactDao;
 import com.example.administrator.new_ptns.data_handler.ContactData;
 import com.example.administrator.new_ptns.data_handler.ContactDataList;
 import com.example.administrator.new_ptns.data_handler.ElectrodeBundle;
+import com.example.administrator.new_ptns.data_handler.PatientDao;
+import com.example.administrator.new_ptns.data_handler.PatientData;
 import com.example.administrator.new_ptns.my_utils.TimeUtils;
 import com.example.administrator.new_ptns.pager.PagerBase;
 import com.example.administrator.new_ptns.pager.shuqian.NewContactActivity;
@@ -59,12 +61,17 @@ public class PagerShuzhong extends PagerBase {
                 }
                 list1 = newlist;
                 if(list1.size()==0){
-                    ToastUtils.showShort("没有符合条件的合同信息");
+                    ToastUtils.showShort("没有符合条件的合同信息1");
                     return;
                 }
+
+                ContactData contactData=list1.get(0);
                 setActive();
                 ContactDataList contactDataList = new ContactDataList();
-                contactDataList.list1 = list1;
+                contactDataList.list1 = new ArrayList<>();
+                contactDataList.list1.add(contactData);
+                set_global_contact(contactData);
+
                 Intent intent = new Intent(mContext, NewContactActivity.class);
                 intent.putExtra(NewContactActivity.INTENT_CONTACT_STATE,NewContactActivity.VIEW);
                 intent.putExtra(NewContactActivity.INTENT_CONTACT_JSON,new Gson().toJson(contactDataList));
@@ -73,6 +80,7 @@ public class PagerShuzhong extends PagerBase {
                 if(G.TEST==false) {
                     mContext.startActivity(intent);
                 }
+                ToastUtils.showShort("OK1");
             }
         });
         enter1.setOnClickListener(new View.OnClickListener() {
@@ -106,10 +114,14 @@ public class PagerShuzhong extends PagerBase {
         String para3 = ci_electrode1.getTitleText2();
         ElectrodeBundle bundle = new ElectrodeBundle();
         bundle.id = 1;
-        bundle.type = para1;
+        bundle.left_or_right = para1;
         bundle.guige = para2;
         bundle.xuliehao = para3;
-        intent.putExtra("extra",new Gson().toJson(bundle));
+        G.position1 = bundle;
+        G.electrodeBundle1 = bundle;
+        Gson gson = new Gson();
+        String s1 = gson.toJson(bundle);
+        intent.putExtra("extra",s1);
         mContext.startActivity(intent);
     }
     private void do_enter2(){
@@ -119,10 +131,14 @@ public class PagerShuzhong extends PagerBase {
         String para3 = ci_electrode2.getTitleText2();
         ElectrodeBundle bundle = new ElectrodeBundle();
         bundle.id = 2;
-        bundle.type = para1;
+        bundle.left_or_right = para1;
         bundle.guige = para2;
         bundle.xuliehao = para3;
-        intent.putExtra("extra",new Gson().toJson(bundle));
+        G.position2 = bundle;
+        G.electrodeBundle2 = bundle;
+        Gson gson = new Gson();
+        String s1 = gson.toJson(bundle);
+        intent.putExtra("extra",s1);
         mContext.startActivity(intent);
     }
 
@@ -131,6 +147,36 @@ public class PagerShuzhong extends PagerBase {
         Gson gson = new Gson();
         intent.putExtra("para1",gson.toJson(g_contactData));
         mContext.startActivity(intent);
+    }
+
+    private void set_global_contact(ContactData contactData){
+        G.g_contact_data = contactData;
+        generate_patient_by_contact(contactData);
+    }
+
+    private void generate_patient_by_contact(ContactData contactData){
+        String id_card = contactData.id_card;
+        if(id_card==null){
+            mContext.finish();
+            return;
+        }
+        PatientDao patientDao = new PatientDao(mContext);
+        PatientData patientData = G.getPatientLocalByIdCard(id_card);
+        if(patientData!=null){
+            G.g_patient_data = patientData;
+        }else{
+            PatientDao dao = new PatientDao(mContext);
+            PatientData patientData1 = new PatientData();
+            patientData1.id_card = contactData.id_card;
+            patientData1.doctor_id = G.doctor_id;
+            patientData1.name = contactData.patient_name;
+            patientData1.sex = contactData.sex;
+            patientData1.phone_number = contactData.phone_number;
+            patientData1.address = contactData.address;
+            patientData1.detail_address = contactData.detail_address;
+            G.add_patient(dao,patientData1);
+            G.g_patient_data = patientData1;
+        }
     }
 
     private void setActive(){

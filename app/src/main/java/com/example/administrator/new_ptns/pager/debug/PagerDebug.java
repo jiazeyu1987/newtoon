@@ -28,7 +28,7 @@ public class PagerDebug extends PagerBase {
             }
         });
         if(G.TEST){
-            enter.performClick();
+            //enter.performClick();
         }
     }
 

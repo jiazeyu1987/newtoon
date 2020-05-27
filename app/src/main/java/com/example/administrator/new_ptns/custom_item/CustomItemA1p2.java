@@ -32,6 +32,8 @@ public class CustomItemA1p2 extends LinearLayout {
     private int iconImgId;
     public static final int NO_LINE = 0;
     public Button btn1,btn2;
+    public String[] datalist1 = new String[]{"L","R","/"};
+    public String[] datalist2 = new String[]{"规格1","规格2","无"};
     public int getIconImgId() {
         return iconImgId;
     }
@@ -80,6 +82,8 @@ public class CustomItemA1p2 extends LinearLayout {
     }
 
 
+
+
     public String getBtn1Text(){
         return btn1.getText().toString();
     }
@@ -120,15 +124,14 @@ public class CustomItemA1p2 extends LinearLayout {
             @Override
             public void onClick(View view) {
                 final Context c1 = mContext;
-                final String[] datalist = new String[]{"L","R","/"};
                 AlertDialog.Builder builder = new AlertDialog.Builder(c1);
                 builder.setTitle("请选择电极位置");
                 builder.setCancelable(true);
                 builder.setIcon(R.mipmap.ic_launcher)
-                        .setItems(datalist, new DialogInterface.OnClickListener() {
+                        .setItems(datalist1, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                btn1.setText(datalist[which]);
+                                btn1.setText(datalist1[which]);
                             }
                         }).create()
                         .show();
@@ -140,15 +143,14 @@ public class CustomItemA1p2 extends LinearLayout {
             @Override
             public void onClick(View view) {
                 final Context c1 = mContext;
-                final String[] datalist = new String[]{"规格1","规格2","无"};
                 AlertDialog.Builder builder = new AlertDialog.Builder(c1);
                 builder.setTitle("请选择规格");
                 builder.setCancelable(true);
                 builder.setIcon(R.mipmap.ic_launcher)
-                        .setItems(datalist, new DialogInterface.OnClickListener() {
+                        .setItems(datalist2, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                btn2.setText(datalist[which]);
+                                btn2.setText(datalist2[which]);
                             }
                         }).create()
                         .show();

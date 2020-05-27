@@ -118,8 +118,8 @@ public class NewContactActivity extends BaseActivity {
         aniOperationDoctor.setValue3("医生1");
         aniOperationDate.setValue3("2020-1-12");
         aniStimulator.setValue3("刺激器1");
-        aniElectrode1.setValue3("LSTN");
-        aniElectrode2.setValue3("RSTN");
+        aniElectrode1.setValue3("规格1");
+        aniElectrode2.setValue3("规格2");
         aniControlSoftware.setValue3("软件1");
         aniChargingCoil.setValue3("线圈1");
     }
@@ -131,8 +131,8 @@ public class NewContactActivity extends BaseActivity {
         aniOperationDate.setDatePicker();
 
         aniStimulator.setDataList("请选择刺激器", new String[]{"刺激器1", "刺激器2", "刺激器3", "刺激器4", "刺激器5", "刺激器6",});
-        aniElectrode1.setDataList("请选择电极", new String[]{"LSTN", "RSTN",});
-        aniElectrode2.setDataList("请选择电极", new String[]{"LSTN", "RSTN",});
+        aniElectrode1.setDataList("请选择电极", new String[]{"规格1", "规格2",});
+        aniElectrode2.setDataList("请选择电极", new String[]{"规格1", "规格2",});
         aniControlSoftware.setDataList("请选择程控软件", new String[]{"软件1", "软件2"});
         aniChargingCoil.setDataList("请选择充电线圈", new String[]{"线圈1", "线圈2"});
     }

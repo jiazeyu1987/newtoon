@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.TextView;
 
 import com.example.administrator.new_ptns.MainActivity;
 import com.example.administrator.new_ptns.R;
@@ -47,6 +48,7 @@ class ImpedanceHistoryAdapter extends BaseAdapter {
             convertView = inflater.inflate(R.layout.pager_nt_three_5_item1, null, true);
             mHolder.ci90 = convertView.findViewById(R.id.cia1);
             mHolder.ci91 = convertView.findViewById(R.id.cia2);
+            mHolder.tv = convertView.findViewById(R.id.textView81);
             convertView.setTag(mHolder);
         } else {
             mHolder = (ViewHolder) convertView.getTag();
@@ -57,12 +59,13 @@ class ImpedanceHistoryAdapter extends BaseAdapter {
         mHolder.ci90.setTitleText("左脑");
         mHolder.ci91.setValue(data2);
         mHolder.ci91.setTitleText("右脑");
-
+        mHolder.tv.setText(list.get(position).date);
         return convertView;
     }
 
     class ViewHolder {
         private CustomItemA6 ci90;
         private CustomItemA6 ci91;
+        private TextView tv;
     }
 }

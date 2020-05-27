@@ -9,7 +9,9 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import com.blankj.utilcode.util.ToastUtils;
 import com.example.administrator.new_ptns.BaseActivity;
+import com.example.administrator.new_ptns.G;
 import com.example.administrator.new_ptns.R;
 import com.example.administrator.new_ptns.custom_item.CustomItemA4;
 import com.example.administrator.new_ptns.custom_item.CustomItemA5;
@@ -91,10 +93,10 @@ public class OperationActivity extends BaseActivity {
             }
         });
 
-        btnEmbeddedPosition.setDataList("请选择位置：",new String[]{"位置1","位置2","位置3","位置4","位置5",});
+        btnEmbeddedPosition.setDataList("请选择位置：",new String[]{"STN","GPI","ANT"});
         Intent intent = getIntent();
         electrodeBundle = new Gson().fromJson(intent.getStringExtra("extra"),ElectrodeBundle.class);
-        tvElectrodeShow.setText(electrodeBundle.type+":"+electrodeBundle.guige);
+        tvElectrodeShow.setText(electrodeBundle.left_or_right+":"+electrodeBundle.guige);
         init_false_data();
 
     }
@@ -148,13 +150,22 @@ public class OperationActivity extends BaseActivity {
 
     private void do_save_para(){
         OperationTempData data = new OperationTempData();
+        data.electrode_id = electrodeBundle.id;
         data.electrode_data = save_electrode_data();
         data.impedance = save_impedance_data();
-        data.electrode_position = "----";
+
+        electrodeBundle.embeddedPosition = btnEmbeddedPosition.getTitleText();
+        data.electrode_position = electrodeBundle.get_position();
         data.long_date = TimeUtils.getCurrentTimeYMDHMS();
         data.stim_para = save_stim_para();
+        if(electrodeBundle.id==1){
+            G.electrodeBundle1 = electrodeBundle;
+        }else{
+            G.electrodeBundle2 = electrodeBundle;
+        }
         OperationTempDataDao dao = new OperationTempDataDao(this);
         dao.insert(data);
+        ToastUtils.showShort("saved");
     }
 
     private String save_stim_para(){

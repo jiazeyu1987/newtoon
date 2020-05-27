@@ -12,10 +12,12 @@ public class ImpedanceData extends AABaseData{
         ArrayList<ImpedanceData> list1 = new ArrayList<>();
         for(int i = 0 ; i < 11;i++){
             ImpedanceData data = new ImpedanceData();
-            data.date = "2020-02-01";
+            data.date = "2020-02-0"+i;
             data.leftImpedanceList = new ArrayList<>();
+            data.rightImpedanceList = new ArrayList<>();
             for(int j = 0 ; j < 20 ;j++){
                 data.leftImpedanceList.add(j*j+"");
+                data.rightImpedanceList.add(j*j/2+"");
             }
             list1.add(data);
         }
