@@ -92,26 +92,9 @@ public class CustomItemA1p3 extends LinearLayout {
         txt2.setText(titleText);
     }
 
-    public void setDatalist(String title1,String[] list11){
-        title1 = title1;
+    public void setDatalist(String title11,String[] list11){
+        title = title11;
         list1 = list11;
-    }
-
-    public String  getTitleText2() {
-        return txt2.getText().toString();
-    }
-
-    public void setTitleText3(String titleText) {
-        txt3.setText(titleText);
-    }
-
-    public void setTitleText4(String titleText) {
-        txt4.setText(titleText);
-    }
-
-    public void setBtn1(String s1){
-        setBtnMode();
-        btn1.setText(s1);
         btn1.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -129,6 +112,24 @@ public class CustomItemA1p3 extends LinearLayout {
                         .show();
             }
         });
+    }
+
+    public String  getTitleText2() {
+        return txt2.getText().toString();
+    }
+
+    public void setTitleText3(String titleText) {
+        txt3.setText(titleText);
+    }
+
+    public void setTitleText4(String titleText) {
+        txt4.setText(titleText);
+    }
+
+    public void setBtn1(String s1){
+        btn1.setText(s1);
+        setBtnMode();
+
     }
 
     public void setedt1(boolean b){
