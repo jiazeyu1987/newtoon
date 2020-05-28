@@ -15,7 +15,7 @@ public class OperationTempDataDao {
 
     private Context context;
 
-    private String db_name = "operation_temp_data1.db";
+    private String db_name = "operation_temp_data2.db";
 
     public OperationTempDataDao(Context context){
 

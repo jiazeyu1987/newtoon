@@ -1,13 +1,15 @@
 package com.example.administrator.new_ptns.data_handler;
 
+import com.example.administrator.new_ptns.G;
+
 import java.util.ArrayList;
 
 public class PatientData extends AABaseData {
     public int id;
 
-    public int doctor_id;
+    public int doctor_id =1;
     public String doctor_name;
-
+    public String id_card;
     public String name;
     public String sex;
     public int age;
@@ -27,6 +29,10 @@ public class PatientData extends AABaseData {
     public String electrode2_number;
     public String electrode2_date;
     public String electorde2_position;
+
+    public PatientData(){
+        doctor_id = G.doctor_id;
+    }
 
     public static ArrayList<PatientData> get_test_data(){
         ArrayList<PatientData> list1 = new ArrayList<>();

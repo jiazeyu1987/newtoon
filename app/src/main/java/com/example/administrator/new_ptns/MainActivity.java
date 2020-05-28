@@ -1,5 +1,6 @@
 package com.example.administrator.new_ptns;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
@@ -9,6 +10,8 @@ import android.widget.Button;
 import com.blankj.utilcode.util.ToastUtils;
 import com.example.administrator.new_ptns.custom_item.CustomItemA1;
 import com.example.administrator.new_ptns.data_handler.ContactDao;
+import com.example.administrator.new_ptns.data_handler.OperationTempDataDao;
+import com.example.administrator.new_ptns.data_handler.PatientDao;
 import com.example.administrator.new_ptns.pager.MyPagerAdapter;
 import com.example.administrator.new_ptns.pager.shuqian.AddressPickTask;
 
@@ -95,8 +98,16 @@ public class MainActivity extends BaseActivity {
         viewPager.setAdapter(myPagerAdapter);
 
         if(G.TEST){
-            debug.performClick();
+           // shuzhong.performClick();
         }
+
+        Intent intent = getIntent();
+        G.doctor_id = intent.getIntExtra("doctor_id",1);
+        //after setting doctor id
+        PatientDao dao = new PatientDao(this);
+        G.patientDataArrayList = dao.get_patient_by_doctor_id(G.doctor_id);
+        OperationTempDataDao operationTempDataDao = new OperationTempDataDao(this);
+        operationTempDataDao.delete_all();
     }
 
     private void do_click_shuqian(){

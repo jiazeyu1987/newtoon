@@ -109,4 +109,5 @@
         app:bool1="true"
         app:txt3="iSBS210A"
         app:txt4="ISBSxxxxxxxxx" />
+
 </android.support.constraint.ConstraintLayout>

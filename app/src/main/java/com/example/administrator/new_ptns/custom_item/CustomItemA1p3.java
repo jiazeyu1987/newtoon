@@ -34,6 +34,8 @@ public class CustomItemA1p3 extends LinearLayout {
     private int iconImgId;
     public Button btn1;
     public EditText edt1;
+    public String title;
+    public String[] list1;
     public static final int NO_LINE = 0;
 
     public int getIconImgId() {
@@ -90,6 +92,28 @@ public class CustomItemA1p3 extends LinearLayout {
         txt2.setText(titleText);
     }
 
+    public void setDatalist(String title11,String[] list11){
+        title = title11;
+        list1 = list11;
+        btn1.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final Context c1 = mContext;
+                AlertDialog.Builder builder = new AlertDialog.Builder(c1);
+                builder.setTitle(title);
+                builder.setCancelable(true);
+                builder.setIcon(R.mipmap.ic_launcher)
+                        .setItems(list1, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                btn1.setText(list1[which]);
+                            }
+                        }).create()
+                        .show();
+            }
+        });
+    }
+
     public String  getTitleText2() {
         return txt2.getText().toString();
     }
@@ -103,26 +127,9 @@ public class CustomItemA1p3 extends LinearLayout {
     }
 
     public void setBtn1(String s1){
-        setBtnMode();
         btn1.setText(s1);
-        btn1.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                final Context c1 = mContext;
-                final String[] datalist = new String[]{"LSTN","RSTN","/"};
-                AlertDialog.Builder builder = new AlertDialog.Builder(c1);
-                builder.setTitle("请选择规格");
-                builder.setCancelable(true);
-                builder.setIcon(R.mipmap.ic_launcher)
-                        .setItems(datalist, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                btn1.setText(datalist[which]);
-                            }
-                        }).create()
-                        .show();
-            }
-        });
+        setBtnMode();
+
     }
 
     public void setedt1(boolean b){
