@@ -30,7 +30,11 @@
         android:screenOrientation="landscape"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".pager.debug.ReportActivity"></activity>
+        <activity
+            android:name=".pager.patient_info.StimReportActivity"
+            android:label="@string/title_activity_stim_report"
+            android:theme="@style/AppTheme.NoActionBar.NoActionBar"></activity>
+        <activity android:name=".pager.debug.ReportActivity" />
         <activity android:name=".pager.patient_info.DetailPatientInfoActivity" />
         <activity android:name=".pager.patient_info.ImpedanceHistoryActivity" />
         <activity android:name=".pager.shuzhong.OperationTestingActivity" />

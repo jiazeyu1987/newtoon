@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pager.patient_info.StimReportActivity">
+
+    <com.example.administrator.new_ptns.custom_item.CustomItemA2
+        android:id="@+id/ci2_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView120"
+        app:layout_constraintStart_toEndOf="@+id/tv_patientname"
+        app:layout_constraintTop_toTopOf="@+id/textView120" />
+
+    <TextView
+        android:id="@+id/tv_patientname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="张三"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView120"
+        app:layout_constraintStart_toEndOf="@+id/textView120"
+        app:layout_constraintTop_toTopOf="@+id/textView120" />
+
+    <TextView
+        android:id="@+id/textView120"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:text="刺激参数日志"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include4" />
+
+    <include
+        android:id="@+id/include4"
+        layout="@layout/newtoon_nt_title3"></include>
+
+    <TextView
+        android:id="@+id/textView106"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Left Side"
+        app:layout_constraintBottom_toTopOf="@+id/smartTableLeft"
+        app:layout_constraintEnd_toEndOf="@+id/smartTableLeft"
+        app:layout_constraintStart_toStartOf="@+id/smartTableLeft" />
+
+    <TextView
+        android:id="@+id/textView107"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="RightSide"
+        app:layout_constraintBottom_toTopOf="@+id/smartTableLeft"
+        app:layout_constraintEnd_toEndOf="@+id/smartTableRight"
+        app:layout_constraintStart_toStartOf="@+id/smartTableRight" />
+
+    <com.bin.david.form.core.SmartTable
+        android:id="@+id/smartTableRight"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginEnd="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.bin.david.form.core.SmartTable
+        android:id="@+id/smartTableLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="300dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btn_up"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ci2_list"
+        app:layout_constraintStart_toEndOf="@+id/ci2_list"
+        app:layout_constraintTop_toTopOf="@+id/ci2_list"
+        app:srcCompat="@mipmap/dianliu" />
+
+    <ImageView
+        android:id="@+id/btn_down"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ci2_list"
+        app:layout_constraintStart_toEndOf="@+id/btn_up"
+        app:layout_constraintTop_toTopOf="@+id/ci2_list"
+        app:layout_constraintVertical_bias="0.6"
+        app:srcCompat="@mipmap/dianliu" />
+
+</android.support.constraint.ConstraintLayout>

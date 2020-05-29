@@ -3,16 +3,13 @@ package com.example.administrator.new_ptns.pager.shuzhong.pager;
 import android.graphics.Color;
 import android.support.constraint.ConstraintLayout;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.CheckBox;
-import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TableLayout;
 import android.widget.TextView;
 
 import com.bin.david.form.core.SmartTable;
 import com.bin.david.form.data.style.FontStyle;
-import com.example.administrator.new_ptns.G;
 import com.example.administrator.new_ptns.R;
 import com.example.administrator.new_ptns.custom_item.CustomItem5;
 import com.example.administrator.new_ptns.custom_item.CustomItemA1;
@@ -20,7 +17,7 @@ import com.example.administrator.new_ptns.custom_item.CustomItemA1p3;
 import com.example.administrator.new_ptns.data_handler.ContactData;
 import com.example.administrator.new_ptns.data_handler.OperationTempData;
 import com.example.administrator.new_ptns.data_handler.OperationTempDataDao;
-import com.example.administrator.new_ptns.data_handler.OperationTableColumnInfo;
+import com.example.administrator.new_ptns.data_handler.TableColumnInfoOperation;
 import com.example.administrator.new_ptns.pager.shuzhong.OperationTestingActivity;
 
 import java.util.ArrayList;
@@ -114,12 +111,12 @@ public class PagerReportPreview {
     }
 
     private void set_table_data(){
-        List<OperationTableColumnInfo> list = new ArrayList<>();
+        List<TableColumnInfoOperation> list = new ArrayList<>();
         SmartTable table = mView.findViewById(R.id.table1);
         for(int i = 0 ; i < list1.size();i++){
             OperationTempData data = list1.get(i);
             String lor = "";
-            list.add(new OperationTableColumnInfo(data.long_date,data.electrode_position,data.electrode_data,data.impedance,data.stim_para));
+            list.add(new TableColumnInfoOperation(data.long_date,data.electrode_position,data.electrode_data,data.impedance,data.stim_para));
         }
         table.setData(list);
         table.getConfig().setContentStyle(new FontStyle(18, Color.BLUE));

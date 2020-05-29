@@ -75,7 +75,7 @@ public class PagerShuzhong extends PagerBase {
                 Intent intent = new Intent(mContext, NewContactActivity.class);
                 intent.putExtra(NewContactActivity.INTENT_CONTACT_STATE,NewContactActivity.VIEW);
                 intent.putExtra(NewContactActivity.INTENT_CONTACT_JSON,new Gson().toJson(contactDataList));
-                G.init(contactDataList.list1.get(0), TimeUtils.getCurrentTimeYMDHMS());
+                G.init(contactDataList.list1.get(0), TimeUtils.getCurrentTimeYMD2(),TimeUtils.DayofWeek());
                 g_contactData = list1.get(0);
                 if(G.TEST==false) {
                     mContext.startActivity(intent);

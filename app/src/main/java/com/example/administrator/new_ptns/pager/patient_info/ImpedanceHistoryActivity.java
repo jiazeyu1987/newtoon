@@ -6,6 +6,7 @@ import android.widget.ListView;
 
 import com.example.administrator.new_ptns.BaseActivity;
 import com.example.administrator.new_ptns.R;
+import com.example.administrator.new_ptns.Title3Activity;
 import com.example.administrator.new_ptns.data_handler.DoublePatientData;
 import com.example.administrator.new_ptns.data_handler.ImpedanceData;
 
@@ -14,7 +15,7 @@ import java.util.ArrayList;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class ImpedanceHistoryActivity extends BaseActivity {
+public class ImpedanceHistoryActivity extends Title3Activity {
 
 
     @BindView(R.id.listview4)
@@ -30,5 +31,6 @@ public class ImpedanceHistoryActivity extends BaseActivity {
         list1 = ImpedanceData.get_test_data();
         adapter = new ImpedanceHistoryAdapter(this,list1);
         listview4.setAdapter(adapter);
+        init_title();
     }
 }

@@ -11,6 +11,7 @@ import java.util.HashMap;
 
 public class G {
     public static String g_date = null;
+    public static String g_xingqi = null;
     public static ContactData g_contact_data = null;
     public static PatientData g_patient_data = null;
     public static ArrayList<PatientData> patientDataArrayList = new ArrayList<>();
@@ -20,9 +21,10 @@ public class G {
     public static ElectrodeBundle electrodeBundle2=null;
     public static ElectrodeBundle position1 = null;
     public static ElectrodeBundle position2 = null;
-    public  static void init(ContactData data1,String date1){
+    public  static void init(ContactData data1,String date1,String xingqi){
         g_contact_data = data1;
         g_date = date1;
+        g_xingqi = xingqi;
     }
 
 

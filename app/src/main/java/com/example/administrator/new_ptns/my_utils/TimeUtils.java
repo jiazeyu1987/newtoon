@@ -8,6 +8,7 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.Locale;
 import java.util.Random;
+import java.util.TimeZone;
 
 public class TimeUtils {
     /**
@@ -48,7 +49,24 @@ public class TimeUtils {
         int minute = c.get(Calendar.MINUTE);
         int second = c.get(Calendar.SECOND);
 
-        return year + "-" + month+1 + "-" + date;
+        return year + "-" + (month+1) + "-" + date;
+    }
+
+    /**
+     * 获取当前时间 - Calendar方式
+     * @return
+     */
+    public static String getCurrentTimeYMD2() {
+        //获取当前时间
+        Calendar c = Calendar.getInstance();//可以对每个时间域单独修改
+        int year = c.get(Calendar.YEAR);
+        int month = c.get(Calendar.MONTH);
+        int date = c.get(Calendar.DATE);
+        int hour = c.get(Calendar.HOUR_OF_DAY);
+        int minute = c.get(Calendar.MINUTE);
+        int second = c.get(Calendar.SECOND);
+
+        return year + "年" + (month+1) + "月" + date+ "日";
     }
 
     /*
@@ -61,6 +79,17 @@ public class TimeUtils {
         long ts = date.getTime();
         res = String.valueOf(ts);
         return res;
+    }
+
+    /*
+     * 将时间转换为时间戳
+     */
+    public static long dateToStampShort(String s) throws ParseException {
+        String res;
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        Date date = simpleDateFormat.parse(s);
+        long ts = date.getTime();
+        return ts;
     }
 
     /*
@@ -657,12 +686,35 @@ public class TimeUtils {
         return new SimpleDateFormat("yyyy-MM-dd").format(c.getTime());
     }
 
-    /**
-     * 根据一个日期，返回是星期几的字符串
-     *
-     * @param sdate
-     * @return
-     */
+
+    public static String DayofWeek() {
+        final Calendar c = Calendar.getInstance();
+        String mWay = String.valueOf(c.get(Calendar.DAY_OF_WEEK));
+        c.setTimeZone(TimeZone.getTimeZone("GMT+8:00"));
+        if ("1".equals(mWay)) {
+            mWay = "天";
+        } else if ("2".equals(mWay)) {
+            mWay = "一";
+        } else if ("3".equals(mWay)) {
+            mWay = "二";
+        } else if ("4".equals(mWay)) {
+            mWay = "三";
+        } else if ("5".equals(mWay)) {
+            mWay = "四";
+        } else if ("6".equals(mWay)) {
+            mWay = "五";
+        } else if ("7".equals(mWay)) {
+            mWay = "六";
+        }
+        return "星期" + mWay;
+    }
+
+        /**
+         * 根据一个日期，返回是星期几的字符串
+         *
+         * @param sdate
+         * @return
+         */
     public static String getWeek(String sdate) {
         // 再转换为时间
         Date date = strToDate(sdate);

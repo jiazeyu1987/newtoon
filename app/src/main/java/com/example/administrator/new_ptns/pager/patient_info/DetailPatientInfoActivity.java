@@ -40,15 +40,15 @@ public class DetailPatientInfoActivity extends BaseActivity {
     Button btnImpedanceReport;
     @BindView(R.id.btn_operation_report)
     Button btnOperationReport;
-
+    private String patient_string;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pager_nt_three_2);
         ButterKnife.bind(this);
         Intent intent = getIntent();
-        String s1 = intent.getStringExtra("extra");
-        mPatientData = new Gson().fromJson(s1, PatientData.class);
+        patient_string = intent.getStringExtra("extra");
+        mPatientData = new Gson().fromJson(patient_string, PatientData.class);
         pnt2Txt1.setText("姓名：" + mPatientData.name + "  性别：" + mPatientData.sex + " 年龄:" + mPatientData.age + "岁");
         pnt2Txt2.setText("手机号码：" + mPatientData.phone_number);
         pnt2Txt3.setText("家庭住址：" + mPatientData.address + mPatientData.detail_address);
@@ -65,15 +65,20 @@ public class DetailPatientInfoActivity extends BaseActivity {
 
     @OnClick({R.id.btn_stim_report, R.id.btn_impedance_report, R.id.btn_operation_report})
     public void onClick(View view) {
+        Intent intent1=null;
         switch (view.getId()) {
             case R.id.btn_stim_report:
+                intent1 = new Intent(DetailPatientInfoActivity.this,StimReportActivity.class);
+
                 break;
             case R.id.btn_impedance_report:
-                Intent intent1 = new Intent(DetailPatientInfoActivity.this, ImpedanceHistoryActivity.class);
-                startActivity(intent1);
+                intent1 = new Intent(DetailPatientInfoActivity.this, ImpedanceHistoryActivity.class);
                 break;
             case R.id.btn_operation_report:
+                intent1 = new Intent(DetailPatientInfoActivity.this, ImpedanceHistoryActivity.class);
                 break;
         }
+        intent1.putExtra("extra",patient_string);
+        startActivity(intent1);
     }
 }
