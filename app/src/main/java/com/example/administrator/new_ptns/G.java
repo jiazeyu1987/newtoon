@@ -16,7 +16,7 @@ public class G {
     public static PatientData g_patient_data = new PatientData();
     public static ArrayList<PatientData> patientDataArrayList = new ArrayList<>();
     public static boolean TEST = true;
-    public static int doctor_id = 1;
+    public static int doctor_id = 2;
     public  static void init(String date1,String xingqi){
         g_date = date1;
         g_xingqi = xingqi;
