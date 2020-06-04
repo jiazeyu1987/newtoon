@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.administrator.dbs1">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+
+    <uses-permission-sdk-23 android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+
+    <uses-permission-sdk-23 android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-permission-sdk-23 android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-permission-sdk-23 android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".Main2Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".pager.user.DataExportActivity"
+            android:label="@string/title_activity_data_export"
+            android:theme="@style/AppTheme.NoActionBar.NoActionBar" />
+        <activity android:name=".CameraActivity" />
+        <activity android:name=".chart.ChartManagerActivity" />
+        <activity
+            android:name=".pager.timing.NewTimingActivity"
+            android:label="@string/title_activity_add_timing"
+            android:theme="@style/AppTheme.NoActionBar.NoActionBar" />
+        <activity
+            android:name=".pager.template.NewTemplateActivity"
+            android:theme="@style/AppTheme.NoActionBar.NoActionBar" />
+        <activity
+            android:name=".chart.chart_item.unit.LineChartActivity1"
+            android:theme="@style/AppTheme.NoActionBar.NoActionBar" />
+        <activity
+            android:name=".chart.chart_item.unit.LineChartActivity2"
+            android:theme="@style/AppTheme.NoActionBar.NoActionBar" />
+        <activity
+            android:name=".chart.chart_item.unit.LineChartActivityColored"
+            android:theme="@style/AppTheme.NoActionBar.NoActionBar" />
+        <activity
+            android:name=".chart.chart_item.unit.LineChartTime"
+            android:theme="@style/AppTheme.NoActionBar.NoActionBar" />
+        <activity
+            android:name=".chart.chart_item.unit.BarChartActivitySinus"
+            android:theme="@style/AppTheme.NoActionBar.NoActionBar" />
+        <activity android:name=".chart.chart_item.unit.BarChartActivityMultiDataset" />
+        <activity android:name=".chart.chart_item.unit.FilledLineActivity" />
+        <activity android:name=".chart.chart_item.unit.BarChartPositiveNegative" />
+        <activity android:name=".chart.chart_item.unit.BubbleChartActivity" />
+        <activity android:name=".chart.chart_item.unit.PieChartActivity" />
+        <activity android:name=".chart.chart_item.unit.BarChartActivity" />
+        <activity android:name=".chart.chart_item.unit.CubicLineChartActivity" />
+        <activity android:name=".chart.chart_item.unit.HalfPieChartActivity" />
+        <activity android:name=".chart.chart_item.unit.InvertedLineChartActivity" />
+        <activity android:name=".chart.chart_item.unit.PerformanceLineChart" />
+        <activity
+            android:name=".pager.user.EditUserActivity"
+            android:label="@string/title_activity_new_patient"
+            android:theme="@style/AppTheme.NoActionBar.NoActionBar" />
+        <activity android:name=".ble.NewScanActivity" />
+        <activity android:name=".MainActivity">
+
+        </activity>
+
+        <service
+            android:name=".ble.btsmart.BtSmartService"
+            android:enabled="true"
+            android:exported="false" />
+    </application>
+
+</manifest>

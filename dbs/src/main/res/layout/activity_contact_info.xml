@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/grid_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rect_blue"
+            android:text="@string/save"
+            android:theme="@style/RoundRectButton.Normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/grid_01"
+        android:layout_width="@dimen/contact_info_width_01"
+        android:layout_height="@dimen/contact_info_height_02"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grid_top">
+
+        <com.example.administrator.dbs1.custom_item.CustomItemA1
+            android:id="@+id/ca1_001"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="200dp"
+            app:CustomItem1Attr_txt1="姓名："
+            app:CustomItem1Attr_txt2="请输入姓名"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"></com.example.administrator.dbs1.custom_item.CustomItemA1>
+
+        <com.example.administrator.dbs1.custom_item.CustomItemA1
+            android:id="@+id/ca1_002"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:CustomItem1Attr_txt1="身份证号："
+            app:CustomItem1Attr_txt2="请输入身份证号"
+            app:layout_constraintBottom_toTopOf="@+id/ca1_003"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"></com.example.administrator.dbs1.custom_item.CustomItemA1>
+
+        <com.example.administrator.dbs1.custom_item.CustomItemA1
+            android:id="@+id/ca1_003"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:CustomItem1Attr_txt1="手机号码："
+            app:CustomItem1Attr_txt2="请输入手机号码"
+            app:layout_constraintBottom_toTopOf="@+id/ca1_004"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"></com.example.administrator.dbs1.custom_item.CustomItemA1>
+
+        <com.example.administrator.dbs1.custom_item.CustomItemA1
+            android:id="@+id/ca1_004"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:CustomItem1Attr_txt1="家庭住址："
+            app:CustomItem1Attr_txt2="请选择城市"
+            app:layout_constraintBottom_toTopOf="@+id/ca1_005"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"></com.example.administrator.dbs1.custom_item.CustomItemA1>
+
+        <com.example.administrator.dbs1.custom_item.CustomItemA1
+            android:id="@+id/ca1_005"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:CustomItem1Attr_txt1="详细地址："
+            app:CustomItem1Attr_txt2="清输入详细地址"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"></com.example.administrator.dbs1.custom_item.CustomItemA1>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/grid_top"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/grid_11"
+        android:layout_width="@dimen/contact_info_width_01"
+        android:layout_height="@dimen/contact_info_height_01"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grid_01">
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/grid_12"
+        android:layout_width="@dimen/contact_info_width_02"
+        android:layout_height="@dimen/contact_info_height_01"
+        app:layout_constraintBottom_toBottomOf="@+id/grid_11"
+        app:layout_constraintStart_toEndOf="@+id/grid_11"
+        app:layout_constraintTop_toBottomOf="@+id/grid_01">
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/grid_02"
+        android:layout_width="@dimen/contact_info_width_02"
+        android:layout_height="@dimen/contact_info_height_02"
+        app:layout_constraintBottom_toBottomOf="@+id/grid_01"
+        app:layout_constraintStart_toEndOf="@+id/grid_01"
+        app:layout_constraintTop_toTopOf="@+id/grid_01">
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/grid_03"
+        android:layout_width="@dimen/contact_info_width_01"
+        android:layout_height="@dimen/contact_info_height_02"
+        app:layout_constraintBottom_toBottomOf="@+id/grid_01"
+        app:layout_constraintStart_toEndOf="@+id/grid_02"
+        app:layout_constraintTop_toTopOf="@+id/grid_01"></android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/grid_13"
+        android:layout_width="@dimen/contact_info_width_01"
+        android:layout_height="@dimen/contact_info_height_01"
+        app:layout_constraintBottom_toBottomOf="@+id/grid_11"
+        app:layout_constraintStart_toEndOf="@+id/grid_12"
+        app:layout_constraintTop_toBottomOf="@+id/grid_01">
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

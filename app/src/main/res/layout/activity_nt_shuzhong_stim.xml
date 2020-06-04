@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/activity_content_width"
+    android:layout_height="@dimen/activity_content_height"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/aci_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include layout="@layout/newtoon_nt_title2"></include>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/aci_00"
+        android:layout_width="520dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aci_top">
+
+        <com.example.administrator.new_ptns.custom_item.CustomItem6
+            android:id="@+id/customItem66"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:txt1="患者信息"></com.example.administrator.new_ptns.custom_item.CustomItem6>
+
+        <com.example.administrator.new_ptns.custom_item.CustomItemA6
+            android:id="@+id/bundle_impedance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/customItem66"></com.example.administrator.new_ptns.custom_item.CustomItemA6>
+
+        <Button
+            android:id="@+id/btn_testing"
+            android:layout_width="88dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rect1"
+            android:text="检测"
+            app:layout_constraintBottom_toBottomOf="@+id/customItem66"
+            app:layout_constraintEnd_toEndOf="@+id/bundle_impedance"
+            app:layout_constraintTop_toTopOf="@+id/customItem66" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/aci_10"
+        android:layout_width="@dimen/contact_info_width_03"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aci_00">
+
+
+        <com.example.administrator.new_ptns.custom_item.CustomItem6
+            android:id="@+id/customItem63"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:txt1="手术信息">
+
+        </com.example.administrator.new_ptns.custom_item.CustomItem6>
+
+        <TableLayout
+            android:id="@+id/tableLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:background="@color/active_txt_color1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/customItem63">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/te2xtView163"
+                    style="@style/GridViewText2"
+                    android:layout_width="@dimen/channel_width"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="2dp"
+                    android:text="1" />
+
+                <TextView
+                    android:id="@+id/te2xtView263"
+                    style="@style/GridViewText2"
+                    android:layout_width="@dimen/channel_width"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="2dp"
+                    android:text="2" />
+
+                <TextView
+                    android:id="@+id/te2xtView363"
+                    style="@style/GridViewText2"
+                    android:layout_width="@dimen/channel_width"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="2dp"
+                    android:text="3" />
+
+                <TextView
+                    android:id="@+id/te2xtView463"
+                    style="@style/GridViewText2"
+                    android:layout_width="@dimen/channel_width"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="2dp"
+                    android:text="4" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.example.administrator.new_ptns.custom_item.CustomItemA8
+                    android:id="@+id/channel_1"
+                    android:layout_width="@dimen/channel_width"
+                    android:layout_height="wrap_content">
+
+                </com.example.administrator.new_ptns.custom_item.CustomItemA8>
+
+                <com.example.administrator.new_ptns.custom_item.CustomItemA8
+                    android:id="@+id/channel_2"
+                    android:layout_width="@dimen/channel_width"
+                    android:layout_height="wrap_content">
+
+                </com.example.administrator.new_ptns.custom_item.CustomItemA8>
+
+                <com.example.administrator.new_ptns.custom_item.CustomItemA8
+                    android:id="@+id/channel_3"
+                    android:layout_width="@dimen/channel_width"
+                    android:layout_height="wrap_content">
+
+                </com.example.administrator.new_ptns.custom_item.CustomItemA8>
+
+                <com.example.administrator.new_ptns.custom_item.CustomItemA8
+                    android:id="@+id/channel_4"
+                    android:layout_width="@dimen/channel_width"
+                    android:layout_height="wrap_content">
+
+                </com.example.administrator.new_ptns.custom_item.CustomItemA8>
+
+            </TableRow>
+
+        </TableLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="@dimen/contact_info_width_03"
+        android:layout_height="130dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aci_10">
+
+        <com.example.administrator.new_ptns.custom_item.CustomItemA4
+            android:id="@+id/btn_embedded_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toEndOf="@+id/textView74"
+            app:layout_constraintTop_toTopOf="parent"
+            app:txt1="STN" />
+
+        <TextView
+            android:id="@+id/textView74"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:text="植入位置"
+            android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/aci_11"
+        android:layout_width="760dp"
+        android:layout_height="700dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aci_top">
+
+        <Button
+            android:id="@+id/btn_stop_stim"
+            style="@style/RoundRectButton.Active"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="停止刺激"
+            app:layout_constraintEnd_toEndOf="@+id/bundle_freq"
+            app:layout_constraintTop_toBottomOf="@+id/adfadf" />
+
+        <Button
+            android:id="@+id/btn_save_para"
+            style="@style/RoundRectButton.Active"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="保存参数"
+            app:layout_constraintEnd_toEndOf="@+id/bundle_freq"
+            app:layout_constraintTop_toBottomOf="@+id/customItem6" />
+
+        <Button
+            android:id="@+id/btn_start_time"
+            style="@style/RoundRectButton.Active"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="开始刺激"
+            app:layout_constraintStart_toStartOf="@+id/bundle_freq"
+            app:layout_constraintTop_toBottomOf="@+id/adfadf" />
+
+        <com.example.administrator.new_ptns.custom_item.CustomItemA5
+            android:id="@+id/bundle_freq"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+
+            app:layout_constraintStart_toStartOf="@+id/bundle_range"
+            app:layout_constraintTop_toBottomOf="@+id/bundle_range"
+            app:float0="0"
+            app:float1="0"
+            app:float2="5"
+            app:float3="0.1"
+            app:float4="0.5"
+            app:txt1="频率"
+            app:txt2="0"
+            app:txt3="Hz" />
+
+        <com.example.administrator.new_ptns.custom_item.CustomItemA5
+            android:id="@+id/adfadf"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+
+            app:layout_constraintStart_toStartOf="@+id/bundle_freq"
+            app:layout_constraintTop_toBottomOf="@+id/bundle_freq"
+            app:float0="0"
+            app:float1="0"
+            app:float2="50"
+            app:float3="1"
+            app:float4="10"
+            app:txt1="脉宽"
+            app:txt2="0"
+            app:txt3="uS" />
+
+        <com.example.administrator.new_ptns.custom_item.CustomItemA5
+            android:id="@+id/bundle_range"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="273dp"
+            android:layout_marginEnd="8dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:float0="0"
+            app:float1="0"
+            app:float2="50"
+            app:float3="10"
+            app:float4="20"
+            app:txt1="幅度"
+            app:txt2="0"
+            app:txt3="mA" />
+
+        <com.example.administrator.new_ptns.custom_item.CustomItem6
+            android:id="@+id/customItem6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:txt1="参数">
+
+        </com.example.administrator.new_ptns.custom_item.CustomItem6>
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/bundle_range"
+            app:layout_constraintEnd_toEndOf="@+id/bundle_freq"
+            app:layout_constraintStart_toStartOf="@+id/bundle_freq">
+
+            <RadioButton
+                android:id="@+id/radio_voltage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:layout_weight="1"
+                android:text="恒压模式"
+                tools:layout_editor_absoluteX="255dp"
+                tools:layout_editor_absoluteY="191dp" />
+
+            <RadioButton
+                android:id="@+id/radio_current"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:text="恒流模式"
+                tools:layout_editor_absoluteX="255dp"
+                tools:layout_editor_absoluteY="191dp" />
+        </RadioGroup>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/activity_content_width"
+    android:layout_height="@dimen/activity_content_height"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cons1traintLayout111"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.example.administrator.new_ptns.custom_item.CustomItem5
+            android:id="@+id/customI1t1em511"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:txt1="测试报告">
+
+        </com.example.administrator.new_ptns.custom_item.CustomItem5>
+
+        <ListView
+            android:id="@+id/listview3"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/customI1t1em511"></ListView>
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cons1traintLayout11"
+        android:layout_width="500dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cons1traintLayout111">
+
+        <Button
+            android:id="@+id/btn_stim_report"
+            style="@style/RoundRectButton2"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:text="刺激日志"
+            app:layout_constraintStart_toEndOf="@+id/btn_operation_report"
+            app:layout_constraintTop_toBottomOf="@+id/customI1t1em512" />
+
+        <Button
+            android:id="@+id/btn_impedance_report"
+            style="@style/RoundRectButton2"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:text="阻抗日志"
+            app:layout_constraintStart_toEndOf="@+id/btn_stim_report"
+            app:layout_constraintTop_toBottomOf="@+id/customI1t1em512" />
+
+        <Button
+            android:id="@+id/btn_operation_report"
+            style="@style/RoundRectButton2"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:text="手术报告"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/customI1t1em512" />
+
+        <com.example.administrator.new_ptns.custom_item.CustomItem5
+            android:id="@+id/customI1t1em512"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:txt1="其他信息">
+
+        </com.example.administrator.new_ptns.custom_item.CustomItem5>
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout11"
+        android:layout_width="500dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/pnt2_txt1"
+            style="@style/SmallText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:text="姓名：牛海波  性别：男  年龄：19岁"
+            app:layout_constraintStart_toStartOf="@+id/customItem511"
+            app:layout_constraintTop_toBottomOf="@+id/customItem511" />
+
+        <TextView
+            android:id="@+id/pnt2_txt2"
+            style="@style/SmallText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:text="手机号码：18232492819"
+            app:layout_constraintStart_toStartOf="@+id/customItem511"
+            app:layout_constraintTop_toBottomOf="@+id/pnt2_txt1" />
+
+        <TextView
+            android:id="@+id/pnt2_txt3"
+            style="@style/SmallText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:text="家庭住址：XXXXXXXXXXXXXX"
+            app:layout_constraintStart_toStartOf="@+id/customItem511"
+            app:layout_constraintTop_toBottomOf="@+id/pnt2_txt2" />
+
+        <com.example.administrator.new_ptns.custom_item.CustomItem5
+            android:id="@+id/customItem511"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </com.example.administrator.new_ptns.custom_item.CustomItem5>
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="500dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout11">
+
+        <TextView
+            android:id="@+id/textView123"
+            style="@style/SmallText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:text="刺激器："
+            app:layout_constraintStart_toStartOf="@+id/customI1tem511"
+            app:layout_constraintTop_toBottomOf="@+id/customI1tem511" />
+
+        <TextView
+            android:id="@+id/textView125"
+            style="@style/SmallText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:text="电极一："
+            app:layout_constraintStart_toStartOf="@+id/customI1tem511"
+            app:layout_constraintTop_toBottomOf="@+id/pnt2_txt4" />
+
+        <TextView
+            android:id="@+id/textView127"
+            style="@style/SmallText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:text="电极一："
+            app:layout_constraintStart_toStartOf="@+id/customI1tem511"
+            app:layout_constraintTop_toBottomOf="@+id/pnt2_txt5" />
+
+        <TextView
+            android:id="@+id/pnt2_txt4"
+            style="@style/SmallText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:text="序列号：XXXXXXXXXXX\n植入日期：2020年02月02日\n电池容量：90%"
+            app:layout_constraintStart_toEndOf="@+id/textView123"
+            app:layout_constraintTop_toBottomOf="@+id/customI1tem511" />
+
+        <TextView
+            android:id="@+id/pnt2_txt5"
+            style="@style/SmallText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:text="序列号：XXXXXXXXXXX\n植入日期：2020年02月02日\n电池容量：90%"
+            app:layout_constraintStart_toEndOf="@+id/textView123"
+            app:layout_constraintTop_toBottomOf="@+id/pnt2_txt4" />
+
+        <TextView
+            android:id="@+id/pnt2_txt6"
+            style="@style/SmallText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:text="序列号：XXXXXXXXXXX\n植入日期：2020年02月02日\n电池容量：90%"
+            app:layout_constraintStart_toEndOf="@+id/textView123"
+            app:layout_constraintTop_toBottomOf="@+id/pnt2_txt5" />
+
+        <com.example.administrator.new_ptns.custom_item.CustomItem5
+            android:id="@+id/customI1tem511"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:txt1="植入体信息">
+
+        </com.example.administrator.new_ptns.custom_item.CustomItem5>
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

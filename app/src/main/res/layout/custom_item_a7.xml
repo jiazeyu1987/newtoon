@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.example.administrator.new_ptns.custom_item.CustomItemA3p2
+        android:id="@+id/ci_testtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:btn1="5S"
+        app:layout_constraintEnd_toEndOf="@+id/customItemA55"
+        app:layout_constraintTop_toBottomOf="@+id/customItemA55" />
+
+    <Button
+        android:id="@+id/ci_teststim"
+        style="@style/RoundRectButton2"
+        android:layout_marginTop="8dp"
+        android:text="测试刺激"
+        app:layout_constraintEnd_toEndOf="@+id/customItemA55"
+        app:layout_constraintStart_toStartOf="@+id/textView105"
+        app:layout_constraintTop_toBottomOf="@+id/textView105" />
+
+    <TextView
+        android:id="@+id/textView105"
+        style="@style/SmallText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="测试时间"
+        app:layout_constraintStart_toStartOf="@+id/customItemA55"
+        app:layout_constraintTop_toBottomOf="@+id/customItemA55" />
+
+    <com.example.administrator.new_ptns.custom_item.CustomItemA5
+        android:id="@+id/customItemA54"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        app:float0="0"
+        app:float1="0"
+        app:float2="5"
+        app:float3="0.1"
+        app:float4="0.5"
+        app:txt1="频率"
+        app:txt2="0"
+        app:txt3="Hz"
+        app:layout_constraintTop_toBottomOf="@+id/adfadf" />
+
+    <com.example.administrator.new_ptns.custom_item.CustomItemA5
+        android:id="@+id/adfadf"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        app:float0="0"
+        app:float1="0"
+        app:float2="50"
+        app:float3="10"
+        app:float4="20"
+        app:txt1="幅度"
+        app:txt2="0"
+        app:txt3="mA"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fadfadf" />
+
+    <com.example.administrator.new_ptns.custom_item.CustomItemA5
+        android:id="@+id/customItemA55"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:float0="0"
+        app:float1="0"
+        app:float2="50"
+        app:float3="1"
+        app:float4="10"
+        app:txt1="脉宽"
+        app:txt2="0"
+        app:txt3="uS"
+        app:layout_constraintTop_toBottomOf="@+id/customItemA54" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/fadfadf"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.example.administrator.new_ptns.custom_item.CustomItemA3p2
+            android:id="@+id/ci_starttime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="250dp"
+            app:btn1="08:10"
+            app:layout_constraintBottom_toBottomOf="@+id/textView108"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView108" />
+
+        <com.example.administrator.new_ptns.custom_item.CustomItemA3p2
+            android:id="@+id/ci_endtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:btn1="08:10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView114"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView108"
+            style="@style/SmallText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="日间"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView114"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="~"
+            android:textColor="#333333"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ci_starttime"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

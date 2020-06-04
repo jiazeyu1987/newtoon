@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/pager_content_width"
+    android:layout_height="@dimen/pager_content_height"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <com.example.administrator.new_ptns.custom_item.CustomItemA1p3
+        android:id="@+id/afasdfas2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:btn1="LSTN"
+        app:layout_constraintStart_toStartOf="@+id/customItem55"
+        app:layout_constraintTop_toBottomOf="@+id/sdfafa1"
+        app:txt1="电极一"
+        app:txt3="iSBS210A"
+        app:txt4="ISBSxxxxxxxxx" />
+
+    <com.example.administrator.new_ptns.custom_item.CustomItemA1p3
+        android:id="@+id/afasdfas3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:btn1="RSTN"
+        app:layout_constraintStart_toStartOf="@+id/customItem55"
+        app:layout_constraintTop_toBottomOf="@+id/afasdfas2"
+        app:txt1="电极二"
+        app:txt3="iSBS210A"
+        app:txt4="ISBSxxxxxxxxx" />
+
+    <com.example.administrator.new_ptns.custom_item.CustomItem5
+        android:id="@+id/customItem55"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView93"
+        app:txt1="产品信息" />
+
+    <TextView
+        android:id="@+id/textView92"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="姓名：王二小"
+        app:layout_constraintStart_toStartOf="@+id/customItem54"
+        app:layout_constraintTop_toBottomOf="@+id/customItem54" />
+
+    <TextView
+        android:id="@+id/textView93"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="性别：男"
+        app:layout_constraintStart_toEndOf="@+id/textView92"
+        app:layout_constraintTop_toBottomOf="@+id/customItem54" />
+
+    <TextView
+        android:id="@+id/textView95"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="年龄：18"
+        app:layout_constraintStart_toEndOf="@+id/textView93"
+        app:layout_constraintTop_toBottomOf="@+id/customItem54" />
+
+    <TextView
+        android:id="@+id/textView98"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="视频备注："
+        app:layout_constraintStart_toEndOf="@+id/textView95"
+        app:layout_constraintTop_toBottomOf="@+id/customItem54" />
+
+    <com.example.administrator.new_ptns.custom_item.CustomItem5
+        android:id="@+id/customItem54"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView41"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView98"
+        app:layout_constraintStart_toEndOf="@+id/textView98"
+        app:srcCompat="@mipmap/dianliu" />
+
+    <com.example.administrator.new_ptns.custom_item.CustomItemA1p3
+        android:id="@+id/sdfafa1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/customItem55"
+        app:layout_constraintTop_toBottomOf="@+id/customItem55"
+        app:txt1="刺激器"
+        app:bool1="true"
+        app:txt3="iSBS210A"
+        app:txt4="ISBSxxxxxxxxx" />
+
+</android.support.constraint.ConstraintLayout>

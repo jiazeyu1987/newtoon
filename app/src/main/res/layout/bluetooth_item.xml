@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="103dp"
+    android:background="#F7F7F7"
+    android:gravity="center|center_vertical"
+    android:orientation="horizontal"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="795dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="31dp"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/ping"
+            android:text="DBS脑深部神经刺激器程控仪"
+            android:textColor="#4C4C4C"
+            android:textSize="21sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView94"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="62dp"
+            android:layout_marginBottom="11dp"
+            android:fontFamily="@font/ping"
+            android:text="程控仪MAC地址"
+            android:textColor="#C4C1C5"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView96"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="450dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/ping"
+            android:text="信号强度"
+            android:textColor="#C4C1C5"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="577dp"
+            android:layout_marginTop="13dp"
+            android:background="#979797"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+
+        <TextView
+            android:id="@+id/textView97"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="591dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/ping"
+            android:text="BLE软件版本"
+            android:textColor="#C4C1C5"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="182dp"
+            android:layout_marginTop="62dp"
+            android:layout_marginBottom="11dp"
+            android:fontFamily="@font/ping"
+            android:text="1520:5D00:0041"
+            android:textColor="#4CD964"
+            android:textSize="21sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="325dp"
+            android:layout_marginTop="13dp"
+            android:background="#979797"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+
+        <TextView
+            android:id="@+id/strong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="539dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/ping"
+            android:text="中"
+            android:textColor="#4CD964"
+            android:textSize="21sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="434dp"
+            android:layout_marginTop="13dp"
+            android:background="#979797"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+
+        <TextView
+            android:id="@+id/textView100"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="345dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/ping"
+            android:lineSpacingExtra="15dp"
+
+            android:text="Z F S T"
+            android:textColor="#4CD964"
+            android:textSize="21sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/rssi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="717dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/ping"
+            android:text="V2.0"
+            android:textColor="#4CD964"
+            android:textSize="21sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+</android.widget.LinearLayout>

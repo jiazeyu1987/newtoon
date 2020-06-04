@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TemplateItem">
+        <attr name="icon_reference" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="CustomItem1Attr">
+        <attr name="txt1" format="string" />
+        <attr name="txt2" format="string" />
+        <attr name="txt3" format="string" />
+        <attr name="txt4" format="string" />
+        <attr name="btn1" format="string" />
+        <attr name="icon1" format="reference" />
+        <attr name="bool1" format="boolean" />
+        <attr name="int1" format="integer" />
+        <attr name="int2" format="integer" />
+        <attr name="int3" format="integer" />
+        <attr name="int4" format="integer" />
+        <attr name="int0" format="integer" />
+        <attr name="int10" format="integer" />
+        <attr name="float1" format="float" />
+        <attr name="float2" format="float" />
+        <attr name="float3" format="float" />
+        <attr name="float4" format="float" />
+        <attr name="float0" format="float" />
+        <attr name="float10" format="float" />
+    </declare-styleable>
+</resources>
